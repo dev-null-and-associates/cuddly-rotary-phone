@@ -1,4 +1,4 @@
-**# Team 1 Project Proposal** 🚀🚀🚀
+# Team 1 Project Proposal 🚀🚀🚀
 
 ## Name of opensource software 🔮
 
