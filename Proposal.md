@@ -10,13 +10,13 @@
 
 ## Perceived threats in the operational environment 🌵
 
-## Current security features 🔒
+## Current security features ✈️
 
 ## Team Motivation 🐉
 
 ## Selected Project Description 💂‍♂️
 
-## Project Licensing, contribution procedures and contributor agreements 👮
+## Project Licensing, contribution procedures and contributor agreements ✈️
 
 ## Security related history of the project 🙈🙊🙉
 
