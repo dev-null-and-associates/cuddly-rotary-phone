@@ -80,7 +80,7 @@ code found on the main GitHub.
 
 ### Jmcshannon 
 
-** What did you learn from this assignment **
+**What did you learn from this assignment**
 
 For me the biggest takeaway from this proposal was the amount of work involved in all 
 of the additional overhead needed to run a moderately successful open source project.
@@ -88,7 +88,7 @@ While the team has OWASP Production Product status and have already written the 
 application firewall in Golang, there are still a myriad of tasks for the team to work on
 to drive community engagement and further adoption.
 
-** What did you find the most useful **
+**What did you find the most useful**
 
 I found the dependency graph to be extremely useful and something I hadn't really 
 spent a lot of time looking at before. The dependency graph also sports an Export
