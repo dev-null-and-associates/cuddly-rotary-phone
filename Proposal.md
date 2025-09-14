@@ -7,24 +7,24 @@ For our project proposal we have selected Coraza WAF
 https://github.com/corazawaf/coraza
 
 ## Hypothetical operational environment 🖥️
-- Medium-sized enterprise
-- Employee-only websites
-- Customer facing websites
-- Public-access websites
-    We will be using a medium-sized corporate enterprise as our operational environment. In
-    this enterprise, there is an on-site technology team that creates the majority of the
-    company's websites / web applications. Everything else is sourced as COTS systems. All
-    of the web applications can be grouped into three different audiences: employee-only,
-    customer-facing, and public access. This is important because each audience should only
-    get access to the information relevant to their needs: business sensitive information
-    (employee information, business data, etc), customer data (including orders and bank
-    account information), or only the generic marketing and customer sign-up portals.
-
-
+We will be using a medium-sized corporate enterprise as our operational environment. In
+this enterprise, there is an on-site technology team that creates the majority of the
+company's websites / web applications. Everything else is sourced as COTS systems. All
+of the web applications can be grouped into three different audiences: employee-only,
+customer-facing, and public access. This is important because each audience should only
+get access to the information relevant to their needs: business sensitive information
+(employee information, business data, etc), customer data (including orders and bank
+account information), or only the generic marketing and customer sign-up portals.
 
 ## Systems Engineering view in the hypothetical environment context 🌌
 
 ## Perceived threats in the operational environment 🌵
+- Web application vulnerabilities
+    - SQL Injections
+    - Data sanitization
+    - CSRF
+- Different levels of security when it comes to home-grown applications vs COTS
+
 
 ## Current security features ✈️
 
