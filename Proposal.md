@@ -17,6 +17,7 @@ get access to the information relevant to their needs: business sensitive inform
 account information), or only the generic marketing and customer sign-up portals. 
 
 ## Systems Engineering view in the hypothetical environment context 🌌
+<img src="https://github.com/dev-null-and-associates/cuddly-rotary-phone/systemEngineering.jpg?raw=true">
 
 ## Perceived threats in the operational environment 🌵
 Running a web infrastructure always comes with vulnerability risks. This can be from poorly 
@@ -138,3 +139,18 @@ I think having the websites that list open source projects was very helpful. Hav
 broken down by application type/domain made it very easy to figure out a handful of projects 
 within a domain that a user is interested in. It is very intimidating to see thousands of 
 projects, so being able to narrow it down is very helpful.
+
+### Matthew Vandergriff
+
+**What did you learn from this assignment**
+
+I was amazed at how big the open source community has gotten.  How many different projects are available
+and how hit and miss they are.  Some projects are fully fleshed out, some are just getting started, and
+some have been abandoned.  And also, how hit and miss the development style is.  Given all of the discussion
+in the world about security, and how many projects over the years have failed due to overhead and the cost
+of making changes, how some projects look to be totally locked down, and some are just happy path.
+
+**What did you find most useful**
+
+Working on the system engineering view, reviewing the slides to better understand the pieces.  Looking at the
+way projects are tagged in GitHub to help narrow down the search for suitable projects.  
