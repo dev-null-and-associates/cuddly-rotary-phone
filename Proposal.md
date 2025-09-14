@@ -7,24 +7,34 @@ For our project proposal we have selected Coraza WAF
 https://github.com/corazawaf/coraza
 
 ## Hypothetical operational environment 🖥️
-We will be using a medium-sized corporate enterprise as our operational environment. In
-this enterprise, there is an on-site technology team that creates the majority of the
-company's websites / web applications. Everything else is sourced as COTS systems. All
-of the web applications can be grouped into three different audiences: employee-only,
-customer-facing, and public access. This is important because each audience should only
-get access to the information relevant to their needs: business sensitive information
-(employee information, business data, etc), customer data (including orders and bank
-account information), or only the generic marketing and customer sign-up portals.
+We will be using a medium-sized corporate enterprise as our operational environment. In 
+this enterprise, there is an on-site technology team that creates the majority of the 
+company's websites / web applications. Everything else is sourced as COTS systems. All 
+of the web applications can be grouped into three different audiences: employee-only, 
+customer-facing, and public access. This is important because each audience should only 
+get access to the information relevant to their needs: business sensitive information 
+(employee information, business data, etc), customer data (including orders and bank 
+account information), or only the generic marketing and customer sign-up portals. 
 
 ## Systems Engineering view in the hypothetical environment context 🌌
 
 ## Perceived threats in the operational environment 🌵
-- Web application vulnerabilities
-    - SQL Injections
-    - Data sanitization
-    - CSRF
-- Different levels of security when it comes to home-grown applications vs COTS
+Running a web infrastructure always comes with vulnerability risks. This can be from poorly 
+configured applications or from vulnerabilities within the application itself. Things like 
+    - SQL Injections 
+    - PHP/CSS Attacks 
+    - Cross-Site Request Forgery 
+In order to protect customer and business information, protections need to be put into place 
+to prevent the exploitation of these vulnerabilities. With Coraza WAF, these vulnerabilities 
+can be caught and the requests can be rejected before they even make it to the web 
+application. 
 
+When vulnerabilities are discovered, there can be varying levels of fixes for them. If the 
+application was developed internally, the source code can be updated to fix it. On the other 
+hand, if the vulnerability is in an purchased product, the business will need to wait for a 
+fix to come from a vendor. With Coraza WAF installed as a reverse-proxy, the business can 
+add or update a rule within the firewall to reject requests that seek to exploit the found 
+vulnerability. 
 
 ## Current security features ✈️
 
