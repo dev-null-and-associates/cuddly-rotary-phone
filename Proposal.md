@@ -21,9 +21,9 @@ account information), or only the generic marketing and customer sign-up portals
 ## Perceived threats in the operational environment 🌵
 Running a web infrastructure always comes with vulnerability risks. This can be from poorly 
 configured applications or from vulnerabilities within the application itself. Things like 
-    - SQL Injections 
-    - PHP/CSS Attacks 
-    - Cross-Site Request Forgery 
+    * SQL Injections 
+    * PHP/CSS Attacks 
+    * Cross-Site Request Forgery 
 In order to protect customer and business information, protections need to be put into place 
 to prevent the exploitation of these vulnerabilities. With Coraza WAF, these vulnerabilities 
 can be caught and the requests can be rejected before they even make it to the web 
