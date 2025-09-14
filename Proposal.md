@@ -7,6 +7,10 @@ For our project proposal we have selected Coraza WAF
 https://github.com/corazawaf/coraza
 
 ## Hypothetical operational environment 🖥️
+- Medium-sized enterprise
+- Employee-only websites
+- Customer facing websites
+- Public-access websites
 
 ## Systems Engineering view in the hypothetical environment context 🌌
 
