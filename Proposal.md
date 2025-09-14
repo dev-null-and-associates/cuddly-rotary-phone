@@ -17,7 +17,7 @@ get access to the information relevant to their needs: business sensitive inform
 account information), or only the generic marketing and customer sign-up portals. 
 
 ## Systems Engineering view in the hypothetical environment context 🌌
-<img src="https://github.com/dev-null-and-associates/cuddly-rotary-phone/systemEngineering.jpg?raw=true">
+<img src="https://github.com/dev-null-and-associates/cuddly-rotary-phone/systemEngineering.jpeg?raw=true">
 
 ## Perceived threats in the operational environment 🌵
 Running a web infrastructure always comes with vulnerability risks. This can be from poorly 
