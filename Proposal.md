@@ -7,10 +7,35 @@ For our project proposal we have selected Coraza WAF
 https://github.com/corazawaf/coraza
 
 ## Hypothetical operational environment 🖥️
+We will be using a medium-sized corporate enterprise as our operational environment. In 
+this enterprise, there is an on-site technology team that creates the majority of the 
+company's websites / web applications. Everything else is sourced as COTS systems. All 
+of the web applications can be grouped into three different audiences: employee-only, 
+customer-facing, and public access. This is important because each audience should only 
+get access to the information relevant to their needs: business sensitive information 
+(employee information, business data, etc), customer data (including orders and bank 
+account information), or only the generic marketing and customer sign-up portals. 
 
 ## Systems Engineering view in the hypothetical environment context 🌌
 
 ## Perceived threats in the operational environment 🌵
+Running a web infrastructure always comes with vulnerability risks. This can be from poorly 
+configured applications or from vulnerabilities within the application itself. Things like 
+ * SQL Injections 
+ * PHP/CSS Attacks 
+ * Cross-Site Request Forgery
+   
+In order to protect customer and business information, protections need to be put into place 
+to prevent the exploitation of these vulnerabilities. With Coraza WAF, these vulnerabilities 
+can be caught and the requests can be rejected before they even make it to the web 
+application. 
+
+When vulnerabilities are discovered, there can be varying levels of fixes for them. If the 
+application was developed internally, the source code can be updated to fix it. On the other 
+hand, if the vulnerability is in an purchased product, the business will need to wait for a 
+fix to come from a vendor. With Coraza WAF installed as a reverse-proxy, the business can 
+use Coraza without any integration into a purchased product and can then add or update a rule 
+within the firewall to reject requests that seek to exploit the found vulnerability. 
 
 ## Current security features ✈️
 
@@ -93,3 +118,23 @@ to drive community engagement and further adoption.
 I found the dependency graph to be extremely useful and something I hadn't really 
 spent a lot of time looking at before. The dependency graph also sports an Export
 as SBOM feature which is super useful.
+
+### Aaron Buesing
+
+**What did you learn from this assignment**
+
+I learned how big and how much variety there is in the Open Source world. Something small 
+like a library all the way up to fully-fledged applications with thousands or millions of 
+users. While knowing about Linux and Android (AOSP) being open source, it is still surprising 
+to see the vast number of other successful projects out there. It was also interesting to see 
+the level of maturity for different projects. Some projects didn't have formal documentation 
+or security/merge requirements listed within their projects so it would be a harder to start 
+contributing to the project, while some of the more mature projects had full documentation 
+and a single point to start learning how to contribute.
+
+**What did you find the most useful**
+
+I think having the websites that list open source projects was very helpful. Having them 
+broken down by application type/domain made it very easy to figure out a handful of projects 
+within a domain that a user is interested in. It is very intimidating to see thousands of 
+projects, so being able to narrow it down is very helpful.
