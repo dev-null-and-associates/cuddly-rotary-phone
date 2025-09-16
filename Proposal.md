@@ -120,10 +120,11 @@ Within Coraza you can enforce policies using the OWASP Core Ruleset, or create y
 Additionally, Coraza follows the "Guide to coordinated vulnerability disclosure for open source software projects" where possible > https://github.com/ossf/oss-vulnerability-guide
 
 Versions currently being supported with security updates.
-Version 	Supported 	EOL
-v1.2.x 	❌ 	Jun 1st 2022
-v2.x 	✅ 	TBD
-v3.x 	✅ 	Not defined
+| Version |  Supported |  	EOL |
+| ------ | ------ | ------ |
+| v1.2.x |  ❌ 	| Jun 1st 2022 |
+| v2.x |  ✅ | 	TBD |
+| v3.x |  	✅ |  	Not defined |
 
 https://github.com/corazawaf/coraza/blob/main/SECURITY.md
 
