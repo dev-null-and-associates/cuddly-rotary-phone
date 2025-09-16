@@ -55,6 +55,19 @@ The project follows a 90-day coordinated vulnerability disclosure policy. It als
 
 ## Team Motivation 🐉
 
+Our team selected the Coraza WAF because it is an OWASP production product with a strong community of users. 
+The user community gives us a fallback mechanism should we encounter difficulties with the product. 
+Additionally, the WAF is written in Golang, which is unfamiliar to the entire team. Finally,
+WAF's are just cool. A WAF needs to be able to process a large amount of requests with as little
+latency as possible while still providing protection from complex attack payloads. This functionality
+alone makes a WAF an interesting choice, but then when you layer on the additional interfaces and 
+integrations with third-party projects and libraries you end up with a very sophisticated application
+that must perform with high precision at optimum speeds. Every line of code has to be optimized so the WAF
+doesn't become a bottleneck and since this is a security device there must be a high degree of assurance that
+comes with the product. This blend of function, purpose, and being an unfamiliar language presents a unique
+opportunity for the team to dig into the internals and potentially make an impact that can benefit the rest
+of the open source community as a whole. 
+
 ## Selected Project Description 💂‍♂️
 
 For our team project we selected Coraza Web Application Firewall.
@@ -171,6 +184,21 @@ False Positives and Tuning, CRS provides generic attack detection capabilities. 
 Sampling mode makes it possible to run CRS on a limited percentage of traffic. The remaining traffic will bypass the rule set.
 
 ## Team Reflections 🏁
+
+### Team Reflection
+
+Large well supported open source projects produce a myriad of challenges that must be addressed in order to have a well functioning result.
+Leaning on the wider community and getting support from a well known "brand" within the open source ecosystem certainly helps, but it doesn't
+sprinkle magic security dust™️ on your product. In order to create a niche product in the open source space you must align from the beginning. 
+You must handle all of the side quests, community building, and documentation chores. You have to be responsive and able to move quickly when
+the time comes. 
+
+We were all surprised by the sheer volume of projects competing for funding, use, and adoption and found out quickly that not all open
+source projects are created equally. There's a big boon that comes from having rigor and adopting well tested methodologies that directly 
+impact the quality and **longevity** of an open source initiative. 
+
+Finally, we think there may be a market for an open source project aggregator that functions much like the Linux Foundation, but has better
+search/detail allowing for users/contributors/potential backers to find the project for them quickly and painlessly. 
 
 ### Jmcshannon 
 
