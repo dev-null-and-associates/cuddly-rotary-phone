@@ -232,3 +232,13 @@ Overall, I learned a lot about the open source community and how it works. One f
 **What did you find most useful**
 
 I found it particularly useful learn how contributions are made to open source projects often following a structured set of guidlines and procedures. These rules for contributing are critical to maintaining the health of an active project that might otherwise easily fall into chaos.
+
+### Mason Wagner
+
+**What did you learn from this assignment**
+
+The main takeaway for me from this assignment is how beneficial it can be to use OWASP. The community behind the Coraza WAF has bolstered the security of the application. Having a proper reporting channel for vulnerabilities and a team that works to fix them provides a great opportunity for users and owners to collab and make a great piece of secure software. Additionally, no matter how secure an open source project can be, it will still most likely have its fair share of vulnerabilities, we saw that in the various reported vulnerabilities. I think it is important with software, especially open-source, to stay on top of security and to provide and easy channel for reporting vulnerabilities.
+
+**What did you find most useful**
+
+Put simply, I found the size of the Coraza WAF to be the most useful part of this assignment. When doing research on the security-related history, I found it very easy to find blogs and CVE's related to the Coraza WAF. Having community backed applications that have many users allows for collaboration to more properly secure the application and improve its useaility.
