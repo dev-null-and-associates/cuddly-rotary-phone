@@ -39,6 +39,19 @@ use Coraza without any integration into a purchased product and can then add or 
 within the firewall to reject requests that seek to exploit the found vulnerability. 
 
 ## Current security features ✈️
+Coraza incorporates several security features to strengthen the WAF and reduce its attack surface.
+
+**Secure by Design**
+Coraza is written in Go which does benefit from memory safety and eliminates classes of vulnerabilities that are common in C/C++ applications like buffer overflows. Additionally, its strong typing and concurrency features reduce some of the risks of undefined behavior.
+
+**Rigorous Testing**
+To prevent evasion, every change is tested against the OWASP CRS regression suite. An automated CI/CD pipeline validates all pull requests with linting, formatting, and unit tests before they are merged.
+
+**Controlled Extensibility**
+Custom extensions can run inside of a sandboxed WebAssembly (WASM) environment. This ideally prevents faulty code from crashing the WAF. The modular plugin architecture also isolates integrations (like Nginx or Envoy) to try and reduce systemic risk.
+
+**Clear Security Policies**
+The project follows a 90-day coordinated vulnerability disclosure policy. It also maintains a supported version policy for security updates, and guarantees a response from the security team within three working days.
 
 ## Team Motivation 🐉
 
@@ -98,7 +111,21 @@ OWASP also maintains a page dedicated to Coraza and the discussion and Issues
 sections of GitHub also contain a wealth of information in addition to the example
 code found on the main GitHub.
 
-## Project Licensing, contribution procedures and contributor agreements ✈️
+## Project Licensing, Contribution Procedures, and Contributor Agreements ✈️
+Coraza WAF is licensed under the Apache License 2.0, a permissive license that allows commercial use, modification, distribution, and private use. The license requires that changes be documented and notices retained but imposes no restrictions on integration into commercial products.
+### Contribution Procedures
+According to the project’s `CONTRIBUTING.md`, contributors should:
+* Fork the repository and create a feature branch (`git checkout -b feature-xyz`).
+* Write tests for new features or bug fixes.
+* Ensure all tests pass (`go test ./...`) and code is properly formatted (`go fmt ./...`).
+* Run static analysis tools (`golangci-lint run`) to catch style and performance issues.
+* Open a pull request (PR) against the main branch with a clear description of the change.
+The repository uses GitHub Actions for CI, so each PR is automatically checked for formatting, tests, and lint compliance before review.
+### Code of Conduct and Security Policy
+Coraza follows the Contributor Covenant Code of Conduct v2.0, requiring respectful and inclusive participation.
+A Security Policy guides responsible vulnerability disclosure, including affected versions and reproduction steps.
+### Contributor Agreements
+Coraza does not require a Contributor License Agreement (CLA). By submitting a PR, contributors agree that their code is licensed under the project’s Apache-2.0 terms.
 
 ## Security related history of the project 🙈🙊🙉
 
@@ -195,3 +222,13 @@ of making changes, how some projects look to be totally locked down, and some ar
 
 Working on the system engineering view, reviewing the slides to better understand the pieces.  Looking at the
 way projects are tagged in GitHub to help narrow down the search for suitable projects.  
+
+### Aiden Barger
+
+**What did you learn from this assignment**
+
+Overall, I learned a lot about the open source community and how it works. One finding that suprised me was how a small number of individuals often contribute a large amount of code to projects used by many. Of course, this is part of the beauty of open source that many can benefit from the work of a few, but it is still surprising to see in action.
+
+**What did you find most useful**
+
+I found it particularly useful learn how contributions are made to open source projects often following a structured set of guidlines and procedures. These rules for contributing are critical to maintaining the health of an active project that might otherwise easily fall into chaos.
