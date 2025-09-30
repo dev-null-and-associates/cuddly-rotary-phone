@@ -86,7 +86,7 @@ The documentation is basically devoid of security-related configuration and inst
 ### How to improve the documentation
 As previously mentioned the documentation focuses on installation and some of the core features of the WAF, but provides near zero guidance on creating an enterprise or even SMB worthy deployment of the product so adding some of that documentation would be useful as well as documentation regarding the steps the developers and project team themselves take to provide integrity and provenance of their product.
 
-
+=======
 ## Use/Misuse Case - Logging, Monitoring and Alerting
 #### Aiden Barger
 
@@ -131,6 +131,32 @@ Visualizing the use cases for logging and monitoring data with a diagram was sup
 
 ### Documentation Gap
 The current Coraza documentation does a good job of detailing the audit logging directives but provides little guidance on secure log ingestion and monitoring that happens after the fact. It might be helpful to add a short "Secure Logging Setup" section that shows how to forward Coraza’s JSON audit logs to a common log stack. This would make it easier for operators to follow industry best practices for managing logs.
+---
+
+## Aaron Use Case
+Coraza WAF is able to be run as a module within some common reverse-proxies. This is helpful when a legacy application or an off-the shelf application is needing extra protection. Since the source code is not able to be modified, having Coraza sit in front of the application provides an extra layer of protection against some common attacks.
+
+
+![Legacy Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_usecase.png)
+
+![Fuzzing of Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_applicationfuzzing.drawio.png)
+
+### Security Requirements
+1) WAF should prevent any state changing web requests without a CSRF token
+2) IP Tables should be utilized to ensure all requests must come from WAF reverse-proxy server
+3) Custom rules can be implemented to further protect from malicious applications - this may require more information about expected input/output
+4) Limit over-sized inputs unless expected
+5) Verify input is valid within the character set passed in.
+
+### Assessment
+From the documentation: 🔌 Extensible - Coraza is a library at its core, with many integrations to deploy on-premise Web Application Firewall instances. Audit Loggers, persistence engines, operators, actions, create your own functionalities to extend Coraza as much as you want.
+
+While the default code base does not support CSRF out of the bag, but as it is an extensible library, you are free to write your own functionality. This can be useful here to extend the ruleset to drop any POST, PUT, or DELETE request without a corresponding CSRF token in the header.
+
+### Assignment Part 2
+Looking through some of the issues, there are a few documentation improvements needed. For example, you can install plugins for Coraza, but there isn't a README documentation about how to configure the plugin when it is included in a proxy server ![Issue Link](https://github.com/corazawaf/coraza-caddy/issues/160)
+
+The issues section of Coraza seem to be pretty well maintained. A lot of the issues with documentation have a 'Documentation' tag on them, so it is easy to spot. For example: ![documenting performance tweaks](https://github.com/corazawaf/coraza-caddy/issues). This makes for an easy start into documentation improvements.
 
 ### Leave this until all team members have submitted their changes and then condense
 ## Team Reflection
