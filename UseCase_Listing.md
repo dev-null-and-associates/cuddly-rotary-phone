@@ -36,7 +36,7 @@ Looking through the code, I found a AuditLog section, that should be used for re
 1. The main gap I have found thus far is related to emails passing through this project.  I do not see anything related to attachment security, anti virus, spam blocking
 
 ## Jmcshannon UseCase - WAF Platform Integrity
-![UC1: Deploy WAF to protect banking applications](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc1_jmcshannon.drawio.png)
+![UC1: Deploy WAF to protect banking applications](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc1_jmcshannon.drawio%20(2).png)
 ![UC2: Monitor and Maintain WAF Operations](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc2_jmcshannon.drawio.png)
 ![UC3: Rule Updates and Tuning](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc3_jmcshannon.drawio.png)
 ![UC4: Ensure WAF Integrity](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc4_jmcshannon.drawio.png)
