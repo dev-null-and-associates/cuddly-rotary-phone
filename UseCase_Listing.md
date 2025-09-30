@@ -88,11 +88,19 @@ As previously mentioned the documentation focuses on installation and some of th
 
 
 ## Aaron Use Case
+Coraza WAF is able to be run as a module within some common reverse-proxies. This is helpful when a legacy application or an off-the shelf application is needing extra protection. Since the source code is not able to be modified, having Coraza sit in front of the application provides an extra layer of protection against some common attacks.
+
+
 ![Legacy Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_usecase.png)
+
+![Fuzzing of Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_applicationfuzzing.drawio.png)
 
 ### Security Requirements
 1) WAF should prevent any state changing web requests without a CSRF token
 2) IP Tables should be utilized to ensure all requests must come from WAF reverse-proxy server
+3) Custom rules can be implemented to further protect from malicious applications - this may require more information about expected input/output
+4) Limit over-sized inputs unless expected
+5) Verify input is valid within the character set passed in.
 
 ### Assessment
 From the documentation: 🔌 Extensible - Coraza is a library at its core, with many integrations to deploy on-premise Web Application Firewall instances. Audit Loggers, persistence engines, operators, actions, create your own functionalities to extend Coraza as much as you want.
@@ -103,7 +111,6 @@ While the default code base does not support CSRF out of the bag, but as it is a
 Looking through some of the issues, there are a few documentation improvements needed. For example, you can install plugins for Coraza, but there isn't a README documentation about how to configure the plugin when it is included in a proxy server ![Issue Link](https://github.com/corazawaf/coraza-caddy/issues/160)
 
 The issues section of Coraza seem to be pretty well maintained. A lot of the issues with documentation have a 'Documentation' tag on them, so it is easy to spot. For example: ![documenting performance tweaks](https://github.com/corazawaf/coraza-caddy/issues). This makes for an easy start into documentation improvements.
-
 
 ### Leave this until all team members have submitted their changes and then condense
 ## Team Reflection
