@@ -1,9 +1,9 @@
 # Team 1 UseCase / MisUseCase
 
 ## Vandergriff UseCase - Employee access through WAF
-![UseCase 1](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/Vandergriff_usecase1.png)
-![UseCase 2](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/Vandergriff_usecase2.drawio.png)
-![UseCase 3](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/Vandergriff_usecase3.drawio.png)
+![UseCase 1](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase1.png)
+![UseCase 2](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase2.drawio.png)
+![UseCase 3](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase3.drawio.png)
 
 ## Use of AI
 ### Vandergriff
@@ -34,3 +34,57 @@ Looking through the code, I found a AuditLog section, that should be used for re
 ## Assignment Part 2
 ### Vandergriff
 1. The main gap I have found thus far is related to emails passing through this project.  I do not see anything related to attachment security, anti virus, spam blocking
+
+## Jmcshannon UseCase - WAF Platform Integrity
+![UC1: Deploy WAF to protect banking applications](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc1_jmcshannon.drawio.png)
+![UC2: Monitor and Maintain WAF Operations](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc2_jmcshannon.drawio.png)
+![UC3: Rule Updates and Tuning](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc3_jmcshannon.drawio.png)
+![UC4: Ensure WAF Integrity](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc4_jmcshannon.drawio.png)
+![UC5: Automate Updates and Deployment (CI/CD)](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc5_jmcshannon.drawio.png)
+
+## Use of AI
+### Jmcshannon
+I asked GPT the following: "Given an opensource WAF, what use cases could be created for systems administrators at a regional bank deploying the WAF in their environment. What are the misuse cases?" 
+I followed up with additional questions and conversation to restrict the use and misuse cases to sys admins/security engineers and operations CI/CD. I then asked the AI to generate UML for each of the use cases presented and adapted the UML diagrams to draw.io. Additionally I asked the AI to derive security requirements given the bounds of the use cases and actor persona.
+
+## Security Requirements
+
+### Jmcshannon
+
+1. **SR1: Hardened Deployment Configurations**
+2. **SR2: Separation of Environments**
+3. **SR3: Rule Change Control**
+4. **SR4: False Positive Management**
+5. **SR5: Secure Log Handling**
+6. **SR6: Access Control for Logs**
+7. **SR7: Continuous Monitoring**
+8. **SR8: Provenance Verification**
+9. **SR9: Dependency Security**
+10. **SR10: Third-Party Component Verification**
+11. **SR11: Automated Patch Management**
+12. **SR12: Version Pinning**
+13. **SR13: Update Validation**
+14. **SR14: Least Privilege Tokens**
+15. **SR15: Ephemeral Tokens**
+16. **SR16: Pipeline Activity Monitoring**
+17. **SR17: Segregation of Duties in CI/CD**
+
+## Assessment
+### Jmcshannon
+The documentation for the Coraza WAF project mainly focuses on the features of the WAF (Surprise, surprise), and doesn't include a lot of information about deployment/maintenance or assurance of the project. While there are some pages available on the instantion of the WAF and a quickstart for adding the WAF to a project there is really nothing about operations. In the code base I found some issues with the current handling of certain aspects that could lead to problems down the line for the maintainers and anyone who is dependent on this product.
+
+## Reflections
+### Jmcshannon
+I enjoy me a good diagram. I have learned that it helps to get a birds eye view of the interactions and putting user stories into diagrams helps to envision all of the ways that a software would be used as well as some likely ways it could be misused. I think the most useful takeaway for me is the concept of anti-requirements. I like that and I will use those moving forward.
+
+## Assignment Part 2
+### Jmcshannon
+The documentation is basically devoid of security-related configuration and installation information. There isn't much in the way of integration regarding things like MFA/SSO and there is a gap in the documentation with regards to properly vetting the ruleset. It basically relies on the core rule set documentation provided by the OWASP CRS maintainers, which while we could assume the CRS provides rules that are safe to use, a lot of work would need to be done to prevent oopsies with rules that block necessary traffic. 
+
+### How to improve the documentation
+As previously mentioned the documentation focuses on installation and some of the core features of the WAF, but provides near zero guidance on creating an enterprise or even SMB worthy deployment of the product so adding some of that documentation would be useful as well as documentation regarding the steps the developers and project team themselves take to provide integrity and provenance of their product.
+
+
+### Leave this until all team members have submitted their changes and then condense
+## Team Reflection
+
