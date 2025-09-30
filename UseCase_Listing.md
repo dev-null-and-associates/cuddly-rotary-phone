@@ -87,6 +87,51 @@ The documentation is basically devoid of security-related configuration and inst
 As previously mentioned the documentation focuses on installation and some of the core features of the WAF, but provides near zero guidance on creating an enterprise or even SMB worthy deployment of the product so adding some of that documentation would be useful as well as documentation regarding the steps the developers and project team themselves take to provide integrity and provenance of their product.
 
 
+## Use/Misuse Case - Logging, Monitoring and Alerting
+#### Aiden Barger
+
+### Use Case: Monitor and Respond to WAF Events
+**Actor:** Security Analyst
+
+**Basic Flow:**
+1. Coraza inspects HTTP requests using its rule set
+2. When a rule includes the `auditlog` action and logging conditions are met, Coraza writes an entry to the audit log
+3. A logging agent forwards audit entries to the monitoring platform
+4. The monitoring system detects patterns and raises alerts
+5. Security analyst reviews alerts, investigates logs, and takes action
+
+### Misuse Cases
+
+| Misuse Case | Misuser/Motive | Attack Vector | Security Requirements |
+|-------------|----------------|---------------|----------------------|
+| **Tampering with audit logs** | Malicious insider | Gains host access, modifies or deletes audit files, disables audit engine or auditlog actions | • Store audit logs with strict permissions (0600)<br>• Use remote cryptographically signed logs<br>• Limit who can modify Coraza configurations<br>• Monitor that AuditEngine remains On and audit logger is configured |
+| **Log flooding / alert fatigue** | Botnet operator | Sends high volumes of malicious requests to trigger excessive log entries and alerts | • Implement rate-limiting upstream<br>• Aggregate duplicate events to suppress redundant alerts<br>• Monitor log volume and set alerts on spikes |
+| **Insecure log transmission** | Man-in-the-middle attacker | Intercepts unencrypted audit logs, exfiltrating sensitive data or injecting falsified entries | • Forward logs using TLS and authenticated endpoints<br>• Apply integrity checks on log streams<br>• Avoid sending logs over insecure protocols |
+
+![Observability Use Case](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/diagrams/observabilityusecase.png)
+
+### Existing Features & Gaps
+
+**Tampering with logs:**
+- Coraza directives allow administrators to control file and directory modes, defaulting to 0600, which limits access to the owner
+- Does not provide cryptographic signing (external implementation required)
+- Audit engine only writes logs when certain conditions are met; disabling the engine or removing auditlog actions stops logging
+
+**Log flooding:**
+- Coraza logs every matched transaction unless configured otherwise, but lacks built-in rate limiting or log aggregation
+- Upstream tools should handle rate limiting and deduplication
+- Operators can adjust `SecAuditLogParts` to reduce log verbosity and use `SecAuditLogRelevantStatus` to log only certain status codes
+
+**Insecure transmission:**
+- Logging directives specify only the local file path; secure forwarding (TLS, authentication) must be configured in external log shippers
+- Coraza does not offer encryption for log outputs
+
+### Reflection
+Visualizing the use cases for logging and monitoring data with a diagram was super helpful in considering the potential misuses and gaps in the system. Of coures details matter, but the high level view of the data flow makes identifying the misuses more intuitive.
+
+### Documentation Gap
+The current Coraza documentation does a good job of detailing the audit logging directives but provides little guidance on secure log ingestion and monitoring that happens after the fact. It might be helpful to add a short "Secure Logging Setup" section that shows how to forward Coraza’s JSON audit logs to a common log stack. This would make it easier for operators to follow industry best practices for managing logs.
+
 ### Leave this until all team members have submitted their changes and then condense
 ## Team Reflection
 
