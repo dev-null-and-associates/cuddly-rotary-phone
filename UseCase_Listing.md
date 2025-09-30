@@ -1,9 +1,9 @@
 # Team 1 UseCase / MisUseCase
 
 ## Vandergriff UseCase - Employee access through WAF
-![UseCase 1](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase1.png)
-![UseCase 2](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase2.drawio.png)
-![UseCase 3](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_usecase3.drawio.png)
+![UseCase 1](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase1.png)
+![UseCase 2](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase2.drawio.png)
+![UseCase 3](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase3.drawio.png)
 
 ## Use of AI
 ### Vandergriff
