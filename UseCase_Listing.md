@@ -86,7 +86,7 @@ The documentation is basically devoid of security-related configuration and inst
 ### How to improve the documentation
 As previously mentioned the documentation focuses on installation and some of the core features of the WAF, but provides near zero guidance on creating an enterprise or even SMB worthy deployment of the product so adding some of that documentation would be useful as well as documentation regarding the steps the developers and project team themselves take to provide integrity and provenance of their product.
 
-=======
+---
 ## Use/Misuse Case - Logging, Monitoring and Alerting
 #### Aiden Barger
 
