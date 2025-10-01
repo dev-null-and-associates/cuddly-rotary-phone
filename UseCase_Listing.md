@@ -148,6 +148,9 @@ Coraza WAF is able to be run as a module within some common reverse-proxies. Thi
 4) Limit over-sized inputs unless expected
 5) Verify input is valid within the character set passed in.
 
+### Reflection
+At the beginning, the use case diagrams were a little challenging to wrap my head around. I have gone through a few different fake threat assessments at work, and while they had similar sections to these use cases, it was in a different format. Once I understood the layout/formatting of these use cases, it was nice to be able to take one use and work through the attacks and remediations one after the other. I think I still prefer a non-graph based format, but this is a super easy to understand layout that can help visual learners.
+
 ### Assessment
 From the documentation: 🔌 Extensible - Coraza is a library at its core, with many integrations to deploy on-premise Web Application Firewall instances. Audit Loggers, persistence engines, operators, actions, create your own functionalities to extend Coraza as much as you want.
 
