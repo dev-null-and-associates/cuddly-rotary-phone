@@ -161,7 +161,7 @@ Looking through some of the issues, there are a few documentation improvements n
 
 The issues section of Coraza seem to be pretty well maintained. A lot of the issues with documentation have a 'Documentation' tag on them, so it is easy to spot. For example: ![documenting performance tweaks](https://github.com/corazawaf/coraza-caddy/issues). This makes for an easy start into documentation improvements.
 
-=====
+---
 
 ## Mason Wagner UseCase - WAF Integration
 ![UC: Reverse Proxy Integration](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/Wagner_Use_Case.drawio.png)
@@ -183,7 +183,7 @@ I followed up with more specific questions about certain integration methods for
 
 ## Assessment
 ### Mason Wagner
-Coraza WAF has documentation on the Reverse Proxy integration - ![Caddy Reverse Proxy and Webserver Plugin](https://github.com/corazawaf/coraza-caddy/tree/main). Based on my misuse case analysis I would say my findings on the Caddy Reverse Proxy and Webserver Plugin provide sufficient security for the integration of the WAF. Albeit is up to the Security professional on the strategy they want to use for integration, based on my analysis I think a gradual enforcement would be the most efficient way.
+Coraza WAF has documentation on the Reverse Proxy integration - [Caddy Reverse Proxy and Webserver Plugin](https://github.com/corazawaf/coraza-caddy/tree/main). Based on my misuse case analysis I would say my findings on the Caddy Reverse Proxy and Webserver Plugin provide sufficient security for the integration of the WAF. Albeit is up to the Security professional on the strategy they want to use for integration, based on my analysis I think a gradual enforcement would be the most efficient way.
 
 ## Reflections
 ### Mason Wagner
