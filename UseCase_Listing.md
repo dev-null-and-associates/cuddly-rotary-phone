@@ -198,5 +198,6 @@ After looking through the github I did find some integration instructions for pl
 I think they could improve the documentation by adding in documentation regarding to testing the Coraza WAF and configuring the WAF to be implemented in different situations from a big enterprise all the way to a small business. The security related documentation is also lacking and could use some updating on the proper ways to integrate and maintain the WAF for the highest ability to stay secure.
 
 
-### Leave this until all team members have submitted their changes and then condense
 ## Team Reflection
+
+We all found diagrams helpful, however laying out with a table would add a dimension and likely be better for documentation purposes (Diagrams and Spreadsheets). We found that being able to view the use cases and misuse cases through the lens of requirements helped us establis the potential misuse cases and determine the appropriate set of security requirements for our product. Finally, breaking the team out into domains was extremely helpful for providing a robust set of requirements and potential use/abuse cases.
