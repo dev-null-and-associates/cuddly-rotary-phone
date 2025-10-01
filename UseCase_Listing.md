@@ -200,4 +200,4 @@ I think they could improve the documentation by adding in documentation regardin
 
 ## Team Reflection
 
-We all found diagrams helpful, however laying out with a table would add a dimension and likely be better for documentation purposes (Diagrams and Spreadsheets). We found that being able to view the use cases and misuse cases through the lens of requirements helped us establis the potential misuse cases and determine the appropriate set of security requirements for our product. Finally, breaking the team out into domains was extremely helpful for providing a robust set of requirements and potential use/abuse cases.
+We all found diagrams helpful, however laying the diagrams out with a table would add a dimension and likely be better for documentation purposes (Diagrams and Spreadsheets). We found that being able to view the use cases and misuse cases through the lens of requirements helped us establish the potential misuse cases and determine the appropriate set of security requirements for our product. Finally, breaking the team out into domains was extremely helpful for providing a robust set of requirements and potential use/abuse cases.
