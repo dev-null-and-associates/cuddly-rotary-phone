@@ -191,7 +191,7 @@ I think that visualizing the good and bad parts of the integration aspect helps 
 
 ## Assignment Part 2
 ### Mason Wagner
-After looking through the github I did find some integration instructions for plug-ins regarding the reverse proxy. There is some information regarding the Core Rule Set provided by the Coraza WAF: ![Ruleset](https://github.com/corazawaf/coraza-caddy/issues/143). There are some, albeit limited, integration instructions for the WAF: ![Caddy Reverse Proxy and Webserver Plugin](https://github.com/corazawaf/coraza-caddy/tree/main).
+After looking through the github I did find some integration instructions for plug-ins regarding the reverse proxy. There is some information regarding the Core Rule Set provided by the Coraza WAF: [Ruleset](https://github.com/corazawaf/coraza-caddy/issues/143). There are some, albeit limited, integration instructions for the WAF: [Caddy Reverse Proxy and Webserver Plugin](https://github.com/corazawaf/coraza-caddy/tree/main).
 
 
 ### How to improve the documentation
