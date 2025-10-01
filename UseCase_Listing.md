@@ -172,12 +172,11 @@ I followed up with more specific questions about certain integration methods for
 
 ### Mason Wagner
 
-1. Reverse proxy operates at the edge of the traffic, i.e. before it reaches the application.
-2. Anomaly scoring and custom rules in order to reduce false positives
-3. High Availibility is necessary for eliminating a single point of failure.
-4. High Availbility is needed for scaling to handle additional traffic.
-5. Fault tolerance is necessary for providing protection even if a component of the system fails.
-6. TLS termination to inspect HTTP traffic.
+1. Anomaly scoring and custom rules in order to reduce false positives
+2. High Availibility is necessary for eliminating a single point of failure.
+3. High Availbility is needed for scaling to handle additional traffic.
+4. Fault tolerance is necessary for providing protection even if a component of the system fails.
+5. All inbound TLS traffic must be terminated at the WAF to allow for full inspection. Immediately after inspection, the WAF must re-establish TLS and forward traffic to backend application servers over a secure channel.
 
 ## Assessment
 ### Mason Wagner
