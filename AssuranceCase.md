@@ -87,6 +87,15 @@ Coraza’s audit logging system as defined in the auditlog package supports both
 
 However, some gaps remain. The repo does not necessarily include empirical proof that logs retain correct permissions across deployments or that entries cannot be lost or altered under high load.
 
+
+
+### Case Four
+![Matthew Assurance Case](/diagrams/assurance_case_diagrams/vandergriff_AssuranceCase.drawio.png)
+
+#### Reflection on Prompt
+  I asked AI, how would a WAF deal with IP blocking.  I knew it could, but would it be covered by a WAF, or a regular FW?  Provided me with the Rules concept.
+
+  
 ### Reflections
 
 #### Aaron Buesing
@@ -110,5 +119,8 @@ a case switch where I was able to follow a path until it terminated and clearly 
 
 #### Aiden Barger
 In this assignment I of course learned how to build the evidence backed claims that allow us to have trust in our open source software. Actually developing the assurance case helped show me how the claims, rebuttals, and evidence are all connected logically. It’s also much more clear to me now how each must be supported by something measurable so that they can be proved or disproved.
+
+#### Mathew Vandergriff
+I thought this exercise was very good, from a logic perspective.  It was interesting to make a claim about functionality, and then come up with arguments as to why it was or was not so.  Much better than the simple argument of "Because it is", or "Because I see it in the code".  Just because you have some logic in the code to address your claim, are you really sure you have it all covered?  Each claim made me take another look, and ask, is that all?  Can I go further, ask more?
 
 ## Single Team Reflection
