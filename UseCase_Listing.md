@@ -1,9 +1,9 @@
 # Team 1 UseCase / MisUseCase
 
 ## Vandergriff UseCase - Employee access through WAF
-![UseCase 1](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase1.png)
-![UseCase 2](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase2.drawio.png)
-![UseCase 3](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/vandergriff_UseCase3.drawio.png)
+![UseCase 1](/diagrams/use_case_diagrams/vandergriff_UseCase1.png)
+![UseCase 2](/diagrams/use_case_diagrams/vandergriff_UseCase2.drawio.png)
+![UseCase 3](/diagrams/use_case_diagrams/vandergriff_UseCase3.drawio.png)
 
 ## Use of AI
 ### Vandergriff
@@ -38,11 +38,11 @@ Looking through the code, I found a AuditLog section, that should be used for re
 ---
 
 ## Jmcshannon UseCase - WAF Platform Integrity
-![UC1: Deploy WAF to protect banking applications](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc1_jmcshannon.drawio%20(2).png)
-![UC2: Monitor and Maintain WAF Operations](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc2_jmcshannon.drawio.png)
-![UC3: Rule Updates and Tuning](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc3_jmcshannon.drawio.png)
-![UC4: Ensure WAF Integrity](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc4_jmcshannon.drawio.png)
-![UC5: Automate Updates and Deployment (CI/CD)](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/uc5_jmcshannon.drawio.png)
+![UC1: Deploy WAF to protect banking applications](/diagrams/use_case_diagrams/uc1_jmcshannon.drawio%20(2).png)
+![UC2: Monitor and Maintain WAF Operations](/diagrams/use_case_diagrams/uc2_jmcshannon.drawio.png)
+![UC3: Rule Updates and Tuning](/diagrams/use_case_diagrams/uc3_jmcshannon.drawio.png)
+![UC4: Ensure WAF Integrity](/diagrams/use_case_diagrams/uc4_jmcshannon.drawio.png)
+![UC5: Automate Updates and Deployment (CI/CD)](/diagrams/use_case_diagrams/uc5_jmcshannon.drawio.png)
 
 ## Use of AI
 ### Jmcshannon
@@ -108,7 +108,7 @@ As previously mentioned the documentation focuses on installation and some of th
 | **Log flooding / alert fatigue** | Botnet operator | Sends high volumes of malicious requests to trigger excessive log entries and alerts | • Implement rate-limiting upstream<br>• Aggregate duplicate events to suppress redundant alerts<br>• Monitor log volume and set alerts on spikes |
 | **Insecure log transmission** | Man-in-the-middle attacker | Intercepts unencrypted audit logs, exfiltrating sensitive data or injecting falsified entries | • Forward logs using TLS and authenticated endpoints<br>• Apply integrity checks on log streams<br>• Avoid sending logs over insecure protocols |
 
-![Observability Use Case](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/diagrams/observabilityusecase.png)
+![Observability Use Case](/diagrams/use_case_diagrams/observabilityusecase.png)
 
 ### Existing Features & Gaps
 
@@ -137,9 +137,9 @@ The current Coraza documentation does a good job of detailing the audit logging 
 Coraza WAF is able to be run as a module within some common reverse-proxies. This is helpful when a legacy application or an off-the shelf application is needing extra protection. Since the source code is not able to be modified, having Coraza sit in front of the application provides an extra layer of protection against some common attacks.
 
 
-![Legacy Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_usecase.png)
+![Legacy Application](/diagrams/use_case_diagrams/aaron_usecase.png)
 
-![Fuzzing of Application](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/aaron_applicationfuzzing.drawio.png)
+![Fuzzing of Application](/diagrams/use_case_diagrams/aaron_applicationfuzzing.drawio.png)
 
 ### Security Requirements
 1) WAF should prevent any state changing web requests without a CSRF token
@@ -164,7 +164,7 @@ The issues section of Coraza seem to be pretty well maintained. A lot of the iss
 =====
 
 ## Mason Wagner UseCase - WAF Integration
-![UC: Reverse Proxy Integration](https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/Wagner_Use_Case.drawio.png)
+![UC: Reverse Proxy Integration](/diagrams/use_case_diagrams/Wagner_Use_Case.drawio.png)
 
 ## Use of AI
 ### Mason Wagner
