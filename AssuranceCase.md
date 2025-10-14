@@ -48,6 +48,20 @@ Compensating controls implemented in lieu of a patch may degrade in effectivenes
 #### Reflection on Prompt:
 This prompted me to go with the whole weekly risk review process.
 
+### Case Three
+#### Top-Level Claim
+"Coraza WAF ensures tamper-proof audit logging"
+
+![Aiden Assurance Case](/diagrams/assurance_case_diagrams/AidenAssuranceCase.png)
+
+#### AI Prompt:
+
+You are an expert software security engineer. Your job is to improve the phrasing of assurance claims for an open-source web application firewall (Coraza WAF), focusing specifically on tamper-proof audit logging. Claims should describe outcomes, not mechanisms,for example, “Coraza WAF ensures audit logs cannot be altered without detection” rather than “Coraza uses file permissions.” Each claim must include the entity (Coraza WAF), a security property (log integrity), and the desired assurance value (tamper-proof). Identify clear “unless” rebuttals for each potential weakness, and end every argument branch with measurable, tangible evidence such as file permission settings, auditlog configuration defaults, or structured log format documentation.
+
+#### Reflection on Prompt:
+
+This focused prompt helped refine the tamper-proof logging claim so that it was concise had a clear desired outcome. It ensured that arguments emphasized security properties rather than details about implementation.
+
 ## Part Two
 
 ### Case One
@@ -67,6 +81,11 @@ present in which case we would need
 1) The manual patching logs showing that a patch was performed and that the critical cve is no longer listed
 2) The risk register/tickets referencing the case where there is a critical vulnerability and a patch does not exist or cannot be implemented.
 
+### Case Three
+Most of the evidence for the tamper-proof audit logging claim can be found already in the Coraza WAF repo and docs.
+Coraza’s audit logging system as defined in the auditlog package supports both serial and concurrent writers, structured formats (JSON and Native), and default secure permissions (0600) for log files and directories. These features are confirmed in the Coraza docs and configuration files like coraza.conf-recommended.
+
+However, some gaps remain. The repo does not necessarily include empirical proof that logs retain correct permissions across deployments or that entries cannot be lost or altered under high load.
 
 
 
@@ -98,6 +117,8 @@ I learned that the accepted methods for creating assurance cases are very narrow
 I found the rebuttals to be the most useful. I'm somewhat familiar with the assurance case, but the rebuttals felt a lot like
 a case switch where I was able to follow a path until it terminated and clearly define what should be present to provide assurane and I liked that because it was a proactive exercise instead of a reactive one.
 
+#### Aiden Barger
+In this assignment I of course learned how to build the evidence backed claims that allow us to have trust in our open source software. Actually developing the assurance case helped show me how the claims, rebuttals, and evidence are all connected logically. It’s also much more clear to me now how each must be supported by something measurable so that they can be proved or disproved.
 
 #### Mathew Vandergriff
 I thought this exercise was very good, from a logic perspective.  It was interesting to make a claim about functionality, and then come up with arguments as to why it was or was not so.  Much better than the simple argument of "Because it is", or "Because I see it in the code".  Just because you have some logic in the code to address your claim, are you really sure you have it all covered?  Each claim made me take another look, and ask, is that all?  Can I go further, ask more?
