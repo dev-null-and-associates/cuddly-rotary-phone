@@ -68,6 +68,15 @@ present in which case we would need
 2) The risk register/tickets referencing the case where there is a critical vulnerability and a patch does not exist or cannot be implemented.
 
 
+
+
+### Case Four
+![Matthew Assurance Case](/diagrams/assurance_case_diagrams/vandergriff_AssuranceCase.drawio.png)
+
+#### Reflection on Prompt
+  I asked AI, how would a WAF deal with IP blocking.  I knew it could, but would it be covered by a WAF, or a regular FW?  Provided me with the Rules concept.
+
+  
 ### Reflections
 
 #### Aaron Buesing
@@ -88,5 +97,9 @@ I learned that the accepted methods for creating assurance cases are very narrow
 
 I found the rebuttals to be the most useful. I'm somewhat familiar with the assurance case, but the rebuttals felt a lot like
 a case switch where I was able to follow a path until it terminated and clearly define what should be present to provide assurane and I liked that because it was a proactive exercise instead of a reactive one.
+
+
+#### Mathew Vandergriff
+I thought this exercise was very good, from a logic perspective.  It was interesting to make a claim about functionality, and then come up with arguments as to why it was or was not so.  Much better than the simple argument of "Because it is", or "Because I see it in the code".  Just because you have some logic in the code to address your claim, are you really sure you have it all covered?  Each claim made me take another look, and ask, is that all?  Can I go further, ask more?
 
 ## Single Team Reflection
