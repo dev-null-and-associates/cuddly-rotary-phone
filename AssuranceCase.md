@@ -5,7 +5,7 @@
 ### Case One
 ![Aaron Assurance Case](/diagrams/assurance_case_diagrams/AaronAssuranceCase.png)
 
-AI Prompt from assignment:  
+#### AI Prompt from assignment:  
 You are an expert software security engineer. Your job is to suggest rebutting defeater for a given assurance claim 
 using the concept of eliminative induction where support/assurance increases as reasons for doubt are eliminated.  
 Here is an example claim for which rebutting defeaters are identified.   
@@ -24,6 +24,7 @@ Rebuttal 1: Unless backend server is directly exposed to the internet
 Rebuttal 2: Unless WAF fails to initialize  
 Rebuttal 3: Unless the WAF is in detection-only mode
 
+#### Reflection on Prompt: 
 The first two rebuttals were captured by myself initially before the AI helped out - just in different words. This made
 me more confident in making my own rebuttals. The only new one was rebuttal 3. After looking at it for a while, I didn't
 think it would be a valid rebuttal, as the claim was that all requests went through the WAF, not necessarily that all 
@@ -32,7 +33,8 @@ the requests were being verified/validated by the WAF. Maybe this would be a goo
 ### Case Two
 ![Jmcshannon Assurance Case](/diagrams/assurance_case_diagrams/Assurance%20Case.drawio.png)
 
-AI Prompt: I am working on an assurance case for Coraza WAF operating in a regional bank environment. My top level claim
+#### AI Prompt: 
+I am working on an assurance case for Coraza WAF operating in a regional bank environment. My top level claim
 is that the WAF is free from critical CVE's and for one of my rebuttals I have "No suitable patch exists" what should my sub-claim be?
 
 GPT responded with a sub-claim to control risk when no patch exists.
@@ -43,6 +45,7 @@ I then asked "describe an undermining detractor for the above sub-claim"
 and received "Undermining Detractor: Stale or ineffective Compensating controls
 Compensating controls implemented in lieu of a patch may degrade in effectiveness over time, fail to fully mitigate the vulnerability, or become obsolete as the threat landscape evolves — leading to unmitigated exposure despite perceived protection."
 
+#### Reflection on Prompt:
 This prompted me to go with the whole weekly risk review process.
 
 ## Part Two
@@ -80,7 +83,7 @@ that nobody would ever do it (like having a lightbulb with no power and expectin
 addressed. Some of the most embarrassing flaws I have dealt with in my own programs were because assumptions were made,
 but if I had addressed the 'nobody would do this' issues, I wouldn't have had to deal with the mess afterwards.
 
-### Jmcshannon
+#### Jmcshannon
 I learned that the accepted methods for creating assurance cases are very narrow and much more defined. I was winging it.
 
 I found the rebuttals to be the most useful. I'm somewhat familiar with the assurance case, but the rebuttals felt a lot like
