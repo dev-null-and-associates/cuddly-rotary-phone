@@ -70,10 +70,15 @@ This focused prompt helped refine the tamper-proof logging claim so that it was 
 
 
 ### Case Four
+#### Top-Level Claim
+"Only valid people are able to log in through WAF"
 ![Matthew Assurance Case](/diagrams/assurance_case_diagrams/vandergriff_AssuranceCase.drawio.png)
 
+#### AI Prompt:
+You are an an expert software security engineer.  Your job is to work on a WAF.  Is it possible for a WAF to institue IP WhiteListing
+
 #### Reflection on Prompt
-  I asked AI, how would a WAF deal with IP blocking.  I knew it could, but would it be covered by a WAF, or a regular FW?  Provided me with the Rules concept.
+ The AI came back with yes, it would be setup through the WAF Rule Set.  This helped me confirm a 3rd Rebuttal defeater.
 
 
 ### Case Five
@@ -119,6 +124,8 @@ Coraza’s audit logging system as defined in the auditlog package supports both
 
 However, some gaps remain. The repo does not necessarily include empirical proof that logs retain correct permissions across deployments or that entries cannot be lost or altered under high load.
 
+### Case Four
+There currently exists a series of logging options within the Coraza WAF, that could be used to support my Assurance Case.  The audit log would be the most logical place to find any information related to login attempts, or hits against the IP Whitelisting.  The regular log file would likely be the location for any SQL Injection rejections.
 
 ### Case Five
 For the most part there is a lot of documentation regarding implementation of the Coraza WAF which would be the evidence necessary for a few claims.
