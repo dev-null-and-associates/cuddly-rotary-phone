@@ -70,6 +70,9 @@ This focused prompt helped refine the tamper-proof logging claim so that it was 
 
 
 ### Case Four
+#### Top Level Claim
+"Only valid people ae able to log in through WAF"
+
 ![Matthew Assurance Case](/diagrams/assurance_case_diagrams/vandergriff_AssuranceCase.drawio.png)
 
 #### Reflection on Prompt
