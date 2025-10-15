@@ -62,6 +62,21 @@ You are an expert software security engineer. Your job is to improve the phrasin
 
 This focused prompt helped refine the tamper-proof logging claim so that it was concise had a clear desired outcome. It ensured that arguments emphasized security properties rather than details about implementation.
 
+### Case Four
+![Mason Wagner Assurance Case](/diagrams/assurance_case_diagrams/MasonAssuranceCase.png)
+
+#### AI Prompt: 
+You are a senior-level security engineer at a bank, you are creating an assurance case on the Coraza WAF and your Top-level claim is: Coraza WAF minimizes Injection attacks. What would be four good starting rebuttals?
+
+GPT Responded with: 
+1. Coverage Limitation: Not all traffic paths are inspected.
+2. Rule Maintenance: Rules must be current and tuned.
+3. Operational Bypass: False positives can weaken defense.
+4. Dependency on App Controls: WAF is only one layer in defense-in-depth.
+
+#### Reflection on Prompt:
+The prompt allowed me to see some different ideas of Rebuttals to go against my claim, I had to do some reqording of the prompts in order for it to fit exactly what I needed, but the structured prompt allowed me to get the ball rolling with some good rebuttal ideas.
+
 ## Part Two
 
 ### Case One
@@ -95,6 +110,13 @@ However, some gaps remain. The repo does not necessarily include empirical proof
 #### Reflection on Prompt
   I asked AI, how would a WAF deal with IP blocking.  I knew it could, but would it be covered by a WAF, or a regular FW?  Provided me with the Rules concept.
 
+### Case Five
+For the most part there is a lot of documentation regarding implementation of the Coraza WAF which would be the evidence necessary for a few claims.
+
+They also have a pretty well detail GitHub and website that notes on releases and updates that the Coraza WAF team and the community put out.
+
+However, there are some gaps when it comes to actually having log examples, we would need to do some testing and get logs to actually provide the evidence.
+
   
 ### Reflections
 
@@ -122,5 +144,10 @@ In this assignment I of course learned how to build the evidence backed claims t
 
 #### Mathew Vandergriff
 I thought this exercise was very good, from a logic perspective.  It was interesting to make a claim about functionality, and then come up with arguments as to why it was or was not so.  Much better than the simple argument of "Because it is", or "Because I see it in the code".  Just because you have some logic in the code to address your claim, are you really sure you have it all covered?  Each claim made me take another look, and ask, is that all?  Can I go further, ask more?
+
+### Mason Wagner
+For this assignment I learned a lot more about what it actually takes to create and assurance case and a proper diagram. On the previous assignment I wasn't fully aware of what was needed in the diagram, however, after the discussion my team held over the topic I was able to see what was needed.
+
+I think this exercise is really useful for actually putting into perspective what kind of worries/problems could arise with integrating something such as the Coraza WAF. I also think that using AI tools such as Chat GPT can provide other windows of collaboration and rebuttals that you may not think of at the moment.
 
 ## Single Team Reflection
