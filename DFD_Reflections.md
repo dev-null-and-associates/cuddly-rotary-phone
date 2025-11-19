@@ -23,3 +23,16 @@ all the non-standard objects a diagram could be built of.
 
 So overall, I would say it was a good place to start from, but would need to
 be expanded upon to have a more complete picture of the threat landscape.
+
+## Mason's Reflection
+Based on the expected mitigations from the STRIDE-based threat analysis, there 
+are some gaps between identified threats. Several classes of threats such as 
+transport security, privilege boundaries, storage integrity, anti-automation, 
+and behavioral control are not addressed.
+
+I learned a lot from this assignment, particularyl in making a DFD and using the 
+MTM tool to automate threat detection. However, I do think it would possibly had 
+been a bit easier for our group, had our Use/Mis-use cases been more solid. We did 
+take an approach based on feedback that allowed us to use those cases better. I 
+personally found the MTM tool very useful as it allowed us to automate threat detection, 
+which helps see threats you may not inherently think of.
