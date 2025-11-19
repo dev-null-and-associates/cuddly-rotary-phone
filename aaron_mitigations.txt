@@ -1,5 +1,0 @@
-11. Connection is provided over https. Valid server certificate mitigates spoofed service
-12. Proxy Response is a response to a request - WAF doesn't accept incoming connections from Requested Web Service
-13. Not Applicable 
-14. WAF statically analyzes responses from web servers against the rulesets enabled, it doesn't execute any code in responses.
-15. WAF statically analyzes responses from web servers against the rulesets enabled, it doesn't execute any code in responses.
