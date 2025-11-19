@@ -24,6 +24,22 @@ all the non-standard objects a diagram could be built of.
 So overall, I would say it was a good place to start from, but would need to
 be expanded upon to have a more complete picture of the threat landscape.
 
+## Mason's Reflection
+Based on the expected mitigations from the STRIDE-based threat analysis, there 
+are some gaps between identified threats. Several classes of threats such as 
+transport security, privilege boundaries, storage integrity, anti-automation, 
+and behavioral control are not addressed.
+
+I learned a lot from this assignment, particularyl in making a DFD and using the 
+MTM tool to automate threat detection. However, I do think it would possibly had 
+been a bit easier for our group, had our Use/Mis-use cases been more solid. We did 
+take an approach based on feedback that allowed us to use those cases better. I 
+personally found the MTM tool very useful as it allowed us to automate threat detection, 
+which helps see threats you may not inherently think of.
+
 ## Matthew Vandergriff Reflections
-I thought this was an interesting project, in that it showed how succinct a drawing can be, and then putting it through the threat modeling tool, the volume of threats that can be generated was startling. Just looking at the number of threats, it really was much bigger than what I thought would come out.  Much bigger than what I could think of, just looking at the DFD.
-I thought the tool worked out well, and was fairly straight forward.  Being able to run the tool through, and what threats popped out, made me look closer at the DFD, and think about what maybe needed changing.
+I thought this was an interesting project, in that it showed how succinct a drawing can be, 
+and then putting it through the threat modeling tool, the volume of threats that can be generated was startling.
+Just looking at the number of threats, it really was much bigger than what I thought would come out. 
+Much bigger than what I could think of, just looking at the DFD.I thought the tool worked out well, and was fairly straight forward.
+Being able to run the tool through, and what threats popped out, made me look closer at the DFD, and think about what maybe needed changing
