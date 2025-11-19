@@ -12,4 +12,4 @@ that have been lodged on the GitHub repository for Coraza WAF we see that there 
 reports of uncontrolled resource consumption (CWE-400) which appears to have been addressed,
 but still would give a risk adverse organization such as our bank pause before adopting this technology.
 
-Our work is available here: [Coraza WAF Threat Model] (https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/diagrams/data_flow_diagrams/DFD%20-%20Proxy%20User%20Request.htm)
+Our work is available here: [Coraza WAF Threat Model](https://htmlpreview.github.io/?https://github.com/dev-null-and-associates/cuddly-rotary-phone/blob/main/diagrams/data_flow_diagrams/DFD%20-%20Proxy%20User%20Request.htm)
