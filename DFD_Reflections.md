@@ -23,3 +23,7 @@ all the non-standard objects a diagram could be built of.
 
 So overall, I would say it was a good place to start from, but would need to
 be expanded upon to have a more complete picture of the threat landscape.
+
+## Matthew Vandergriff Reflections
+I thought this was an interesting project, in that it showed how succinct a drawing can be, and then putting it through the threat modeling tool, the volume of threats that can be generated was startling. Just looking at the number of threats, it really was much bigger than what I thought would come out.  Much bigger than what I could think of, just looking at the DFD.
+I thought the tool worked out well, and was fairly straight forward.  Being able to run the tool through, and what threats popped out, made me look closer at the DFD, and think about what maybe needed changing.
