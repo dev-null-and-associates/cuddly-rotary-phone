@@ -1,4 +1,4 @@
-# Cuddly-Rotary-Phone Coraza WAF Code Review
+# WAF Code Review
 
 ## Strategy
 We are going with a hybrid approach where we are performing a checlist and scenario based code review strategy leveraging automated tools to refine what we should look at manually. 
@@ -49,7 +49,7 @@ While automated tools are great and drastically reduce the amount of time a code
 
 Because I am not a Golang afficionado I leveraged AI to assist with understanding functions quickly and verifying if the results from the gosec plugin were correct.
 
-### Manual Analysis Results
+# Manual Analysis Results
 
 ## CWE-190 Integer Overflow or Wraparound
 
