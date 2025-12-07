@@ -51,7 +51,7 @@ Because I am not a Golang afficionado I leveraged AI to assist with understandin
 
 ### Manual Analysis Results
 
-##CWE-190 Integer Overflow or Wraparound
+## CWE-190 Integer Overflow or Wraparound
 
 This bug is located in the internal/auditlog/formats_ocsf.go file which provides a standard logging format that             adheres to the OCSF standard. The code blocks referenced are for HTTP status codes and this wouldn't provide a              feasible risk of CWE-190.
 
@@ -73,7 +73,7 @@ internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -
 internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)
 internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)
 
-##CWE-252 Unchecked Return Value
+## CWE-252 Unchecked Return Value
 
 
 http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)
