@@ -1,0 +1,2672 @@
+http/e2e/e2e.go:252:20: non-canonical header "coraza-e2e", instead use: "Coraza-E2e" (canonicalheader)
+				req.Header.Add("coraza-e2e", "ok")
+				               ^
+http/e2e/e2e.go:300:18: non-canonical header "coraza-e2e", instead use: "Coraza-E2e" (canonicalheader)
+		req.Header.Add("coraza-e2e", "ok")
+		               ^
+internal/seclang/generator/main.go:4:1: the average complexity for the package main is 14.000000, max is 10.000000 (cyclop)
+package main
+^
+internal/variables/generator/main.go:4:1: the average complexity for the package main is 10.500000, max is 10.000000 (cyclop)
+package main
+^
+internal/variables/variables_test.go:14:1: the average complexity for the package variables is 36.500000, max is 10.000000 (cyclop)
+package variables
+^
+debuglog/default.go:9:2: import 'log' is not allowed from list 'non-main files': Use log/slog instead, see https://go.dev/blog/slog (depguard)
+	"log"
+	^
+http/interceptor.go:13:2: import 'log' is not allowed from list 'non-main files': Use log/slog instead, see https://go.dev/blog/slog (depguard)
+	"log"
+	^
+internal/auditlog/concurrent_writer.go:12:2: import 'log' is not allowed from list 'non-main files': Use log/slog instead, see https://go.dev/blog/slog (depguard)
+	"log"
+	^
+internal/auditlog/serial_writer.go:8:2: import 'log' is not allowed from list 'non-main files': Use log/slog instead, see https://go.dev/blog/slog (depguard)
+	"log"
+	^
+internal/strings/strings.go:7:2: import 'math/rand' is not allowed from list 'non-test files': Use math/rand/v2 instead, see https://go.dev/blog/randv2 (depguard)
+	"math/rand"
+	^
+internal/auditlog/concurrent_writer.go:28:2: embedded fields should be listed before regular fields (embeddedstructfieldcheck)
+	io.Closer
+	^
+internal/auditlog/concurrent_writer_test.go:50:2: there must be an empty line separating embedded fields from regular fields (embeddedstructfieldcheck)
+	plugintypes.AuditLogFormatter
+	^
+internal/auditlog/https_writer.go:22:2: there must be an empty line separating embedded fields from regular fields (embeddedstructfieldcheck)
+	io.Closer
+	^
+internal/auditlog/serial_writer.go:16:2: there must be an empty line separating embedded fields from regular fields (embeddedstructfieldcheck)
+	io.Closer
+	^
+internal/auditlog/syslog_writer.go:28:2: there must be an empty line separating embedded fields from regular fields (embeddedstructfieldcheck)
+	Syslog
+	^
+internal/auditlog/syslog_writer_test.go:250:2: sync.Mutex should not be embedded (embeddedstructfieldcheck)
+	sync.Mutex
+	^
+internal/corazawaf/rule.go:138:2: embedded fields should be listed before regular fields (embeddedstructfieldcheck)
+	inferredPhases
+	^
+debuglog/default.go:124:42: Error return value is not checked (errcheck)
+		defaultFields: append(l.defaultFields, e.(*defaultEvent).fields...),
+		                                       ^
+internal/actions/allow.go:58:8: Error return value is not checked (errcheck)
+	tx := txS.(*corazawaf.Transaction)
+	      ^
+internal/actions/auditlog.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = true
+	^
+internal/actions/capture.go:34:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Capture = true
+	^
+internal/actions/chain.go:53:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).HasChain = true
+	^
+internal/actions/ctl.go:130:8: Error return value is not checked (errcheck)
+	tx := txS.(*corazawaf.Transaction)
+	      ^
+internal/actions/ctl.go:232:4: Error return value is not checked (errcheck)
+			tx.Variables().RequestBodyProcessor().(*collections.Single).Set(strings.ToUpper(a.value))
+			^
+internal/actions/ctl.go:348:4: Error return value is not checked (errcheck)
+			tx.Variables().ResponseBodyProcessor().(*collections.Single).Set(strings.ToUpper(a.value))
+			^
+internal/actions/id.go:39:8: Error return value is not checked (errcheck)
+	cr := r.(*corazawaf.Rule)
+	      ^
+internal/actions/log.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Log = true
+	^
+internal/actions/log.go:29:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = true
+	^
+internal/actions/logdata.go:35:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).LogData = m
+	^
+internal/actions/maturity.go:38:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Maturity_ = m
+	^
+internal/actions/msg.go:35:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Msg = msg
+	^
+internal/actions/multimatch.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).MultiMatch = true
+	^
+internal/actions/noauditlog.go:32:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = false
+	^
+internal/actions/nolog.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Log = false
+	^
+internal/actions/nolog.go:29:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = false
+	^
+internal/actions/phase.go:46:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Phase_ = p
+	^
+internal/actions/rev.go:30:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Rev_ = data
+	^
+internal/actions/severity.go:48:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Severity_ = sev
+	^
+internal/actions/skip.go:51:2: Error return value is not checked (errcheck)
+	tx.(*corazawaf.Transaction).Skip = a.data
+	^
+internal/actions/skipafter.go:61:2: Error return value is not checked (errcheck)
+	tx.(*corazawaf.Transaction).SkipAfter = a.data
+	^
+internal/actions/status.go:37:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).DisruptiveStatus = status
+	^
+internal/actions/t.go:30:3: Error return value is not checked (errcheck)
+		r.(*corazawaf.Rule).ClearTransformations()
+		^
+internal/actions/t.go:38:9: Error return value is not checked (errcheck)
+	return r.(*corazawaf.Rule).AddTransformation(data, tt)
+	       ^
+internal/actions/tag.go:32:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Tags_ = append(r.(*corazawaf.Rule).Tags_, data)
+	^
+internal/actions/ver.go:30:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Version_ = data
+	^
+internal/bodyprocessors/multipart.go:27:3: Error return value is not checked (errcheck)
+		v.MultipartStrictError().(*collections.Single).Set("1")
+		^
+internal/bodyprocessors/multipart.go:48:4: Error return value is not checked (errcheck)
+			v.MultipartStrictError().(*collections.Single).Set("1")
+			^
+internal/bodyprocessors/multipart.go:65:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:71:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:79:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:92:5: Error return value is not checked (errcheck)
+				v.MultipartStrictError().(*collections.Single).Set("1")
+				^
+internal/bodyprocessors/multipart.go:98:3: Error return value is not checked (errcheck)
+		filesCombinedSizeCol.(*collections.Single).Set(fmt.Sprintf("%d", totalSize))
+		^
+internal/bodyprocessors/raw.go:26:2: Error return value is not checked (errcheck)
+	v.RequestBody().(*collections.Single).Set(b)
+	^
+internal/bodyprocessors/raw.go:27:2: Error return value is not checked (errcheck)
+	v.RequestBodyLength().(*collections.Single).Set(strconv.Itoa(len(b)))
+	^
+internal/bodyprocessors/urlencoded.go:31:2: Error return value is not checked (errcheck)
+	v.RequestBody().(*collections.Single).Set(b)
+	^
+internal/bodyprocessors/urlencoded.go:32:2: Error return value is not checked (errcheck)
+	v.RequestBodyLength().(*collections.Single).Set(strconv.Itoa(len(b)))
+	^
+internal/collections/concat.go:105:3: Error return value is not checked (errcheck)
+		m.(*corazarules.MatchData).Variable_ = v
+		^
+internal/operators/pm.go:37:22: Error return value is not checked (errcheck)
+	return &pm{matcher: m.(ahocorasick.AhoCorasick)}, nil
+	                    ^
+internal/operators/pm_from_dataset.go:32:22: Error return value is not checked (errcheck)
+	return &pm{matcher: m.(ahocorasick.AhoCorasick)}, nil
+	                    ^
+internal/operators/pm_from_file.go:50:22: Error return value is not checked (errcheck)
+	return &pm{matcher: m.(ahocorasick.AhoCorasick)}, nil
+	                    ^
+internal/operators/restpath.go:39:23: Error return value is not checked (errcheck)
+	return &restpath{re: re.(*regexp.Regexp)}, nil
+	                     ^
+internal/operators/rx.go:52:17: Error return value is not checked (errcheck)
+	return &rx{re: re.(*regexp.Regexp)}, nil
+	               ^
+internal/operators/rx.go:88:23: Error return value is not checked (errcheck)
+	return &binaryRX{re: re.(*binaryregexp.Regexp)}, nil
+	                     ^
+internal/operators/validate_nid.go:49:34: Error return value is not checked (errcheck)
+	return &validateNid{fn: fn, re: re.(*regexp.Regexp)}, nil
+	                                ^
+internal/operators/validate_schema.go:83:15: Error return value is not checked (errcheck)
+		jsonSchema: schema.(*jsonschema.Schema),
+		            ^
+internal/seclang/directives.go:821:39: Error return value is not checked (errcheck)
+	options.WAF.AuditLogRelevantStatus = re.(*regexp.Regexp)
+	                                     ^
+waf.go:33:7: Error return value is not checked (errcheck)
+	c := config.(*wafConfig)
+	     ^
+http/e2e/e2e.go:277:138: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+					return fmt.Errorf("timeout waiting for response from %s, make sure the server is running. Last request error: %v", healthCheck.url, err)
+					                                                                                                                                    ^
+http/e2e/e2e.go:295:57: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+			return fmt.Errorf("could not make http request: %v", err)
+			                                                     ^
+http/e2e/e2e.go:304:55: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+			return fmt.Errorf("could not do http request: %v", err)
+			                                                   ^
+http/e2e/e2e.go:322:59: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+				return fmt.Errorf("could not read response body: %v", err)
+				                                                      ^
+http/e2e/e2e.go:326:77: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+				return fmt.Errorf("could not convert content-length header to int: %v", err)
+				                                                                        ^
+http/interceptor.go:187:73: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+				return fmt.Errorf("failed to release the response body reader: %v", err)
+				                                                                    ^
+http/interceptor.go:195:63: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+				return fmt.Errorf("failed to copy the response body: %v", err)
+				                                                          ^
+internal/actions/block_test.go:18:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/capture_test.go:26:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/chain_test.go:27:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/deny_test.go:18:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/drop_test.go:18:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/exec_test.go:18:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/msg_test.go:15:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/actions/multimatch_test.go:15:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/noauditlog_test.go:27:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/nolog_test.go:31:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/pass_test.go:20:47: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, "abc"); err == nil || err != ErrUnexpectedArguments {
+		                                            ^
+internal/actions/phase_test.go:14:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/actions/redirect_test.go:11:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/actions/setvar_test.go:33:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/actions/skip_test.go:13:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/actions/ver_test.go:27:44: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err := a.Init(nil, ""); err == nil || err != ErrMissingArguments {
+		                                         ^
+internal/bodyprocessors/xml.go:41:20: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+		if err != nil && err != io.EOF {
+		                 ^
+internal/corazawaf/transaction.go:968:19: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+	if err != nil && err != io.EOF {
+	                 ^
+internal/corazawaf/transaction.go:1219:19: comparing with != will fail on wrapped errors. Use errors.Is to check for a specific error (errorlint)
+	if err != nil && err != io.EOF {
+	                 ^
+internal/corazawaf/transaction.go:1571:67: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+				errs = append(errs, fmt.Errorf("removing temporary file: %v", err))
+				                                                              ^
+internal/corazawaf/transaction.go:1578:70: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+		errs = append(errs, fmt.Errorf("reseting request body buffer: %v", err))
+		                                                                   ^
+internal/corazawaf/transaction.go:1581:71: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+		errs = append(errs, fmt.Errorf("reseting response body buffer: %v", err))
+		                                                                    ^
+internal/corazawaf/transaction.go:1600:52: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+	return fmt.Errorf("transaction close failed: %v", errors.Join(errs...))
+	                                                  ^
+internal/operators/validate_schema.go:59:61: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+		return nil, fmt.Errorf("reading schema from root FS: %v", err)
+		                                                          ^
+internal/operators/validate_schema.go:67:60: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+			return nil, fmt.Errorf("validating schema as JSON: %v", err)
+			                                                        ^
+internal/operators/validate_schema.go:74:56: non-wrapping format verb for fmt.Errorf. Use `%w` to format errors (errorlint)
+			return nil, fmt.Errorf("compiling JSON schema: %v", err)
+			                                                    ^
+internal/actions/ctl.go:131:2: missing cases in switch of type actions.ctlFunctionType: actions.ctlUnknown (exhaustive)
+	switch a.action {
+	^
+internal/auditlog/formats.go:51:3: missing cases in switch of type types.AuditLogPart: types.AuditLogPartIntermediaryResponseHeaders, types.AuditLogPartResponseBody, types.AuditLogPartRequestBodyAlternative, types.AuditLogPartUploadedFiles (exhaustive)
+		switch part {
+		^
+internal/bodyprocessors/json.go:104:3: missing cases in switch of type gjson.Type: gjson.False, gjson.Number, gjson.True (exhaustive)
+		switch value.Type {
+		^
+internal/corazarules/rule_match.go:294:2: missing cases in switch of type corazarules.DisruptiveAction: corazarules.DisruptiveActionUnknown (exhaustive)
+	switch mr.DisruptiveAction_ {
+	^
+internal/corazawaf/transaction.go:1441:3: missing cases in switch of type types.AuditLogPart: types.AuditLogPartIntermediaryResponseHeaders, types.AuditLogPartResponseBody, types.AuditLogPartRequestBodyAlternative, types.AuditLogPartUploadedFiles (exhaustive)
+		switch part {
+		^
+http/e2e/cmd/httpe2e/main.go:40:3: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+		fmt.Printf("[Fail] %s\n", err)
+		^
+http/e2e/e2e.go:242:3: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+		fmt.Printf("[%d/%d] Running health check: %s\n", currentCheckIndex+1, len(healthChecks), healthCheck.name)
+		^
+http/e2e/e2e.go:255:4: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+			fmt.Printf("[Wait] Waiting for %s. Timeout: %ds\n", healthCheck.url, timeout)
+			^
+http/e2e/e2e.go:264:6: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+					fmt.Printf("[Ok] Check successful, got status code %d\n", resp.StatusCode)
+					^
+http/e2e/e2e.go:272:5: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+				fmt.Printf("[Wait] Unexpected status code %d\n", resp.StatusCode)
+				^
+http/e2e/e2e.go:287:3: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+		fmt.Printf("[%d/%d] Running test: %s\n", currentTestIndex+1, len(tests), test.name)
+		^
+http/e2e/e2e.go:315:4: use of `fmt.Printf` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+			fmt.Printf("[Ok] Got expected status code %d\n", resp.StatusCode)
+			^
+http/e2e/e2e.go:333:4: use of `fmt.Print` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+			fmt.Print("[Ok] Got expected response body\n")
+			^
+internal/corazawaf/transaction_test.go:1452:5: use of `fmt.Println` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+				fmt.Println(tx)
+				^
+internal/corazawaf/transaction_test.go:1453:5: use of `fmt.Println` forbidden by pattern `^(fmt\.Print(|f|ln)|print|println)$` (forbidigo)
+				fmt.Println("===STACK===\n", string(debug.Stack())+"\n===STACK===")
+				^
+internal/corazawaf/body_buffer.go:178:1: constructor "NewBodyBuffer" for struct "BodyBuffer" should be placed before struct method "WriteTo" (funcorder)
+func NewBodyBuffer(options types.BodyBufferOptions) *BodyBuffer {
+^
+internal/corazawaf/rule.go:679:1: constructor "NewRule" for struct "Rule" should be placed before struct method "ParentID" (funcorder)
+func NewRule() *Rule {
+^
+internal/corazawaf/rulegroup.go:257:1: constructor "NewRuleGroup" for struct "RuleGroup" should be placed before struct method "Add" (funcorder)
+func NewRuleGroup() RuleGroup {
+^
+internal/corazawaf/waf.go:284:1: constructor "NewWAF" for struct "WAF" should be placed before struct method "NewTransaction" (funcorder)
+func NewWAF() *WAF {
+^
+internal/seclang/parser.go:219:1: constructor "NewParser" for struct "Parser" should be placed before struct method "FromFile" (funcorder)
+func NewParser(waf *corazawaf.WAF) *Parser {
+^
+testing/engine.go:281:1: constructor "NewTest" for struct "Test" should be placed before struct method "SetWAF" (funcorder)
+func NewTest(name string, waf coraza.WAF) *Test {
+^
+internal/actions/ctl.go:378:6: Function 'parseCtl' has too many statements (54 > 50) (funlen)
+func parseCtl(data string) (ctlFunctionType, string, variables.RuleVariable, string, error) {
+     ^
+internal/corazawaf/transaction.go:1745:6: Function 'NewTransactionVariables' has too many statements (88 > 50) (funlen)
+func NewTransactionVariables() *TransactionVariables {
+     ^
+internal/corazawaf/waf.go:170:15: Function 'newTransaction' has too many statements (54 > 50) (funlen)
+func (w *WAF) newTransaction(opts Options) *Transaction {
+              ^
+debuglog/default.go:177:5: defaultPrinterFactory is a global variable (gochecknoglobals)
+var defaultPrinterFactory = func(w io.Writer) Printer {
+    ^
+http/middleware_test.go:245:5: expectedNoBlockingHeaders is a global variable (gochecknoglobals)
+var expectedNoBlockingHeaders = []string{"Content-Type", "Content-Length", "Coraza-Middleware", "Date"}
+    ^
+http/middleware_test.go:248:5: expectedBlockingHeaders is a global variable (gochecknoglobals)
+var expectedBlockingHeaders = []string{"Content-Length", "Date"}
+    ^
+internal/actions/actions.go:25:5: actionmap is a global variable (gochecknoglobals)
+var actionmap = map[string]ruleActionWrapper{}
+    ^
+internal/actions/setvar_test.go:57:5: invalidSyntaxAtoiError is a global variable (gochecknoglobals)
+var invalidSyntaxAtoiError = "invalid syntax"
+    ^
+internal/actions/setvar_test.go:58:5: warningKeyNotFoundInCollection is a global variable (gochecknoglobals)
+var warningKeyNotFoundInCollection = "key not found in collection"
+    ^
+internal/auditlog/logger.go:24:5: writers is a global variable (gochecknoglobals)
+var writers = map[string]func() plugintypes.AuditLogWriter{}
+    ^
+internal/auditlog/logger.go:25:5: formatters is a global variable (gochecknoglobals)
+var formatters = map[string]plugintypes.AuditLogFormatter{}
+    ^
+internal/auditlog/noop_closer.go:10:5: NoopCloser is a global variable (gochecknoglobals)
+var NoopCloser = noopCloser{}
+    ^
+internal/auditlog/syslog_writer.go:18:5: syslogDialer is a global variable (gochecknoglobals)
+var syslogDialer = syslog.Dial
+    ^
+internal/auditlog/syslog_writer_test.go:18:5: SyslogDialer is a global variable (gochecknoglobals)
+var SyslogDialer = new(syslogDialerStub)
+    ^
+internal/bodyprocessors/bodyprocessors.go:15:5: processors is a global variable (gochecknoglobals)
+var processors = map[string]bodyProcessorWrapper{}
+    ^
+internal/bodyprocessors/json_test.go:10:5: jsonTests is a global variable (gochecknoglobals)
+var jsonTests = []struct {
+    ^
+internal/collections/noop.go:11:5: Noop is a global variable (gochecknoglobals)
+var Noop collection.Collection = &noop{}
+    ^
+internal/corazarules/rule_match.go:72:5: DisruptiveActionMap is a global variable (gochecknoglobals)
+var DisruptiveActionMap = map[string]DisruptiveAction{
+    ^
+internal/corazawaf/casesensitive_default.go:8:5: shouldUseCaseSensitiveNamedCollection is a global variable (gochecknoglobals)
+var shouldUseCaseSensitiveNamedCollection = false
+    ^
+internal/corazawaf/rule.go:588:5: transformationIDToName is a global variable (gochecknoglobals)
+var transformationIDToName = []string{""}
+    ^
+internal/corazawaf/rule.go:589:5: transformationNameToID is a global variable (gochecknoglobals)
+var transformationNameToID = map[string]int{"": 0}
+    ^
+internal/corazawaf/rule.go:590:5: transformationIDsLock is a global variable (gochecknoglobals)
+var transformationIDsLock = sync.Mutex{}
+    ^
+internal/corazawaf/rule_test.go:415:5: transformationAppendA is a global variable (gochecknoglobals)
+var transformationAppendA = func(input string) (string, bool, error) {
+    ^
+internal/corazawaf/rule_test.go:419:5: transformationAppendB is a global variable (gochecknoglobals)
+var transformationAppendB = func(input string) (string, bool, error) {
+    ^
+internal/corazawaf/transaction_test.go:168:5: requestBodyWriters is a global variable (gochecknoglobals)
+var requestBodyWriters = map[string]func(tx *Transaction, body string) (*types.Interruption, int, error){
+    ^
+internal/corazawaf/transaction_test.go:490:5: responseBodyWriters is a global variable (gochecknoglobals)
+var responseBodyWriters = map[string]func(tx *Transaction, body string) (*types.Interruption, int, error){
+    ^
+internal/environment/default.go:16:5: HasAccessToFS is a global variable (gochecknoglobals)
+var HasAccessToFS = true
+    ^
+internal/operators/detect_sqli_test.go:12:5: sqliTests is a global variable (gochecknoglobals)
+var sqliTests = []string{
+    ^
+internal/operators/detect_xss_test.go:12:5: xssTests is a global variable (gochecknoglobals)
+var xssTests = []string{
+    ^
+internal/operators/multilineregex_default.go:8:5: shouldNotUseMultilineRegexesOperatorByDefault is a global variable (gochecknoglobals)
+var shouldNotUseMultilineRegexesOperatorByDefault = false
+    ^
+internal/operators/operators.go:12:5: operators is a global variable (gochecknoglobals)
+var operators = map[string]plugintypes.OperatorFactory{}
+    ^
+internal/seclang/directives_test.go:133:5: expectNoErrorOnDirective is a global variable (gochecknoglobals)
+var expectNoErrorOnDirective func(*corazawaf.WAF) bool = func(*corazawaf.WAF) bool { return true }
+    ^
+internal/seclang/rule_parser.go:21:5: defaultActionsPhase2 is a global variable (gochecknoglobals)
+var defaultActionsPhase2 = "phase:2,log,auditlog,pass"
+    ^
+internal/strings/strings.go:21:5: src is a global variable (gochecknoglobals)
+var src = rand.NewSource(time.Now().UnixNano())
+    ^
+internal/strings/strings.go:22:5: mu is a global variable (gochecknoglobals)
+var mu sync.Mutex
+    ^
+internal/transformations/base64decode.go:11:5: base64DecMap is a global variable (gochecknoglobals)
+var base64DecMap = []byte{
+    ^
+internal/transformations/base64decode_test.go:13:5: b64DecodeTests is a global variable (gochecknoglobals)
+var b64DecodeTests = []struct {
+    ^
+internal/transformations/base64decodeext_test.go:13:5: b64DecodeExtTests is a global variable (gochecknoglobals)
+var b64DecodeExtTests = []struct {
+    ^
+internal/transformations/cmd_line_test.go:11:5: cmdLineTests is a global variable (gochecknoglobals)
+var cmdLineTests = []string{
+    ^
+internal/transformations/md5.go:13:5: emptyMD5 is a global variable (gochecknoglobals)
+var emptyMD5 string
+    ^
+internal/transformations/sha1.go:13:5: emptySHA1 is a global variable (gochecknoglobals)
+var emptySHA1 string
+    ^
+internal/transformations/transformations.go:13:5: transformations is a global variable (gochecknoglobals)
+var transformations = map[string]plugintypes.Transformation{}
+    ^
+internal/url/url_test.go:10:5: parseQueryInput is a global variable (gochecknoglobals)
+var parseQueryInput = `var=EmptyValue'||(select extractvalue(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % awpsd SYSTEM "http://0cddnr5evws01h2bfzn5zd0cm3sxvrjv7oufi4.example'||'foo.bar/">%awpsd;`
+    ^
+internal/url/url_test.go:25:5: queryUnescapePayloads is a global variable (gochecknoglobals)
+var queryUnescapePayloads = map[string]string{
+    ^
+testing/profile/profile.go:80:5: Profiles is a global variable (gochecknoglobals)
+var Profiles = map[string]Profile{}
+    ^
+types/waf.go:110:5: validOpts is a global variable (gochecknoglobals)
+var validOpts = map[AuditLogPart]struct{}{
+    ^
+internal/actions/actions.go:35:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/auditlog/init.go:11:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/auditlog/syslog_writer_test.go:20:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/bodyprocessors/json.go:128:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/bodyprocessors/multipart.go:126:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/bodyprocessors/raw.go:39:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/bodyprocessors/urlencoded.go:44:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/bodyprocessors/xml.go:65:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/begins_with.go:36:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/contains.go:36:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/detect_sqli.go:31:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/detect_xss.go:26:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/ends_with.go:36:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/eq.go:37:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/ge.go:37:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/geo_lookup.go:16:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/gt.go:37:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/inspect_file.go:42:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/ip_match.go:56:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/ip_match_from_dataset.go:30:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/ip_match_from_file.go:45:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/le.go:36:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/lt.go:38:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/no_match.go:22:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/pm.go:70:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/pm_from_dataset.go:35:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/pm_from_file.go:53:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/rbl.go:88:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/restpath.go:57:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/rx.go:109:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/streq.go:32:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/unconditional_match.go:20:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/validate_byte_range.go:87:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/validate_nid.go:145:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/validate_schema.go:148:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/validate_url_encoding.go:76:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/validate_utf8_encoding.go:26:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/operators/within.go:34:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/transformations/md5.go:30:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/transformations/sha1.go:28:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+internal/transformations/transformations.go:30:1: don't use `init` function (gochecknoinits)
+func init() {
+^
+debuglog/default_test.go:14:1: cognitive complexity 27 of func `TestLoggerLogLevels` is high (> 20) (gocognit)
+func TestLoggerLogLevels(t *testing.T) {
+^
+experimental/plugins/macro/macro.go:96:1: cognitive complexity 28 of func `(*macro).compile` is high (> 20) (gocognit)
+func (m *macro) compile(input string) error {
+^
+experimental/plugins/macro/macro_test.go:30:1: cognitive complexity 57 of func `TestCompile` is high (> 20) (gocognit)
+func TestCompile(t *testing.T) {
+^
+http/e2e/e2e.go:131:1: cognitive complexity 53 of func `Run` is high (> 20) (gocognit)
+func Run(cfg Config) error {
+^
+http/middleware_test.go:431:1: cognitive complexity 25 of func `runAgainstWAF` is high (> 20) (gocognit)
+func runAgainstWAF(t *testing.T, tCase httpTest, waf coraza.WAF) {
+^
+internal/actions/ctl.go:129:1: cognitive complexity 79 of func `(*ctlFn).Evaluate` is high (> 20) (gocognit)
+func (a *ctlFn) Evaluate(_ plugintypes.RuleMetadata, txS plugintypes.TransactionState) {
+^
+internal/actions/ctl_test.go:18:1: cognitive complexity 72 of func `TestCtl` is high (> 20) (gocognit)
+func TestCtl(t *testing.T) {
+^
+internal/actions/ctl_test.go:369:1: cognitive complexity 24 of func `TestParseCtl` is high (> 20) (gocognit)
+func TestParseCtl(t *testing.T) {
+^
+internal/actions/setvar.go:122:1: cognitive complexity 23 of func `(*setvarFn).evaluateTxCollection` is high (> 20) (gocognit)
+func (a *setvarFn) evaluateTxCollection(r plugintypes.RuleMetadata, tx plugintypes.TransactionState, key string, value string) {
+^
+internal/actions/setvar_test.go:60:1: cognitive complexity 35 of func `TestSetvarEvaluate` is high (> 20) (gocognit)
+func TestSetvarEvaluate(t *testing.T) {
+^
+internal/auditlog/auditlog_test.go:118:1: cognitive complexity 34 of func `TestAuditLogUnmarshalJSON` is high (> 20) (gocognit)
+func TestAuditLogUnmarshalJSON(t *testing.T) {
+^
+internal/auditlog/formats.go:35:1: cognitive complexity 35 of func `(nativeFormatter).Format` is high (> 20) (gocognit)
+func (nativeFormatter) Format(al plugintypes.AuditLog) ([]byte, error) {
+^
+internal/auditlog/formats_ocsf_test.go:21:1: cognitive complexity 134 of func `TestOCSFFormatter` is high (> 20) (gocognit)
+func TestOCSFFormatter(t *testing.T) {
+^
+internal/bodyprocessors/json_test.go:142:1: cognitive complexity 27 of func `TestReadJSON` is high (> 20) (gocognit)
+func TestReadJSON(t *testing.T) {
+^
+internal/bodyprocessors/multipart.go:22:1: cognitive complexity 32 of func `(*multipartBodyProcessor).ProcessRequest` is high (> 20) (gocognit)
+func (mbp *multipartBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, options plugintypes.BodyProcessorOptions) error {
+^
+internal/corazawaf/rule.go:183:1: cognitive complexity 132 of func `(*Rule).doEvaluate` is high (> 20) (gocognit)
+func (r *Rule) doEvaluate(logger debuglog.Logger, phase types.RulePhase, tx *Transaction, collectiveMatchedValues *[]types.MatchData, chainLevel int, cache map[transformationKey]*transformationValue) []types.MatchData {
+^
+internal/corazawaf/rule_multiphase.go:260:1: cognitive complexity 23 of func `multiphaseSkipVariable` is high (> 20) (gocognit)
+func multiphaseSkipVariable(r *Rule, variable variables.RuleVariable, phase types.RulePhase) bool {
+^
+internal/corazawaf/rule_multiphase.go:333:1: cognitive complexity 27 of func `isMultiphaseDoubleEvaluation` is high (> 20) (gocognit)
+func isMultiphaseDoubleEvaluation(tx *Transaction, phase types.RulePhase, r *Rule, collectiveMatchedValues *[]types.MatchData, mr types.MatchData) bool {
+^
+internal/corazawaf/rulegroup.go:134:1: cognitive complexity 44 of func `(*RuleGroup).Eval` is high (> 20) (gocognit)
+func (rg *RuleGroup) Eval(phase types.RulePhase, tx *Transaction) bool {
+^
+internal/corazawaf/transaction.go:426:1: cognitive complexity 21 of func `(*Transaction).ParseRequestReader` is high (> 20) (gocognit)
+func (tx *Transaction) ParseRequestReader(data io.Reader) (*types.Interruption, error) {
+^
+internal/corazawaf/transaction.go:919:1: cognitive complexity 27 of func `(*Transaction).ReadRequestBodyFrom` is high (> 20) (gocognit)
+func (tx *Transaction) ReadRequestBodyFrom(r io.Reader) (*types.Interruption, int, error) {
+^
+internal/corazawaf/transaction.go:1178:1: cognitive complexity 25 of func `(*Transaction).ReadResponseBodyFrom` is high (> 20) (gocognit)
+func (tx *Transaction) ReadResponseBodyFrom(r io.Reader) (*types.Interruption, int, error) {
+^
+internal/corazawaf/transaction.go:1400:1: cognitive complexity 51 of func `(*Transaction).AuditLog` is high (> 20) (gocognit)
+func (tx *Transaction) AuditLog() *auditlog.Log {
+^
+internal/corazawaf/transaction.go:2165:1: cognitive complexity 81 of func `(*TransactionVariables).All` is high (> 20) (gocognit)
+func (v *TransactionVariables) All(f func(v variables.RuleVariable, col collection.Collection) bool) {
+^
+internal/corazawaf/transaction_test.go:182:1: cognitive complexity 91 of func `TestWriteRequestBody` is high (> 20) (gocognit)
+func TestWriteRequestBody(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:296:1: cognitive complexity 29 of func `TestWriteRequestBodyOnLimitReached` is high (> 20) (gocognit)
+func TestWriteRequestBodyOnLimitReached(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:351:1: cognitive complexity 24 of func `TestWriteRequestBodyIsNopWhenBodyIsNotAccesible` is high (> 20) (gocognit)
+func TestWriteRequestBodyIsNopWhenBodyIsNotAccesible(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:504:1: cognitive complexity 90 of func `TestWriteResponseBody` is high (> 20) (gocognit)
+func TestWriteResponseBody(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:619:1: cognitive complexity 29 of func `TestWriteResponseBodyOnLimitReached` is high (> 20) (gocognit)
+func TestWriteResponseBodyOnLimitReached(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:674:1: cognitive complexity 24 of func `TestWriteResponseBodyIsNopWhenBodyIsNotAccesible` is high (> 20) (gocognit)
+func TestWriteResponseBodyIsNopWhenBodyIsNotAccesible(t *testing.T) {
+^
+internal/corazawaf/transaction_test.go:825:1: cognitive complexity 23 of func `TestLogCallback` is high (> 20) (gocognit)
+func TestLogCallback(t *testing.T) {
+^
+internal/operators/operators_test.go:29:1: cognitive complexity 58 of func `TestOperators` is high (> 20) (gocognit)
+func TestOperators(t *testing.T) {
+^
+internal/operators/validate_url_encoding.go:45:1: cognitive complexity 21 of func `validateURLEncodingInternal` is high (> 20) (gocognit)
+func validateURLEncodingInternal(input string, inputLen int) int {
+^
+internal/seclang/directives.go:1031:1: cognitive complexity 29 of func `directiveSecRuleUpdateTargetByID` is high (> 20) (gocognit)
+func directiveSecRuleUpdateTargetByID(options *DirectiveOptions) error {
+^
+internal/seclang/directives.go:1116:1: cognitive complexity 28 of func `directiveSecRuleUpdateActionByID` is high (> 20) (gocognit)
+func directiveSecRuleUpdateActionByID(options *DirectiveOptions) error {
+^
+internal/seclang/directives_test.go:135:1: cognitive complexity 33 of func `TestDirectives` is high (> 20) (gocognit)
+func TestDirectives(t *testing.T) {
+^
+internal/seclang/rule_parser.go:42:1: cognitive complexity 64 of func `(*RuleParser).ParseVariables` is high (> 20) (gocognit)
+func (rp *RuleParser) ParseVariables(vars string) error {
+^
+internal/seclang/rule_parser.go:331:1: cognitive complexity 28 of func `ParseRule` is high (> 20) (gocognit)
+func ParseRule(options RuleOptions) (*corazawaf.Rule, error) {
+^
+internal/seclang/rule_parser.go:506:1: cognitive complexity 25 of func `parseActions` is high (> 20) (gocognit)
+func parseActions(logger debuglog.Logger, actions string) ([]ruleAction, error) {
+^
+internal/transformations/css_decode.go:21:1: cognitive complexity 57 of func `cssDecodeInplace` is high (> 20) (gocognit)
+func cssDecodeInplace(input string, pos int) string {
+^
+internal/transformations/escape_seq_decode.go:23:1: cognitive complexity 24 of func `doEscapeSeqDecode` is high (> 20) (gocognit)
+func doEscapeSeqDecode(input string, pos int) (string, bool) {
+^
+internal/transformations/js_decode.go:24:1: cognitive complexity 45 of func `doJsDecode` is high (> 20) (gocognit)
+func doJsDecode(input string, pos int) (string, bool) {
+^
+internal/transformations/transformations_test.go:25:1: cognitive complexity 27 of func `TestTransformations` is high (> 20) (gocognit)
+func TestTransformations(t *testing.T) {
+^
+internal/transformations/url_decode_uni.go:19:1: cognitive complexity 51 of func `inplaceUniDecode` is high (> 20) (gocognit)
+func inplaceUniDecode(input string, d []byte, pos int) string {
+^
+internal/variables/generator/main.go:31:1: cognitive complexity 49 of func `main` is high (> 20) (gocognit)
+func main() {
+^
+testing/coraza_test.go:17:1: cognitive complexity 43 of func `TestEngine` is high (> 20) (gocognit)
+func TestEngine(t *testing.T) {
+^
+testing/coraza_test.go:60:1: cognitive complexity 36 of func `testList` is high (> 20) (gocognit)
+func testList(t *testing.T, p *profile.Profile) ([]*Test, error) {
+^
+types/waf_test.go:8:1: cognitive complexity 22 of func `TestParseAuditLogParts` is high (> 20) (gocognit)
+func TestParseAuditLogParts(t *testing.T) {
+^
+waf.go:32:1: cognitive complexity 26 of func `NewWAF` is high (> 20) (gocognit)
+func NewWAF(config WAFConfig) (WAF, error) {
+^
+internal/actions/ctl.go:170:3: captLocal: `AuditLogParts' should not be capitalized (gocritic)
+		AuditLogParts, err := types.ParseAuditLogParts(a.value)
+		^
+internal/auditlog/formats_ocsf.go:135:2: captLocal: `ActionID' should not be capitalized (gocritic)
+	ActionID := enums.WEB_RESOURCES_ACTIVITY_ACTION_ID_WEB_RESOURCES_ACTIVITY_ACTION_ID_ALLOWED
+	^
+internal/auditlog/formats_ocsf.go:136:2: captLocal: `Action' should not be capitalized (gocritic)
+	Action := "Allowed"
+	^
+internal/corazarules/rule_match_test.go:29:2: captLocal: `LogSizeWithoutMsg' should not be capitalized (gocritic)
+	LogSizeWithoutMsg := len(matchedRule.ErrorLog())
+	^
+internal/corazawaf/rule_multiphase.go:44:1: cyclomatic complexity 81 of func `minPhase` is high (> 30) (gocyclo)
+func minPhase(v variables.RuleVariable) types.RulePhase {
+^
+internal/corazawaf/transaction.go:136:1: cyclomatic complexity 83 of func `(*Transaction).Collection` is high (> 30) (gocyclo)
+func (tx *Transaction) Collection(idx variables.RuleVariable) collection.Collection {
+^
+internal/operators/rbl.go:36:1: godoc should start with symbol name ("Evaluate") (godoclint)
+// https://github.com/mrichman/godnsbl
+^
+internal/variables/variables.go:6:1: package has more than one godoc ("variables") (godoclint)
+// Package variables contains the representation of the variables used in the rules
+^
+internal/variables/variables_test.go:1:1: package has more than one godoc ("variables") (godoclint)
+// Copyright 2022 Juan Pablo Tosso
+^
+waf.go:150:1: godoc should start with symbol name ("NewTransactionWithOptions") (godoclint)
+// NewTransaction implements the same method on WAF.
+^
+debuglog/level.go:6:1: Comment should end in a period (godot)
+// Level is the type of log level
+^
+debuglog/level.go:10:2: Comment should end in a period (godot)
+	// LevelUnknown is a default value for unknown log level
+	^
+debuglog/level.go:12:2: Comment should end in a period (godot)
+	// LevelNoLog is the lowest level of logging, no logs are generated
+	^
+debuglog/level.go:14:2: Comment should end in a period (godot)
+	// LevelError is the level of logging only for errors
+	^
+debuglog/level.go:16:2: Comment should end in a period (godot)
+	// LevelWarn is the level of logging for warnings
+	^
+debuglog/level.go:18:2: Comment should end in a period (godot)
+	// LevelInfo is the lowest of logging for informational messages
+	^
+debuglog/level.go:20:2: Comment should end in a period (godot)
+	// LevelDebug is the level of logging for debug messages
+	^
+debuglog/level.go:22:2: Comment should end in a period (godot)
+	// ModSecurity compatibility, levels 4-8 will be Debug level
+	^
+debuglog/level.go:24:2: Comment should end in a period (godot)
+	// LevelTrace is the highest level of logging
+	^
+debuglog/level.go:28:1: Comment should end in a period (godot)
+// String returns the string representation of the log level
+^
+debuglog/level.go:47:1: Comment should end in a period (godot)
+// Valid returns true if the log level is valid
+^
+internal/cookies/cookies.go:13:1: Comment should end in a period (godot)
+// Loosely based in the stdlib src/net/http/cookie.go
+^
+testing/engine.go:18:1: Comment should end in a period (godot)
+// a WAF instance for a test case
+^
+testing/engine.go:55:1: Comment should end in a period (godot)
+// SetWAF sets the waf instance pointer
+^
+testing/engine.go:61:1: Comment should end in a period (godot)
+// which auto sets content-type and content-length
+^
+testing/engine.go:67:1: Comment should end in a period (godot)
+// and sets it as the current request
+^
+testing/engine.go:80:1: Comment should end in a period (godot)
+// and sets it as the current request
+^
+testing/engine.go:122:1: Comment should end in a period (godot)
+// SetRequestBody sets the request body
+^
+testing/engine.go:143:1: Comment should end in a period (godot)
+// SetResponseBody sets the request body
+^
+testing/engine.go:160:1: Comment should end in a period (godot)
+// RunPhases runs the phases of the test from 1 to 5
+^
+testing/engine.go:187:1: Comment should end in a period (godot)
+// that occured when comparing the interruption result
+^
+testing/engine.go:217:1: Comment should end in a period (godot)
+// the test when comparing log and rule ids
+^
+testing/engine.go:252:1: Comment should end in a period (godot)
+// LogContains checks if the log contains a string
+^
+testing/engine.go:262:1: Comment should end in a period (godot)
+// Transaction returns the transaction
+^
+testing/engine.go:267:1: Comment should end in a period (godot)
+// Request returns the raw request
+^
+testing/engine.go:280:1: Comment should end in a period (godot)
+// NewTest creates a new test with default properties
+^
+types/phase.go:11:1: Comment should end in a period (godot)
+// RulePhase is the phase of the rule
+^
+types/phase.go:15:2: Comment should end in a period (godot)
+	// PhaseUnknown represents a phase unrecognized by Coraza
+	^
+types/phase.go:17:2: Comment should end in a period (godot)
+	// PhaseRequestHeaders will process once the request headers are received
+	^
+types/phase.go:19:2: Comment should end in a period (godot)
+	// PhaseRequestBody will process once the request body is received
+	^
+types/phase.go:21:2: Comment should end in a period (godot)
+	// PhaseResponseHeaders will process once the response headers are received
+	^
+types/phase.go:23:2: Comment should end in a period (godot)
+	// PhaseResponseBody will process once the response body is received
+	^
+types/phase.go:26:2: Comment should end in a period (godot)
+	// This phase will always run
+	^
+types/phase.go:32:1: Comment should end in a period (godot)
+// if the phase is invalid it will return an error
+^
+types/rule_match.go:9:1: Comment should end in a period (godot)
+// so it contains the collection as a string, and it's value
+^
+types/rule_match.go:26:1: Comment should end in a period (godot)
+// matched variables and a pointer to the rule
+^
+types/rules.go:7:1: Comment should end in a period (godot)
+// that can be used across packages
+^
+types/severity.go:24:1: Comment should end in a period (godot)
+// log the error or not
+^
+types/severity.go:29:2: Comment should end in a period (godot)
+	// We "shold" exit the process immediately
+	^
+types/severity.go:31:2: Comment should end in a period (godot)
+	// RuleSeverityAlert represents the alert severity
+	^
+types/severity.go:33:2: Comment should end in a period (godot)
+	// RuleSeverityCritical represents the critical severity
+	^
+types/severity.go:35:2: Comment should end in a period (godot)
+	// RuleSeverityError represents the error severity
+	^
+types/severity.go:37:2: Comment should end in a period (godot)
+	// RuleSeverityWarning represents the warning severity
+	^
+types/severity.go:39:2: Comment should end in a period (godot)
+	// RuleSeverityNotice represents the notice severity
+	^
+types/severity.go:41:2: Comment should end in a period (godot)
+	// RuleSeverityInfo represents the info severity
+	^
+types/severity.go:43:2: Comment should end in a period (godot)
+	// RuleSeverityDebug represents the debug severity
+	^
+types/severity.go:47:1: Comment should end in a period (godot)
+// String returns the string representation of the severity
+^
+types/severity.go:70:1: Comment should end in a period (godot)
+// Int returns the integer value of the severity
+^
+types/severity.go:75:1: Comment should end in a period (godot)
+// ParseRuleSeverity parses a string into a RuleSeverity
+^
+types/transaction.go:18:1: Comment should end in a period (godot)
+// thread safe
+^
+experimental/plugins/macro/macro.go:86:1: File is not properly formatted (golines)
+	tx.DebugLogger().Warn().Str("variable", token.variable.Name()).Str("key", token.key).Msg("key not found in collection, returning the original text")
+^
+http/e2e/cmd/httpe2e/main.go:27:1: File is not properly formatted (golines)
+		nulledBody      = flag.Bool("nulled-body", false, "Accept a body filled of empty bytes as an enforced disruptive action. Default: false")
+^
+http/e2e/e2e.go:62:1: File is not properly formatted (golines)
+func expectNulledBodyStatusCode(nulledBody bool, expectedEmptyBodyCode, expectedNulledBodyCode int) statusCodeExpectation {
+^
+http/middleware_test.go:489:1: File is not properly formatted (golines)
+		t.Errorf("unexpected response headers, expected keys: %v, headers: %v", tCase.expectedRespHeadersKeys, res.Header)
+^
+internal/actions/ctl_test.go:88:1: File is not properly formatted (golines)
+				if wantToContain, have := "[WARN] Cannot change request body access after request headers phase", logEntry; !strings.Contains(have, wantToContain) {
+^
+internal/actions/setvar_test.go:143:1: File is not properly formatted (golines)
+					t.Errorf("expected error log containing %q, got %q", warningKeyNotFoundInCollection, logsBuf.String())
+^
+internal/auditlog/auditlog_test.go:26:1: File is not properly formatted (golines)
+			t.Errorf("failed to match error message, \ngot: %s, \nexpected: %s", err, "invalid character '}' looking for beginning of value")
+^
+internal/auditlog/concurrent_writer.go:87:1: File is not properly formatted (golines)
+	cl.log.Printf("%s %s - - [%s]", al.Transaction().ClientIP(), al.Transaction().HostIP(), al.Transaction().Timestamp())
+^
+internal/auditlog/formats.go:49:1: File is not properly formatted (golines)
+		_, _ = fmt.Fprintf(&res, "[%s] %s %s %d %s %d", al.Transaction().Timestamp(), al.Transaction().ID(),
+^
+internal/auditlog/formats_json_test.go:62:1: File is not properly formatted (golines)
+		t.Errorf("failed to match legacy formatter, \ngot: %s\nexpected: %s", legacyAl.Transaction.Time, al.Transaction().Timestamp())
+^
+internal/auditlog/formats_ocsf_test.go:39:1: File is not properly formatted (golines)
+			t.Errorf("failed to match ocsfFormatter MIME type, \ngot: %s\nexpected: %s", fmt.Sprint(f.MIME()), "application/json")
+^
+internal/bodyprocessors/json.go:20:1: File is not properly formatted (golines)
+func (js *jsonBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, _ plugintypes.BodyProcessorOptions) error {
+^
+internal/bodyprocessors/multipart_test.go:31:1: File is not properly formatted (golines)
+	}); err == nil || err.Error() != expectedError {
+^
+internal/bodyprocessors/raw.go:18:1: File is not properly formatted (golines)
+func (*rawBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, _ plugintypes.BodyProcessorOptions) error {
+^
+internal/corazarules/rule_match.go:192:1: File is not properly formatted (golines)
+	fmt.Fprintf(log, "[file %q] [line %q] [id %q] [rev %q] [msg %q] [data %q] [severity %q] [ver %q] [maturity %q] [accuracy %q]",
+^
+internal/corazawaf/body_buffer_test.go:138:1: File is not properly formatted (golines)
+				t.Fatalf("unexpected number of bytes written, want: %d, have: %d", len(tCase.toBeWrittenBytes), writtenBytes)
+^
+internal/corazawaf/rule.go:164:1: File is not properly formatted (golines)
+func (r *Rule) Evaluate(phase types.RulePhase, tx plugintypes.TransactionState, cache map[transformationKey]*transformationValue) {
+^
+internal/corazawaf/rule_multiphase.go:302:1: File is not properly formatted (golines)
+func generateChainMatches(tx *Transaction, matchedValues []types.MatchData, currentDepth int, buildingMatchedChain []types.MatchData, matchedChainsResult *[][]types.MatchData) {
+^
+internal/corazawaf/rule_test.go:106:1: File is not properly formatted (golines)
+			matchdata := r.doEvaluate(debuglog.Noop(), types.PhaseRequestHeaders, tx, &matchedValues, 0, tx.transformationCache)
+^
+internal/corazawaf/transaction.go:905:1: File is not properly formatted (golines)
+		tx.debugLogger.Warn().Msg("Processing request body whose size reached the configured limit (Action ProcessPartial)")
+^
+internal/corazawaf/transaction_test.go:228:1: File is not properly formatted (golines)
+		"BodyInOneShot":     {urlencodedBody},
+^
+internal/operators/operators_test.go:113:1: File is not properly formatted (golines)
+						t.Errorf("Invalid operator result for @%s(%q, %q), %s expected", data.Name, data.Param, data.Input, expected)
+^
+internal/operators/pm_from_file.go:48:1: File is not properly formatted (golines)
+	m, _ := memoize.Do(strings.Join(options.Path, ",")+filepath, func() (interface{}, error) { return builder.Build(lines), nil })
+^
+internal/operators/validate_nid_test.go:26:1: File is not properly formatted (golines)
+	ok := []string{"11.111.111-1", "16100407-3", "8.492.655-8", "84926558", "111111111", "5348281-3", "10727393-k", "10727393-K"}
+^
+internal/operators/validate_schema_test.go:584:1: File is not properly formatted (golines)
+		t.Errorf("Expected response body to be preferred in phase 4, but got no violation (should have failed on invalid response body)")
+^
+internal/operators/validate_url_encoding.go:63:1: File is not properly formatted (golines)
+			if (((c1 >= '0') && (c1 <= '9')) || ((c1 >= 'a') && (c1 <= 'f')) || ((c1 >= 'A') && (c1 <= 'F'))) && (((c2 >= '0') && (c2 <= '9')) || ((c2 >= 'a') && (c2 <= 'f')) || ((c2 >= 'A') && (c2 <= 'F'))) {
+^
+internal/seclang/directives_test.go:275:1: File is not properly formatted (golines)
+			{"ProcessPartial", func(w *corazawaf.WAF) bool { return w.RequestBodyLimitAction == types.BodyLimitActionProcessPartial }},
+^
+internal/seclang/parser_test.go:145:1: File is not properly formatted (golines)
+	if !strings.Contains(err.Error(), "no such file or directory") && !strings.Contains(err.Error(), "file does not exist") {
+^
+internal/seclang/rule_parser.go:545:1: File is not properly formatted (golines)
+			res, disruptiveActionIndex, err = appendRuleAction(res, actions[beforeKey+1:afterKey], val, disruptiveActionIndex)
+^
+internal/seclang/rule_parser_test.go:79:1: File is not properly formatted (golines)
+	err := p.FromString(`SecRule REQUEST_COOKIES|!REQUEST_COOKIES:/__utm/|!REQUEST_COOKIES:/_pk_ref/|REQUEST_COOKIES_NAMES|ARGS_NAMES|ARGS|XML:/* "" "id:7,pass"`)
+^
+internal/transformations/css_decode.go:93:1: File is not properly formatted (golines)
+						if (d[c] > 0x00) && (d[c] < 0x5f) && ((input[i+j-3] == 'f') || (input[i+j-3] == 'F')) && ((input[i+j-4] == 'f') || (input[i+j-4] == 'F')) {
+^
+internal/transformations/escape_seq_decode.go:73:1: File is not properly formatted (golines)
+			if (input[i+1] == 'x' || input[i+1] == 'X') && i+3 < inputLen && utils.ValidHex(input[i+2]) && utils.ValidHex(input[i+3]) {
+^
+internal/transformations/js_decode.go:46:1: File is not properly formatted (golines)
+				if (d[c] > 0x00) && (d[c] < 0x5f) && ((input[i+2] == 'f') || (input[i+2] == 'F')) && ((input[i+3] == 'f') || (input[i+3] == 'F')) {
+^
+internal/transformations/transformations_test.go:64:1: File is not properly formatted (golines)
+					t.Errorf("Transformation %s:\nInput: %s\nExpected: %v\nGot: %v\nExpected String: %s\nGot String: %s",
+^
+internal/transformations/url_decode_uni.go:32:1: File is not properly formatted (golines)
+					if (strings.ValidHex(input[i+2])) && (strings.ValidHex(input[i+3])) && (strings.ValidHex(input[i+4])) && (strings.ValidHex(input[i+5])) {
+^
+internal/variables/variables_test.go:21:1: File is not properly formatted (golines)
+	vars := []string{"URLENCODED_ERROR", "RESPONSE_CONTENT_TYPE", "UNIQUE_ID", "ARGS_COMBINED_SIZE", "AUTH_TYPE", "FILES_COMBINED_SIZE", "FULL_REQUEST", "FULL_REQUEST_LENGTH", "INBOUND_DATA_ERROR", "MATCHED_VAR", "MATCHED_VAR_NAME", "MULTIPART_BOUNDARY_QUOTED", "MULTIPART_BOUNDARY_WHITESPACE", "MULTIPART_CRLF_LF_LINES", "MULTIPART_DATA_AFTER", "MULTIPART_DATA_BEFORE", "MULTIPART_FILE_LIMIT_EXCEEDED", "MULTIPART_HEADER_FOLDING", "MULTIPART_INVALID_HEADER_FOLDING", "MULTIPART_INVALID_PART", "MULTIPART_INVALID_QUOTING", "MULTIPART_LF_LINE", "MULTIPART_MISSING_SEMICOLON", "MULTIPART_STRICT_ERROR", "MULTIPART_UNMATCHED_BOUNDARY", "OUTBOUND_DATA_ERROR", "PATH_INFO", "QUERY_STRING", "REMOTE_ADDR", "REMOTE_HOST", "REMOTE_PORT", "REQBODY_ERROR", "REQBODY_ERROR_MSG", "REQBODY_PROCESSOR_ERROR", "REQBODY_PROCESSOR_ERROR_MSG", "REQBODY_PROCESSOR", "REQUEST_BASENAME", "REQUEST_BODY", "REQUEST_BODY_LENGTH", "REQUEST_FILENAME", "REQUEST_LINE", "REQUEST_METHOD", "REQUEST_PROTOCOL", "REQUEST_URI", "REQUEST_URI_RAW", "RESPONSE_BODY", "RESPONSE_CONTENT_LENGTH", "RESPONSE_PROTOCOL", "RESPONSE_STATUS", "SERVER_ADDR", "SERVER_NAME", "SERVER_PORT", "SESSIONID", "RESPONSE_HEADERS_NAMES", "REQUEST_HEADERS_NAMES", "USERID", "ARGS", "ARGS_GET", "ARGS_POST", "FILES_SIZES", "FILES_NAMES", "FILES_TMP_CONTENT", "MULTIPART_FILENAME", "MULTIPART_NAME", "MATCHED_VARS_NAMES", "MATCHED_VARS", "FILES", "REQUEST_COOKIES", "REQUEST_HEADERS", "RESPONSE_HEADERS", "GEO", "REQUEST_COOKIES_NAMES", "FILES_TMPNAMES", "ARGS_NAMES", "ARGS_GET_NAMES", "ARGS_POST_NAMES", "RULE", "XML", "TX", "DURATION", "TIME", "TIME_DAY", "TIME_EPOCH", "TIME_HOUR", "TIME_MIN", "TIME_MON", "TIME_SEC", "TIME_WDAY", "TIME_YEAR"}
+^
+testing/coraza_test.go:41:1: File is not properly formatted (golines)
+							t.Errorf("\x1b[41m ERROR \x1b[0m: %s:%s: %s, got:%s\n%s\nREQUEST:\n%s", p.Meta.Name, test.Name, e, debug, test.transaction, test.Request())
+^
+go.mod:54:1: a comment is mandatory to explain why the version has been retracted (gomoddirectives)
+retract v3.2.2
+^
+debuglog/default.go:78:46: G115: integer overflow conversion uint -> int (gosec)
+	e.fields = append(e.fields, strconv.Itoa(int(i))...)
+	                                            ^
+http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)
+				resp.Body.Close()
+				^
+http/e2e/e2e.go:308:3: G104: Errors unhandled (gosec)
+		resp.Body.Close()
+		^
+internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)
+			Code:        int32(al.Transaction().Response().Status()),
+			                  ^
+internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)
+			Port: int32(al.Transaction().ClientPort()),
+			           ^
+internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)
+			Port: int32(al.Transaction().HostPort()),
+			           ^
+internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)
+	webResourcesActivity.TimezoneOffset = int32(offset)
+	                                           ^
+internal/corazawaf/waf.go:265:9: G302: Expect file permissions to be 0600 or less (gosec)
+	return os.OpenFile(path, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	       ^
+internal/environment/default.go:25:3: G104: Errors unhandled (gosec)
+		file.Close()
+		^
+internal/environment/default.go:26:3: G104: Errors unhandled (gosec)
+		os.Remove(file.Name())
+		^
+internal/operators/inspect_file.go:34:9: G204: Subprocess launched with a potential tainted input or cmd arguments (gosec)
+	cmd := exec.CommandContext(ctx, o.path, value)
+	       ^
+internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
+	"crypto/md5"
+	^
+internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)
+	hasher := md5.New()
+	          ^
+internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.AuditLogWriterConfig.DirMode = fs.FileMode(auditLogDirMode)
+	                                                      ^
+internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.AuditLogWriterConfig.FileMode = fs.FileMode(auditLogFileMode)
+	                                                       ^
+internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.UploadFileMode = fs.FileMode(fm)
+	                                        ^
+internal/transformations/js_decode.go:75:25: G602: slice index out of range (gosec)
+					if (j == 3) && (buf[0] > '3') {
+					                   ^
+internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
+	"crypto/md5"
+	^
+internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)
+	h := md5.New()
+	     ^
+internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)
+	buf := md5.Sum(nil)
+	       ^
+internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)
+	"crypto/sha1"
+	^
+internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)
+	h := sha1.New()
+	     ^
+internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)
+	buf := sha1.Sum(nil)
+	       ^
+config_test.go:88:11: shadow: declaration of "err" shadows declaration at line 80 (govet)
+	if _, _, err := tx.WriteResponseBody([]byte("aaa")); err != nil {
+	         ^
+config_test.go:91:8: shadow: declaration of "err" shadows declaration at line 80 (govet)
+	if _, err := tx.ProcessResponseBody(); err != nil {
+	      ^
+http/interceptor.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+http/interceptor_test.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+http/middleware.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+http/middleware_test.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/sync/pool_std.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/sync/pool_tinygo.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build tinygo
+^
+internal/sync/pool_tinygo_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build tinygo
+^
+mage.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build ignore
+^
+magefile.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build mage
+^
+testing/auditlog_test.go:7:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+testing/auditlog_test.go:32:5: shadow: declaration of "err" shadows declaration at line 28 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:35:5: shadow: declaration of "err" shadows declaration at line 28 (govet)
+	if err := parser.FromString(`
+	   ^
+testing/auditlog_test.go:59:8: shadow: declaration of "err" shadows declaration at line 28 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:63:5: shadow: declaration of "err" shadows declaration at line 28 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err != nil {
+	   ^
+testing/auditlog_test.go:93:5: shadow: declaration of "err" shadows declaration at line 88 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:100:8: shadow: declaration of "err" shadows declaration at line 88 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:106:5: shadow: declaration of "err" shadows declaration at line 88 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err == nil {
+	   ^
+testing/auditlog_test.go:120:5: shadow: declaration of "err" shadows declaration at line 115 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:123:5: shadow: declaration of "err" shadows declaration at line 115 (govet)
+	if err := parser.FromString(`
+	   ^
+testing/auditlog_test.go:138:8: shadow: declaration of "err" shadows declaration at line 115 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:144:5: shadow: declaration of "err" shadows declaration at line 115 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err != nil {
+	   ^
+testing/auditlog_test.go:168:5: shadow: declaration of "err" shadows declaration at line 163 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:175:8: shadow: declaration of "err" shadows declaration at line 163 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:181:5: shadow: declaration of "err" shadows declaration at line 163 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err == nil {
+	   ^
+testing/auditlog_test.go:207:5: shadow: declaration of "err" shadows declaration at line 202 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:214:8: shadow: declaration of "err" shadows declaration at line 202 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:220:5: shadow: declaration of "err" shadows declaration at line 202 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err == nil {
+	   ^
+testing/auditlog_test.go:246:5: shadow: declaration of "err" shadows declaration at line 241 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:257:8: shadow: declaration of "err" shadows declaration at line 241 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:262:5: shadow: declaration of "err" shadows declaration at line 241 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err != nil {
+	   ^
+testing/auditlog_test.go:302:5: shadow: declaration of "err" shadows declaration at line 297 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:316:8: shadow: declaration of "err" shadows declaration at line 297 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:321:5: shadow: declaration of "err" shadows declaration at line 297 (govet)
+	if err := json.NewDecoder(file).Decode(&al2); err != nil {
+	   ^
+testing/auditlog_test.go:360:5: shadow: declaration of "err" shadows declaration at line 355 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:367:8: shadow: declaration of "err" shadows declaration at line 355 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:372:5: shadow: declaration of "err" shadows declaration at line 355 (govet)
+	if err := json.NewDecoder(file).Decode(&al); err != nil {
+	   ^
+testing/auditlog_test.go:410:5: shadow: declaration of "err" shadows declaration at line 405 (govet)
+	if err := parser.FromString(fmt.Sprintf("SecAuditLog %s", file.Name())); err != nil {
+	   ^
+testing/auditlog_test.go:417:8: shadow: declaration of "err" shadows declaration at line 405 (govet)
+	if _, err := file.Seek(0, 0); err != nil {
+	      ^
+testing/auditlog_test.go:422:5: shadow: declaration of "err" shadows declaration at line 405 (govet)
+	if err := json.NewDecoder(file).Decode(&al); err != nil {
+	   ^
+testing/coraza_test.go:31:9: shadow: declaration of "err" shadows declaration at line 25 (govet)
+					if err := test.RunPhases(); err != nil {
+					   ^
+testing/coraza_test.go:103:7: shadow: declaration of "err" shadows declaration at line 69 (govet)
+			if err := test.SetEncodedRequest(stage.Stage.Input.EncodedRequest); err != nil {
+			   ^
+testing/coraza_test.go:106:7: shadow: declaration of "err" shadows declaration at line 69 (govet)
+			if err := test.SetRawRequest(stage.Stage.Input.RawRequest); err != nil {
+			   ^
+testing/coraza_test.go:109:7: shadow: declaration of "err" shadows declaration at line 69 (govet)
+			if err := test.SetRequestBody(stage.Stage.Input.Data); err != nil {
+			   ^
+testing/coraza_test.go:112:7: shadow: declaration of "err" shadows declaration at line 69 (govet)
+			if err := test.SetResponseBody(stage.Stage.Output.Data); err != nil {
+			   ^
+testing/engine_test.go:81:5: shadow: declaration of "err" shadows declaration at line 72 (govet)
+	if err := test.SetRawRequest([]byte(req)); err != nil {
+	   ^
+testing/engine_test.go:85:5: shadow: declaration of "err" shadows declaration at line 72 (govet)
+	if err := test.SetResponseBody("someoutput=withvalue"); err != nil {
+	   ^
+testing/engine_test.go:88:5: shadow: declaration of "err" shadows declaration at line 72 (govet)
+	if err := test.RunPhases(); err != nil {
+	   ^
+testing/modsecurity_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build modsecurity
+^
+debuglog/default_test.go:45:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for settedLevel := 0; settedLevel <= 9; settedLevel++ {
+			^
+internal/bodyprocessors/json_test.go:198:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/collections/map_test.go:112:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/collections/map_test.go:119:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < b.N; i++ {
+		^
+internal/collections/map_test.go:125:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < b.N; i++ {
+		^
+internal/corazawaf/transaction_test.go:1129:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < 1000; i++ {
+	^
+internal/corazawaf/transaction_test.go:1319:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/corazawaf/transaction_test.go:1355:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/corazawaf/transaction_test.go:1398:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/corazawaf/transaction_test.go:1510:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/corazawaf/transaction_test.go:1640:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < limit+1; i++ {
+		^
+internal/corazawaf/transaction_test.go:1660:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < limit+1; i++ {
+		^
+internal/corazawaf/transaction_test.go:1680:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < limit+1; i++ {
+		^
+internal/corazawaf/transaction_test.go:1700:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < limit+1; i++ {
+		^
+internal/corazawaf/waf.go:228:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i <= 10; i++ {
+	^
+internal/operators/validate_byte_range.go:78:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < len(data); i++ {
+	^
+internal/operators/validate_byte_range_test.go:57:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/seclang/parser_test.go:239:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < maxIncludeRecursion+1; i++ {
+	^
+internal/seclang/parser_test.go:296:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/seclang/rule_parser_test.go:393:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/strings/strings_test.go:88:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < 5000; i++ {
+	^
+internal/transformations/base64decode.go:50:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < slen; i++ {
+	^
+internal/transformations/base64decode_test.go:178:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/base64decodeext_test.go:71:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/cmd_line.go:24:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < len(data); i++ {
+	^
+internal/transformations/cmd_line_test.go:22:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/compress_whitespace.go:11:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < len(value); i++ {
+	^
+internal/transformations/compress_whitespace_test.go:56:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/css_decode_test.go:57:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/escape_seq_decode_test.go:65:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/js_decode_test.go:58:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/lowercase_test.go:57:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/transformations/lowercase_test.go:60:5: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+				for j := 0; j < b.N; j++ {
+				^
+internal/transformations/md5_test.go:16:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/sha1_test.go:16:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/transformations/uppercase_test.go:57:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/transformations/uppercase_test.go:60:5: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+				for j := 0; j < b.N; j++ {
+				^
+internal/transformations/url_decode.go:11:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < len(data); i++ {
+	^
+internal/transformations/url_decode_uni.go:11:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < len(data); i++ {
+	^
+internal/transformations/url_decode_uni_test.go:27:5: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+				for i := 0; i < b.N; i++ {
+				^
+internal/transformations/url_encode.go:26:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < inputLen; i++ {
+	^
+internal/transformations/url_encode_test.go:55:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/transformations/url_encode_test.go:58:5: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+				for j := 0; j < b.N; j++ {
+				^
+internal/transformations/utf8_to_unicode.go:47:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < 4-cHexLen; i++ {
+		^
+internal/transformations/utf8_to_unicode_test.go:70:4: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+			for i := 0; i < b.N; i++ {
+			^
+internal/url/url_test.go:20:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+internal/url/url_test.go:46:2: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+	for i := 0; i < b.N; i++ {
+	^
+testing/engine.go:304:3: for loop can be changed to use an integer range (Go 1.22+) (intrange)
+		for i := 0; i < len(v); i++ {
+		^
+internal/corazawaf/rule_multiphase.go:316:33: append to slice `localebuildingMatchedChain` with non-zero initialized length (makezero)
+			localebuildingMatchedChain = append(localebuildingMatchedChain, mv)
+			                             ^
+http/interceptor_test.go:212:39: avoid allocations with bytes.NewBufferString (mirror)
+	_, err = rw.(io.ReaderFrom).ReadFrom(bytes.NewBuffer([]byte("hello world")))
+	                                     ^
+http/interceptor_test.go:217:59: avoid allocations with bytes.NewBufferString (mirror)
+	_, err = rw.(io.ReaderFrom).ReadFrom(struct{ io.Reader }{bytes.NewBuffer([]byte("hello world"))})
+	                                                         ^
+http/middleware_test.go:183:10: avoid allocations with bytes.NewBufferString (mirror)
+	data := bytes.NewBuffer([]byte(strings.Join(rdata, "\r\n")))
+	        ^
+internal/corazawaf/transaction.go:1346:20: avoid allocations with (*regexp.Regexp).MatchString (mirror)
+		if re != nil && !re.Match([]byte(status)) {
+		                 ^
+http/interceptor.go:158:64: Magic number: 200, in <assign> detected (mnd)
+	i := &rwInterceptor{w: w, tx: tx, proto: r.Proto, statusCode: 200}
+	                                                              ^
+internal/auditlog/formats.go:40:60: Magic number: 10, in <argument> detected (mnd)
+	boundaryPrefix := fmt.Sprintf("--%s-", utils.RandomString(10))
+	                                                          ^
+internal/auditlog/formats_ocsf.go:112:12: Magic number: 7, in <assign> detected (mnd)
+			TypeId: 7,
+			        ^
+internal/auditlog/logger.go:17:14: Magic number: 0644, in <assign> detected (mnd)
+		FileMode:  0644,
+		           ^
+internal/auditlog/logger.go:19:14: Magic number: 0755, in <assign> detected (mnd)
+		DirMode:   0755,
+		           ^
+testing/engine.go:95:21: Magic number: 3, in <condition> detected (mnd)
+	if len(reqLine) != 3 {
+	                   ^
+testing/engine.go:293:20: Magic number: 80, in <assign> detected (mnd)
+		RequestPort:     80,
+		                 ^
+testing/engine/allow.go:53:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/allow.go:55:17: Magic number: 22, in <assign> detected (mnd)
+								RuleID: 22,
+								        ^
+testing/engine/allow.go:77:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/allow.go:79:17: Magic number: 42, in <assign> detected (mnd)
+								RuleID: 42,
+								        ^
+testing/engine/allow.go:96:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/allow.go:98:17: Magic number: 46, in <assign> detected (mnd)
+								RuleID: 46,
+								        ^
+testing/engine/allow.go:122:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/allow.go:124:17: Magic number: 51, in <assign> detected (mnd)
+								RuleID: 51,
+								        ^
+testing/engine/allow.go:144:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/allow.go:146:17: Magic number: 70, in <assign> detected (mnd)
+								RuleID: 70,
+								        ^
+testing/engine/directives_updateactions.go:45:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/directives_updateactions.go:47:17: Magic number: 1014, in <assign> detected (mnd)
+								RuleID: 1014,
+								        ^
+testing/engine/disruptive_actions.go:30:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:46:17: Magic number: 403, in <assign> detected (mnd)
+								Status: 403,
+								        ^
+testing/engine/disruptive_actions.go:48:17: Magic number: 2, in <assign> detected (mnd)
+								RuleID: 2,
+								        ^
+testing/engine/disruptive_actions.go:64:17: Magic number: 3, in <assign> detected (mnd)
+								RuleID: 3,
+								        ^
+testing/engine/disruptive_actions.go:79:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:81:17: Magic number: 21, in <assign> detected (mnd)
+								RuleID: 21,
+								        ^
+testing/engine/disruptive_actions.go:96:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:98:17: Magic number: 21, in <assign> detected (mnd)
+								RuleID: 21,
+								        ^
+testing/engine/disruptive_actions.go:112:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:114:17: Magic number: 61, in <assign> detected (mnd)
+								RuleID: 61,
+								        ^
+testing/engine/disruptive_actions.go:128:17: Magic number: 307, in <assign> detected (mnd)
+								Status: 307,
+								        ^
+testing/engine/disruptive_actions.go:130:17: Magic number: 62, in <assign> detected (mnd)
+								RuleID: 62,
+								        ^
+testing/engine/disruptive_actions.go:144:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:146:17: Magic number: 63, in <assign> detected (mnd)
+								RuleID: 63,
+								        ^
+testing/engine/disruptive_actions.go:160:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/disruptive_actions.go:162:17: Magic number: 22, in <assign> detected (mnd)
+								RuleID: 22,
+								        ^
+testing/engine/disruptive_actions.go:178:17: Magic number: 23, in <assign> detected (mnd)
+								RuleID: 23,
+								        ^
+testing/engine/disruptive_actions.go:193:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:195:17: Magic number: 31, in <assign> detected (mnd)
+								RuleID: 31,
+								        ^
+testing/engine/disruptive_actions.go:209:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/disruptive_actions.go:211:17: Magic number: 32, in <assign> detected (mnd)
+								RuleID: 32,
+								        ^
+testing/engine/disruptive_actions.go:227:17: Magic number: 33, in <assign> detected (mnd)
+								RuleID: 33,
+								        ^
+testing/engine/disruptive_actions.go:242:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:244:17: Magic number: 41, in <assign> detected (mnd)
+								RuleID: 41,
+								        ^
+testing/engine/disruptive_actions.go:258:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/disruptive_actions.go:260:17: Magic number: 42, in <assign> detected (mnd)
+								RuleID: 42,
+								        ^
+testing/engine/disruptive_actions.go:276:17: Magic number: 43, in <assign> detected (mnd)
+								RuleID: 43,
+								        ^
+testing/engine/disruptive_actions.go:291:17: Magic number: 302, in <assign> detected (mnd)
+								Status: 302,
+								        ^
+testing/engine/disruptive_actions.go:293:17: Magic number: 51, in <assign> detected (mnd)
+								RuleID: 51,
+								        ^
+testing/engine/disruptive_actions.go:307:17: Magic number: 500, in <assign> detected (mnd)
+								Status: 500,
+								        ^
+testing/engine/disruptive_actions.go:309:17: Magic number: 52, in <assign> detected (mnd)
+								RuleID: 52,
+								        ^
+internal/corazawaf/rule.go:518:42: any: interface{} can be replaced by any (modernize)
+		if vare, err := memoize.Do(rx, func() (interface{}, error) { return regexp.Compile(rx) }); err != nil {
+		                                       ^
+internal/corazawaf/rule.go:562:42: any: interface{} can be replaced by any (modernize)
+		if vare, err := memoize.Do(rx, func() (interface{}, error) { return regexp.Compile(rx) }); err != nil {
+		                                       ^
+internal/corazawaf/waf.go:296:31: any: interface{} can be replaced by any (modernize)
+		txPool: sync.NewPool(func() interface{} { return new(Transaction) }),
+		                            ^
+internal/memoize/noop.go:8:30: any: interface{} can be replaced by any (modernize)
+func Do(_ string, fn func() (interface{}, error)) (interface{}, error) {
+                             ^
+internal/operators/operators_test.go:125:26: any: interface{} can be replaced by any (modernize)
+	for _, in := range v.([]interface{}) {
+	                        ^
+internal/operators/operators_test.go:126:25: any: interface{} can be replaced by any (modernize)
+		obj := in.(map[string]interface{})
+		                      ^
+internal/operators/pm.go:35:35: any: interface{} can be replaced by any (modernize)
+	m, _ := memoize.Do(data, func() (interface{}, error) { return builder.Build(dict), nil })
+	                                 ^
+internal/operators/pm_from_dataset.go:30:35: any: interface{} can be replaced by any (modernize)
+	m, _ := memoize.Do(data, func() (interface{}, error) { return builder.Build(dataset), nil })
+	                                 ^
+internal/operators/rbl_test.go:20:49: any: interface{} can be replaced by any (modernize)
+func (l *testLogger) Printf(format string, v ...interface{}) {
+                                                ^
+internal/operators/restpath.go:35:38: any: interface{} can be replaced by any (modernize)
+	re, err := memoize.Do(data, func() (interface{}, error) { return regexp.Compile(data) })
+	                                    ^
+internal/operators/rx.go:48:38: any: interface{} can be replaced by any (modernize)
+	re, err := memoize.Do(data, func() (interface{}, error) { return regexp.Compile(data) })
+	                                    ^
+internal/operators/rx.go:84:38: any: interface{} can be replaced by any (modernize)
+	re, err := memoize.Do(data, func() (interface{}, error) { return binaryregexp.Compile(data) })
+	                                    ^
+internal/operators/validate_nid.go:44:38: any: interface{} can be replaced by any (modernize)
+	re, err := memoize.Do(expr, func() (interface{}, error) { return regexp.Compile(expr) })
+	                                    ^
+internal/seclang/directives.go:816:46: any: interface{} can be replaced by any (modernize)
+	re, err := memoize.Do(options.Opts, func() (interface{}, error) { return regexp.Compile(options.Opts) })
+	                                            ^
+internal/seclang/directives_log_test.go:62:19: any: interface{} can be replaced by any (modernize)
+	var j map[string]interface{}
+	                 ^
+internal/strings/strings.go:96:2: slicescontains: Loop can be simplified using slices.Contains (modernize)
+	for _, b := range list {
+	^
+internal/sync/pool.go:9:8: any: interface{} can be replaced by any (modernize)
+	Get() interface{}
+	      ^
+internal/sync/pool.go:10:8: any: interface{} can be replaced by any (modernize)
+	Put(x interface{})
+	      ^
+internal/sync/pool_std.go:23:25: any: interface{} can be replaced by any (modernize)
+func (p *stdPool) Get() interface{} {
+                        ^
+internal/sync/pool_std.go:27:25: any: interface{} can be replaced by any (modernize)
+func (p *stdPool) Put(x interface{}) {
+                        ^
+internal/transformations/transformations_test.go:84:26: any: interface{} can be replaced by any (modernize)
+	for _, in := range v.([]interface{}) {
+	                        ^
+internal/transformations/transformations_test.go:85:25: any: interface{} can be replaced by any (modernize)
+		obj := in.(map[string]interface{})
+		                      ^
+testing/coraza_test.go:38:8: stringsbuilder: using string += string in a loop is inefficient (modernize)
+							debug += fmt.Sprintf(" %d", mr.Rule().ID())
+							^
+testing/engine.go:123:36: any: interface{} can be replaced by any (modernize)
+func (t *Test) SetRequestBody(body interface{}) error {
+                                   ^
+testing/engine.go:144:37: any: interface{} can be replaced by any (modernize)
+func (t *Test) SetResponseBody(body interface{}) error {
+                                    ^
+testing/engine.go:271:3: stringsbuilder: using string += string in a loop is inefficient (modernize)
+		str += fmt.Sprintf("%s: %s\r\n", k, v)
+		^
+testing/engine.go:300:25: any: interface{} can be replaced by any (modernize)
+func bodyToString(iface interface{}) string {
+                        ^
+testing/profile/profile.go:61:20: any: interface{} can be replaced by any (modernize)
+	Data              interface{}           `yaml:"data,omitempty"` // Accepts array or string
+	                  ^
+testing/profile/profile.go:67:20: any: interface{} can be replaced by any (modernize)
+	Status            interface{}           `yaml:"status,omitempty"`
+	                  ^
+internal/auditlog/formats_json.go:90:30: the given struct should be annotated with the `json` tag (musttag)
+	jsdata, err := json.Marshal(al2)
+	                            ^
+internal/corazawaf/body_buffer.go:126:2: naked return in func `Read` with 25 lines of code (nakedret)
+	return
+	^
+internal/corazawaf/rule.go:642:2: naked return in func `executeOperator` with 6 lines of code (nakedret)
+	return
+	^
+internal/seclang/rule_parser.go:434:3: naked return in func `parseActionOperator` with 32 lines of code (nakedret)
+		return
+		^
+internal/seclang/rule_parser.go:441:3: naked return in func `parseActionOperator` with 32 lines of code (nakedret)
+		return
+		^
+internal/seclang/rule_parser.go:449:2: naked return in func `parseActionOperator` with 32 lines of code (nakedret)
+	return
+	^
+experimental/plugins/macro/macro.go:123:1: `if isMacro` has complex nested blocks (complexity: 7) (nestif)
+		if isMacro {
+^
+http/interceptor.go:168:1: `if tx.IsResponseBodyAccessible() && tx.IsResponseBodyProcessable()` has complex nested blocks (complexity: 5) (nestif)
+		if tx.IsResponseBodyAccessible() && tx.IsResponseBodyProcessable() {
+^
+http/middleware.go:68:1: `if tx.IsRequestBodyAccessible()` has complex nested blocks (complexity: 7) (nestif)
+	if tx.IsRequestBodyAccessible() {
+^
+internal/actions/ctl.go:449:1: `if ok` has complex nested blocks (complexity: 5) (nestif)
+	if in0, in1, ok := strings.Cut(input, "-"); ok {
+^
+internal/auditlog/formats_ocsf_test.go:48:1: `if al.Transaction().IsInterrupted()` has complex nested blocks (complexity: 5) (nestif)
+		if al.Transaction().IsInterrupted() {
+^
+internal/auditlog/formats_ocsf_test.go:76:1: `if al.Transaction().HasRequest()` has complex nested blocks (complexity: 25) (nestif)
+		if al.Transaction().HasRequest() {
+^
+internal/bodyprocessors/multipart.go:59:1: `if filename != ""` has complex nested blocks (complexity: 10) (nestif)
+		if filename != "" {
+^
+internal/corazawaf/body_buffer.go:72:1: `if targetLen > br.options.MemoryLimit` has complex nested blocks (complexity: 10) (nestif)
+	if targetLen > br.options.MemoryLimit {
+^
+internal/corazawaf/rule.go:206:1: `if r.operator == nil` has complex nested blocks (complexity: 40) (nestif)
+	if r.operator == nil {
+^
+internal/corazawaf/rule.go:343:1: `if r.ParentID_ == noID` has complex nested blocks (complexity: 11) (nestif)
+	if r.ParentID_ == noID {
+^
+internal/corazawaf/rule_multiphase.go:261:1: `if r.ParentID_ == 0 && (!r.HasChain || phase >= r.chainMinPhase)` has complex nested blocks (complexity: 15) (nestif)
+	if r.ParentID_ == 0 && (!r.HasChain || phase >= r.chainMinPhase) {
+^
+internal/corazawaf/rulegroup.go:32:1: `if shouldDoMandatoryRuleIdCheck` has complex nested blocks (complexity: 7) (nestif)
+	if shouldDoMandatoryRuleIdCheck {
+^
+internal/corazawaf/transaction.go:944:1: `if ok` has complex nested blocks (complexity: 7) (nestif)
+	if l, ok := r.(ByteLenger); ok {
+^
+internal/corazawaf/transaction.go:1201:1: `if ok` has complex nested blocks (complexity: 6) (nestif)
+	if l, ok := r.(ByteLenger); ok {
+^
+internal/corazawaf/transaction_test.go:263:1: `if testCase.shouldInterrupt` has complex nested blocks (complexity: 5) (nestif)
+							if testCase.shouldInterrupt {
+^
+internal/corazawaf/transaction_test.go:586:1: `if testCase.shouldInterrupt` has complex nested blocks (complexity: 5) (nestif)
+							if testCase.shouldInterrupt {
+^
+internal/operators/validate_schema.go:92:1: `if tx != nil` has complex nested blocks (complexity: 7) (nestif)
+	if tx != nil {
+^
+internal/seclang/directives.go:373:1: `if idx == -1` has complex nested blocks (complexity: 6) (nestif)
+		if idx := strings.Index(idOrRange, "-"); idx == -1 {
+^
+internal/seclang/directives.go:1044:1: `if idx == -1` has complex nested blocks (complexity: 10) (nestif)
+		if idx := strings.Index(idOrRange, "-"); idx == -1 {
+^
+internal/seclang/directives.go:1129:1: `if idx == -1` has complex nested blocks (complexity: 9) (nestif)
+		if idx := strings.Index(idOrRange, "-"); idx == -1 {
+^
+internal/seclang/directives_test.go:335:1: `if tCase.check == nil` has complex nested blocks (complexity: 6) (nestif)
+					if tCase.check == nil {
+^
+internal/seclang/rule_parser.go:57:1: `if (c == '|' && curr != 2) || i+1 >= len(vars) || (curr == 2 && c == '/' && !isEscaped)` has complex nested blocks (complexity: 17) (nestif)
+		if (c == '|' && curr != 2) || i+1 >= len(vars) || (curr == 2 && c == '/' && !isEscaped) {
+^
+internal/seclang/rule_parser.go:365:1: `if options.WithOperator` has complex nested blocks (complexity: 9) (nestif)
+	if options.WithOperator {
+^
+internal/seclang/rules_test.go:444:1: `if tx.IsResponseBodyProcessable()` has complex nested blocks (complexity: 7) (nestif)
+	if tx.IsResponseBodyProcessable() {
+^
+internal/transformations/css_decode.go:29:1: `if input[i] == '\\'` has complex nested blocks (complexity: 16) (nestif)
+		if input[i] == '\\' {
+^
+internal/transformations/js_decode.go:33:1: `if input[i] == '\\'` has complex nested blocks (complexity: 6) (nestif)
+		if input[i] == '\\' {
+^
+internal/transformations/replace_comments.go:19:1: `if !incomment` has complex nested blocks (complexity: 5) (nestif)
+		if !incomment {
+^
+internal/transformations/url_decode.go:27:1: `if input[i] == '%'` has complex nested blocks (complexity: 8) (nestif)
+		if input[i] == '%' {
+^
+internal/transformations/url_decode_uni.go:26:1: `if d[i] == '%'` has complex nested blocks (complexity: 29) (nestif)
+		if d[i] == '%' {
+^
+types/waf_test.go:24:1: `if test.expectedHasError` has complex nested blocks (complexity: 5) (nestif)
+			if test.expectedHasError {
+^
+internal/corazawaf/transaction.go:1058:3: error is not nil (line 1054) but it returns nil (nilerr)
+		return tx.interruption, nil
+		^
+experimental/plugins/operators_test.go:17:4: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+			return nil, nil
+			^
+internal/auditlog/syslog_writer_test.go:265:2: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+	return nil, nil
+	^
+internal/corazawaf/transaction.go:1000:3: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+		return nil, nil
+		^
+internal/corazawaf/transaction.go:1019:3: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+		return nil, nil
+		^
+internal/corazawaf/transaction.go:1250:3: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+		return nil, nil
+		^
+internal/corazawaf/transaction.go:1272:3: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+		return nil, nil
+		^
+internal/seclang/rule_parser.go:410:3: return both a `nil` error and an invalid value: use a sentinel error instead (nilnil)
+		return nil, nil
+		^
+http/e2e/e2e.go:248:28: net/http.NewRequest must not be called. use net/http.NewRequestWithContext (noctx)
+		req, _ := http.NewRequest(http.MethodGet, healthCheck.url, nil)
+		                         ^
+http/e2e/e2e.go:293:30: net/http.NewRequest must not be called. use net/http.NewRequestWithContext (noctx)
+		req, err := http.NewRequest(test.requestMethod, test.requestURL, requestBody)
+		                           ^
+internal/auditlog/https_writer.go:49:29: net/http.NewRequest must not be called. use net/http.NewRequestWithContext (noctx)
+	req, err := http.NewRequest(http.MethodPost, h.url, bytes.NewReader(body))
+	                           ^
+internal/corazawaf/body_buffer_test.go:151:28: directive `// nolint` should be written without leading space as `//nolint` (nolintlint)
+	br.Write([]byte("test1")) // nolint
+	                          ^
+http/interceptor.go:129:1: named return "n" with type "int64" found (nonamedreturns)
+func (i *rwInterceptor) ReadFrom(r io.Reader) (n int64, err error) {
+^
+http/interceptor_test.go:177:1: named return "n" with type "int64" found (nonamedreturns)
+func (x *testReaderFrom) ReadFrom(r io.Reader) (n int64, err error) {
+^
+internal/corazawaf/body_buffer.go:50:1: named return "n" with type "int" found (nonamedreturns)
+func (br *BodyBuffer) Write(data []byte) (n int, err error) {
+^
+internal/corazawaf/body_buffer.go:102:1: named return "n" with type "int" found (nonamedreturns)
+func (b *bodyBufferReader) Read(p []byte) (n int, err error) {
+^
+internal/corazawaf/rule.go:637:1: named return "result" with type "bool" found (nonamedreturns)
+func (r *Rule) executeOperator(data string, tx *Transaction) (result bool) {
+^
+internal/seclang/rule_parser.go:418:1: named return "vars" with type "string" found (nonamedreturns)
+func parseActionOperator(data string) (vars string, op string, actions string, err error) {
+^
+internal/seclang/rules_test.go:958:1: named return "result" with type "bool" found (nonamedreturns)
+func isMatchData(mds []types.MatchData, key string) (result bool) {
+^
+experimental/plugins/macro/macro.go:99:10: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return fmt.Errorf("empty macro")
+		       ^
+experimental/plugins/macro/macro.go:127:13: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+					return fmt.Errorf("empty variable name")
+					       ^
+http/e2e/e2e.go:89:12: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+				return fmt.Errorf("expected nulled body, got content-length 0")
+				       ^
+http/e2e/e2e.go:93:12: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+				return fmt.Errorf("expected nulled body, got empty body")
+				       ^
+http/middleware_test.go:144:35: integer-format: fmt.Sprintf can be replaced with faster strconv.Itoa (perfsprint)
+	req.Header.Set("Content-Length", fmt.Sprintf("%d", body.Len()))
+	                                 ^
+internal/auditlog/formats_ocsf.go:119:12: integer-format: fmt.Sprint can be replaced with faster strconv.FormatInt (perfsprint)
+			Value:  fmt.Sprint(file.Size()),
+			        ^
+internal/auditlog/formats_ocsf_test.go:106:11: integer-format: fmt.Sprint can be replaced with faster strconv.FormatInt (perfsprint)
+							if fmt.Sprint(file.Size()) != observable.Value {
+							   ^
+internal/bodyprocessors/multipart.go:86:39: integer-format: fmt.Sprintf can be replaced with faster strconv.FormatInt (perfsprint)
+			fileSizesCol.SetIndex(filename, 0, fmt.Sprintf("%d", size))
+			                                   ^
+internal/bodyprocessors/urlencoded_test.go:30:3: concat-loop: string concatenation in a loop (perfsprint)
+		body += k + "=" + v + "&"
+		^
+internal/corazawaf/rule.go:514:10: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return fmt.Errorf("cannot add a variable to an undefined rule")
+		       ^
+internal/corazawaf/rule.go:570:10: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return fmt.Errorf("cannot create a variable exception for an undefined rule")
+		       ^
+internal/corazawaf/transaction.go:435:15: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return nil, fmt.Errorf("invalid request line")
+		            ^
+internal/corazawaf/transaction.go:446:16: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+			return nil, fmt.Errorf("invalid request header")
+			            ^
+internal/corazawaf/transaction_test.go:78:20: integer-format: fmt.Sprintf can be replaced with faster strconv.FormatInt (perfsprint)
+		"%{TIME_EPOCH}": fmt.Sprintf("%d", tx.Timestamp/1e9), // 1731943654 in UTC, may differ in local timezone
+		                 ^
+internal/corazawaf/waf.go:405:11: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+			return fmt.Errorf("request body limit should be at least the memory limit")
+			       ^
+internal/io/file.go:18:15: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return nil, fmt.Errorf("filename is empty")
+		            ^
+internal/operators/pm_from_dataset_test.go:35:11: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		t.Error(fmt.Errorf("pmFromDataset should have failed"))
+		        ^
+internal/operators/validate_nid.go:32:15: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return nil, fmt.Errorf("invalid @validateNid argument")
+		            ^
+internal/operators/validate_nid.go:41:15: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return nil, fmt.Errorf("invalid @validateNid argument")
+		            ^
+internal/seclang/directives.go:541:9: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+	return fmt.Errorf("not implemented")
+	       ^
+internal/seclang/directives.go:957:10: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return fmt.Errorf("SecUploadDir directive is not effective because of no access to the filesystem")
+		       ^
+internal/seclang/rule_parser.go:253:10: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+		return fmt.Errorf("SecDefaultAction must contain a phase")
+		       ^
+testing/engine.go:90:11: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+			return fmt.Errorf("invalid request")
+			       ^
+testing/engine.go:110:11: error-format: fmt.Errorf can be replaced with errors.New (perfsprint)
+			return fmt.Errorf("invalid header")
+			       ^
+testing/engine.go:305:4: concat-loop: string concatenation in a loop (perfsprint)
+			data += fmt.Sprintf("%s\r\n", v[i])
+			^
+internal/auditlog/formats_ocsf_test.go:43:6: avoid direct access to proto field wra.Time, use wra.GetTime() instead (protogetter)
+		if wra.Time != al.Transaction().UnixTimestamp() {
+		   ^
+internal/auditlog/formats_ocsf_test.go:49:7: avoid direct access to proto field wra.Action, use wra.GetAction() instead (protogetter)
+			if wra.Action != "Denied" {
+			   ^
+internal/auditlog/formats_ocsf_test.go:50:75: avoid direct access to proto field wra.Action, use wra.GetAction() instead (protogetter)
+				t.Errorf("failed to match audit log Action, \ngot: %s\nexpected: %s", wra.Action, "Denied")
+				                                                                      ^
+internal/auditlog/formats_ocsf_test.go:53:7: avoid direct access to proto field wra.ActionId, use wra.GetActionId() instead (protogetter)
+			if wra.ActionId != enums.WEB_RESOURCES_ACTIVITY_ACTION_ID_WEB_RESOURCES_ACTIVITY_ACTION_ID_DENIED {
+			   ^
+internal/auditlog/formats_ocsf_test.go:57:7: avoid direct access to proto field wra.Action, use wra.GetAction() instead (protogetter)
+			if wra.Action != "Allowed" {
+			   ^
+internal/auditlog/formats_ocsf_test.go:58:75: avoid direct access to proto field wra.Action, use wra.GetAction() instead (protogetter)
+				t.Errorf("failed to match audit log Action, \ngot: %s\nexpected: %s", wra.Action, "Allowed")
+				                                                                      ^
+internal/auditlog/formats_ocsf_test.go:61:7: avoid direct access to proto field wra.ActionId, use wra.GetActionId() instead (protogetter)
+			if wra.ActionId != enums.WEB_RESOURCES_ACTIVITY_ACTION_ID_WEB_RESOURCES_ACTIVITY_ACTION_ID_ALLOWED {
+			   ^
+internal/auditlog/formats_ocsf_test.go:62:78: avoid direct access to proto field wra.ActionId, use wra.GetActionId() instead (protogetter)
+				t.Errorf("failed to match audit log Action ID, \ngot: %s\nexpected: %s", wra.ActionId, enums.WEB_RESOURCES_ACTIVITY_ACTION_ID_WEB_RESOURCES_ACTIVITY_ACTION_ID_ALLOWED)
+				                                                                         ^
+internal/auditlog/formats_ocsf_test.go:67:30: avoid direct access to proto field wra.Observables, use wra.GetObservables() instead (protogetter)
+		for _, observable := range wra.Observables {
+		                           ^
+internal/auditlog/formats_ocsf_test.go:68:7: avoid direct access to proto field observable.Name, use observable.GetName() instead (protogetter)
+			if observable.Name == "ServerID" {
+			   ^
+internal/auditlog/formats_ocsf_test.go:69:8: avoid direct access to proto field observable.Value, use observable.GetValue() instead (protogetter)
+				if observable.Value != al.Transaction().ServerID() {
+				   ^
+internal/auditlog/formats_ocsf_test.go:78:7: avoid direct access to proto field wra.HttpRequest.Url.UrlString, use wra.GetHttpRequest().GetUrl().GetUrlString() instead (protogetter)
+			if wra.HttpRequest.Url.UrlString != al.Transaction().Request().URI() {
+			   ^
+internal/auditlog/formats_ocsf_test.go:82:7: avoid direct access to proto field wra.HttpRequest.HttpMethod, use wra.GetHttpRequest().GetHttpMethod() instead (protogetter)
+			if wra.HttpRequest.HttpMethod != al.Transaction().Request().Method() {
+			   ^
+internal/auditlog/formats_ocsf_test.go:86:27: avoid direct access to proto field wra.HttpRequest.HttpHeaders, use wra.GetHttpRequest().GetHttpHeaders() instead (protogetter)
+			for _, header := range wra.HttpRequest.HttpHeaders {
+			                       ^
+internal/auditlog/formats_ocsf_test.go:87:8: avoid direct access to proto field header.Value, use header.GetValue() instead (protogetter)
+				if header.Value != al.Transaction().Request().Headers()[header.Name][0] {
+				   ^
+internal/auditlog/formats_ocsf_test.go:93:32: avoid direct access to proto field wra.Observables, use wra.GetObservables() instead (protogetter)
+				for _, observable := range wra.Observables {
+				                           ^
+internal/auditlog/formats_ocsf_test.go:94:9: avoid direct access to proto field observable.Name, use observable.GetName() instead (protogetter)
+					if observable.Name == file.Name() {
+					   ^
+internal/auditlog/formats_ocsf_test.go:95:10: avoid direct access to proto field observable.Type, use observable.GetType() instead (protogetter)
+						if observable.Type == "File Name" {
+						   ^
+internal/auditlog/formats_ocsf_test.go:96:26: avoid direct access to proto field observable.Value, use observable.GetValue() instead (protogetter)
+							if file.Name() != observable.Value {
+							                  ^
+internal/auditlog/formats_ocsf_test.go:100:10: avoid direct access to proto field observable.Type, use observable.GetType() instead (protogetter)
+						if observable.Type == "Mime" {
+						   ^
+internal/auditlog/formats_ocsf_test.go:101:26: avoid direct access to proto field observable.Value, use observable.GetValue() instead (protogetter)
+							if file.Mime() != observable.Value {
+							                  ^
+internal/auditlog/formats_ocsf_test.go:105:10: avoid direct access to proto field observable.Type, use observable.GetType() instead (protogetter)
+						if observable.Type == "Size" {
+						   ^
+internal/auditlog/formats_ocsf_test.go:115:7: avoid direct access to proto field wra.HttpRequest.Version, use wra.GetHttpRequest().GetVersion() instead (protogetter)
+			if wra.HttpRequest.Version != al.Transaction().Request().Protocol() {
+			   ^
+internal/auditlog/formats_ocsf_test.go:122:26: avoid direct access to proto field wra.HttpRequest.Args, use wra.GetHttpRequest().GetArgs() instead (protogetter)
+					if strings.Contains(wra.HttpRequest.Args, fmt.Sprintf("%s=%s", arg.Key(), arg.Value())) == false {
+					                    ^
+internal/auditlog/formats_ocsf_test.go:129:7: avoid direct access to proto field wra.HttpRequest.Uid, use wra.GetHttpRequest().GetUid() instead (protogetter)
+			if wra.HttpRequest.Uid != al.Transaction().ID() {
+			   ^
+internal/auditlog/formats_ocsf_test.go:134:7: avoid direct access to proto field wra.HttpRequest.Length, use wra.GetHttpRequest().GetLength() instead (protogetter)
+			if wra.HttpRequest.Length != al.Transaction().Request().Length() {
+			   ^
+internal/auditlog/formats_ocsf_test.go:141:11: avoid direct access to proto field wra.HttpResponse.Code, use wra.GetHttpResponse().GetCode() instead (protogetter)
+			if int(wra.HttpResponse.Code) != al.Transaction().Response().Status() {
+			       ^
+internal/auditlog/formats_ocsf_test.go:146:27: avoid direct access to proto field wra.HttpResponse.HttpHeaders, use wra.GetHttpResponse().GetHttpHeaders() instead (protogetter)
+			for _, header := range wra.HttpResponse.HttpHeaders {
+			                       ^
+internal/auditlog/formats_ocsf_test.go:147:8: avoid direct access to proto field header.Value, use header.GetValue() instead (protogetter)
+				if header.Value != al.Transaction().Response().Headers()[header.Name][0] {
+				   ^
+internal/auditlog/formats_ocsf_test.go:154:6: avoid direct access to proto field wra.Enrichments[0].Name, use wra.GetEnrichments()[0].GetName() instead (protogetter)
+		if wra.Enrichments[0].Name != al.Messages()[0].Data().Msg() {
+		   ^
+debuglog/default.go:14:6: the methods of "defaultEvent" use pointer receiver and non-pointer receiver. (recvcheck)
+type defaultEvent struct {
+     ^
+internal/auditlog/concurrent_writer.go:21:6: the methods of "concurrentWriter" use pointer receiver and non-pointer receiver. (recvcheck)
+type concurrentWriter struct {
+     ^
+internal/corazarules/rule_match.go:82:6: the methods of "MatchedRule" use pointer receiver and non-pointer receiver. (recvcheck)
+type MatchedRule struct {
+     ^
+http/interceptor.go:160:50: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+	responseProcessor := func(tx types.Transaction, r *http.Request) error {
+	                                                ^
+http/middleware_test.go:564:43: unused-parameter: parameter 'w' seems to be unused, consider removing or renaming it as _ (revive)
+	delegateHandler := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {})
+	                                         ^
+http/middleware_test.go:577:29: unused-parameter: parameter 'w' seems to be unused, consider removing or renaming it as _ (revive)
+			handler:            func(w http.ResponseWriter, r *http.Request) {},
+			                         ^
+http/middleware_test.go:581:18: unused-parameter: parameter 'w' seems to be unused, consider removing or renaming it as _ (revive)
+			handler: func(w http.ResponseWriter, r *http.Request) {
+			              ^
+http/middleware_test.go:593:52: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+			handler:            func(w http.ResponseWriter, r *http.Request) { w.WriteHeader(201) },
+			                                                ^
+http/middleware_test.go:597:41: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+			handler: func(w http.ResponseWriter, r *http.Request) {
+			                                     ^
+http/middleware_test.go:604:41: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+			handler: func(w http.ResponseWriter, r *http.Request) {
+			                                     ^
+http/middleware_test.go:610:41: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+			handler: func(w http.ResponseWriter, r *http.Request) {
+			                                     ^
+http/middleware_test.go:617:41: unused-parameter: parameter 'r' seems to be unused, consider removing or renaming it as _ (revive)
+			handler: func(w http.ResponseWriter, r *http.Request) {
+			                                     ^
+internal/auditlog/auditlog.go:17:2: var-naming: don't use underscores in Go names; struct field Parts_ should be Parts (revive)
+	Parts_ types.AuditLogParts `json:"-"`
+	^
+internal/auditlog/auditlog.go:20:2: var-naming: don't use underscores in Go names; struct field Transaction_ should be Transaction (revive)
+	Transaction_ Transaction `json:"transaction"`
+	^
+internal/auditlog/auditlog.go:23:2: var-naming: don't use underscores in Go names; struct field Messages_ should be Messages (revive)
+	Messages_ []plugintypes.AuditLogMessage `json:"messages,omitempty"`
+	^
+internal/auditlog/auditlog.go:42:2: var-naming: don't use underscores in Go names; struct field Transaction_ should be Transaction (revive)
+	Transaction_ Transaction `json:"transaction"`
+	^
+internal/auditlog/auditlog.go:43:2: var-naming: don't use underscores in Go names; struct field Messages_ should be Messages (revive)
+	Messages_    []Message   `json:"messages"`
+	^
+internal/auditlog/auditlog.go:72:2: var-naming: don't use underscores in Go names; struct field Timestamp_ should be Timestamp (revive)
+	Timestamp_     string `json:"timestamp"`
+	^
+internal/auditlog/auditlog.go:73:2: var-naming: don't use underscores in Go names; struct field UnixTimestamp_ should be UnixTimestamp (revive)
+	UnixTimestamp_ int64  `json:"unix_timestamp"`
+	^
+internal/auditlog/auditlog.go:76:2: var-naming: don't use underscores in Go names; struct field ID_ should be ID (revive)
+	ID_ string `json:"id"`
+	^
+internal/auditlog/auditlog.go:79:2: var-naming: don't use underscores in Go names; struct field ClientIP_ should be ClientIP (revive)
+	ClientIP_ string `json:"client_ip"`
+	^
+internal/auditlog/auditlog.go:81:2: var-naming: don't use underscores in Go names; struct field ClientPort_ should be ClientPort (revive)
+	ClientPort_      int                  `json:"client_port"`
+	^
+internal/auditlog/auditlog.go:82:2: var-naming: don't use underscores in Go names; struct field HostIP_ should be HostIP (revive)
+	HostIP_          string               `json:"host_ip"`
+	^
+internal/auditlog/auditlog.go:83:2: var-naming: don't use underscores in Go names; struct field HostPort_ should be HostPort (revive)
+	HostPort_        int                  `json:"host_port"`
+	^
+internal/auditlog/auditlog.go:84:2: var-naming: don't use underscores in Go names; struct field ServerID_ should be ServerID (revive)
+	ServerID_        string               `json:"server_id"`
+	^
+internal/auditlog/auditlog.go:85:2: var-naming: don't use underscores in Go names; struct field Request_ should be Request (revive)
+	Request_         *TransactionRequest  `json:"request,omitempty"`
+	^
+internal/auditlog/auditlog.go:86:2: var-naming: don't use underscores in Go names; struct field Response_ should be Response (revive)
+	Response_        *TransactionResponse `json:"response,omitempty"`
+	^
+internal/auditlog/auditlog.go:87:2: var-naming: don't use underscores in Go names; struct field Producer_ should be Producer (revive)
+	Producer_        *TransactionProducer `json:"producer,omitempty"`
+	^
+internal/auditlog/auditlog.go:88:2: var-naming: don't use underscores in Go names; struct field HighestSeverity_ should be HighestSeverity (revive)
+	HighestSeverity_ string               `json:"highest_severity"`
+	^
+internal/auditlog/auditlog.go:89:2: var-naming: don't use underscores in Go names; struct field IsInterrupted_ should be IsInterrupted (revive)
+	IsInterrupted_   bool                 `json:"is_interrupted"`
+	^
+internal/auditlog/auditlog.go:157:2: var-naming: don't use underscores in Go names; struct field Protocol_ should be Protocol (revive)
+	Protocol_ string              `json:"protocol"`
+	^
+internal/auditlog/auditlog.go:158:2: var-naming: don't use underscores in Go names; struct field Status_ should be Status (revive)
+	Status_   int                 `json:"status"`
+	^
+internal/auditlog/auditlog.go:159:2: var-naming: don't use underscores in Go names; struct field Headers_ should be Headers (revive)
+	Headers_  map[string][]string `json:"headers"`
+	^
+internal/auditlog/auditlog.go:160:2: var-naming: don't use underscores in Go names; struct field Body_ should be Body (revive)
+	Body_     string              `json:"body"`
+	^
+internal/auditlog/auditlog.go:200:2: var-naming: don't use underscores in Go names; struct field Connector_ should be Connector (revive)
+	Connector_  string   `json:"connector"`
+	^
+internal/auditlog/auditlog.go:201:2: var-naming: don't use underscores in Go names; struct field Version_ should be Version (revive)
+	Version_    string   `json:"version"`
+	^
+internal/auditlog/auditlog.go:202:2: var-naming: don't use underscores in Go names; struct field Server_ should be Server (revive)
+	Server_     string   `json:"server"`
+	^
+internal/auditlog/auditlog.go:203:2: var-naming: don't use underscores in Go names; struct field RuleEngine_ should be RuleEngine (revive)
+	RuleEngine_ string   `json:"rule_engine"`
+	^
+internal/auditlog/auditlog.go:204:2: var-naming: don't use underscores in Go names; struct field Stopwatch_ should be Stopwatch (revive)
+	Stopwatch_  string   `json:"stopwatch"`
+	^
+internal/auditlog/auditlog.go:205:2: var-naming: don't use underscores in Go names; struct field Rulesets_ should be Rulesets (revive)
+	Rulesets_   []string `json:"rulesets"`
+	^
+internal/auditlog/auditlog.go:261:2: var-naming: don't use underscores in Go names; struct field Method_ should be Method (revive)
+	Method_      string                                        `json:"method"`
+	^
+internal/auditlog/auditlog.go:262:2: var-naming: don't use underscores in Go names; struct field Protocol_ should be Protocol (revive)
+	Protocol_    string                                        `json:"protocol"`
+	^
+internal/auditlog/auditlog.go:263:2: var-naming: don't use underscores in Go names; struct field URI_ should be URI (revive)
+	URI_         string                                        `json:"uri"`
+	^
+internal/auditlog/auditlog.go:264:2: var-naming: don't use underscores in Go names; struct field HTTPVersion_ should be HTTPVersion (revive)
+	HTTPVersion_ string                                        `json:"http_version"`
+	^
+internal/auditlog/auditlog.go:265:2: var-naming: don't use underscores in Go names; struct field Headers_ should be Headers (revive)
+	Headers_     map[string][]string                           `json:"headers"`
+	^
+internal/auditlog/auditlog.go:266:2: var-naming: don't use underscores in Go names; struct field Body_ should be Body (revive)
+	Body_        string                                        `json:"body"`
+	^
+internal/auditlog/auditlog.go:267:2: var-naming: don't use underscores in Go names; struct field Files_ should be Files (revive)
+	Files_       []plugintypes.AuditLogTransactionRequestFiles `json:"files"`
+	^
+internal/auditlog/formats_json.go:30:1: receiver-naming: receiver name should not be an underscore, omit the name if it is unused (revive)
+func (_ legacyJSONFormatter) Format(al plugintypes.AuditLog) ([]byte, error) {
+	al2 := logLegacy{
+		Transaction: logLegacyTransaction{
+			Time:          al.Transaction().Timestamp(),
+			TransactionID: al.Transaction().ID(),
+			RemoteAddress: al.Transaction().ClientIP(),
+			RemotePort:    al.Transaction().ClientPort(),
+			LocalAddress:  al.Transaction().HostIP(),
+			LocalPort:     al.Transaction().HostPort(),
+		},
+	}
+	if al.Transaction().Request() != nil {
+		reqHeaders := map[string]string{}
+		for k, v := range al.Transaction().Request().Headers() {
+			reqHeaders[k] = strings.Join(v, ", ")
+		}
+		al2.Request = &logLegacyRequest{
+			RequestLine: fmt.Sprintf(
+				"%s %s %s",
+				al.Transaction().Request().Method(),
+				al.Transaction().Request().URI(),
+				al.Transaction().Request().HTTPVersion(),
+			),
+			Headers: reqHeaders,
+		}
+	}
+	if al.Transaction().Response() != nil {
+		resHeaders := map[string]string{}
+		for k, v := range al.Transaction().Response().Headers() {
+			resHeaders[k] = strings.Join(v, ", ")
+		}
+		al2.Response = &logLegacyResponse{
+			Status:   al.Transaction().Response().Status(),
+			Protocol: al.Transaction().Response().Protocol(),
+			Headers:  resHeaders,
+		}
+	}
+
+	if al.Transaction().Producer() != nil {
+		var producers []string
+		if conn := al.Transaction().Producer().Connector(); conn != "" {
+			producers = append(producers, conn)
+		}
+		producers = append(producers, al.Transaction().Producer().Rulesets()...)
+		al2.AuditData = &logLegacyData{
+			Stopwatch:  logLegacyStopwatch{},
+			Producer:   producers,
+			EngineMode: al.Transaction().Producer().RuleEngine(),
+		}
+	}
+
+	if len(al.Messages()) > 0 {
+		if al2.AuditData == nil {
+			al2.AuditData = &logLegacyData{}
+		}
+		for _, m := range al.Messages() {
+			al2.AuditData.Messages = append(al2.AuditData.Messages, m.Message())
+		}
+	}
+
+	jsdata, err := json.Marshal(al2)
+	if err != nil {
+		return nil, err
+	}
+	return jsdata, nil
+}
+internal/auditlog/formats_json.go:97:1: receiver-naming: receiver name should not be an underscore, omit the name if it is unused (revive)
+func (_ legacyJSONFormatter) MIME() string {
+	return "application/json; charset=utf-8"
+}
+internal/auditlog/https_writer_test.go:21:5: var-naming: var sampleHttpsAuditLog should be sampleHTTPSAuditLog (revive)
+var sampleHttpsAuditLog = &Log{
+    ^
+internal/auditlog/syslog_writer.go:33:24: unexported-return: exported func NewSyslogWriter returns unexported type *auditlog.syslogWriter, which can be annoying to use (revive)
+func NewSyslogWriter() *syslogWriter {
+                       ^
+internal/sync/pool_std.go:11:14: redefines-builtin-id: redefinition of the built-in function new (revive)
+func NewPool(new func() interface{}) Pool {
+             ^
+types/rule_match.go:4:9: var-naming: avoid meaningless package names (revive)
+package types
+        ^
+internal/auditlog/formats_ocsf.go:34:4: QF1012: Use fmt.Fprintf(...) instead of WriteString(fmt.Sprintf(...)) (staticcheck)
+			argString.WriteString(fmt.Sprintf("%s=%s", arg.Key(), arg.Value()))
+			^
+internal/auditlog/formats_test.go:23:4: QF1012: Use fmt.Fprintf(...) instead of WriteString(fmt.Sprintf(...)) (staticcheck)
+			auditLog.WriteString(fmt.Sprintf("Line %d: ", i))
+			^
+internal/corazawaf/rulegroup.go:201:4: SA4011: ineffective break statement. Did you mean to break out of the outer loop? (staticcheck)
+			break
+			^
+internal/operators/validate_nid.go:132:9: QF1001: could apply De Morgan's law (staticcheck)
+	return !(sequence || equals)
+	       ^
+internal/transformations/url_encode_test.go:52:3: ST1018: string literal contains Unicode control characters, consider using escape sequences instead (staticcheck)
+		"~",
+		^
+config_test.go:4:9: package should be `coraza_test` instead of `coraza` (testpackage)
+package coraza
+        ^
+debuglog/default_test.go:4:9: package should be `debuglog_test` instead of `debuglog` (testpackage)
+package debuglog
+        ^
+debuglog/level_test.go:4:9: package should be `debuglog_test` instead of `debuglog` (testpackage)
+package debuglog
+        ^
+debuglog/nop_test.go:4:9: package should be `debuglog_test` instead of `debuglog` (testpackage)
+package debuglog
+        ^
+experimental/plugins/macro/macro_test.go:4:9: package should be `macro_test` instead of `macro` (testpackage)
+package macro
+        ^
+http/e2e/e2e_test.go:7:9: package should be `e2e_test` instead of `e2e` (testpackage)
+package e2e
+        ^
+http/interceptor_test.go:8:9: package should be `http_test` instead of `http` (testpackage)
+package http
+        ^
+http/middleware_test.go:8:9: package should be `http_test` instead of `http` (testpackage)
+package http
+        ^
+internal/auditlog/auditlog_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/concurrent_writer_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/formats_json_test.go:4:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/formats_ocsf_test.go:4:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/formats_test.go:4:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/https_writer_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/logger_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/serial_writer_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/auditlog/syslog_writer_test.go:7:9: package should be `auditlog_test` instead of `auditlog` (testpackage)
+package auditlog
+        ^
+internal/bodyprocessors/json_test.go:4:9: package should be `bodyprocessors_test` instead of `bodyprocessors` (testpackage)
+package bodyprocessors
+        ^
+internal/bodyprocessors/xml_test.go:4:9: package should be `bodyprocessors_test` instead of `bodyprocessors` (testpackage)
+package bodyprocessors
+        ^
+internal/collections/concat_test.go:4:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/collections/map_test.go:14:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/collections/named_test.go:4:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/collections/noop_test.go:4:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/collections/single_test.go:4:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/collections/sized_test.go:4:9: package should be `collections_test` instead of `collections` (testpackage)
+package collections
+        ^
+internal/cookies/cookies_test.go:4:9: package should be `cookies_test` instead of `cookies` (testpackage)
+package cookies
+        ^
+internal/environment/default_test.go:7:9: package should be `environment_test` instead of `environment` (testpackage)
+package environment
+        ^
+internal/operators/detect_sqli_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/detect_xss_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/eq_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/from_file_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/inspect_file_test.go:7:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/ip_match_from_dataset_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/ip_match_from_file_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/ip_match_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/operators_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/pm_from_dataset_test.go:4:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/operators/rbl_test.go:7:9: package should be `operators_test` instead of `operators` (testpackage)
+package operators
+        ^
+internal/seclang/body_test.go:4:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+internal/seclang/directives_log_test.go:8:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+internal/seclang/directives_test.go:4:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+internal/seclang/parser_test.go:4:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+internal/seclang/rule_parser_test.go:4:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+internal/seclang/rules_test.go:4:9: package should be `seclang_test` instead of `seclang` (testpackage)
+package seclang
+        ^
+testing/auditlog_test.go:9:9: package should be `testing_test` instead of `testing` (testpackage)
+package testing
+        ^
+testing/coraza_test.go:4:9: package should be `testing_test` instead of `testing` (testpackage)
+package testing
+        ^
+testing/engine_test.go:4:9: package should be `testing_test` instead of `testing` (testpackage)
+package testing
+        ^
+testing/logger_test.go:4:9: package should be `testing_test` instead of `testing` (testpackage)
+package testing
+        ^
+types/waf_test.go:4:9: package should be `types_test` instead of `types` (testpackage)
+package types
+        ^
+waf_test.go:4:9: package should be `coraza_test` instead of `coraza` (testpackage)
+package coraza
+        ^
+internal/transformations/hex_decode_test.go:10:6: TestHexDecode should call t.Parallel on the top level as well as its subtests (tparallel)
+func TestHexDecode(t *testing.T) {
+     ^
+internal/actions/id.go:40:14: unnecessary conversion (unconvert)
+	cr.ID_ = int(i)
+	            ^
+internal/auditlog/https_writer.go:38:25: unnecessary conversion (unconvert)
+		Timeout: time.Duration(1 * time.Second),
+		                      ^
+internal/corazawaf/transaction.go:908:29: unnecessary conversion (unconvert)
+	return tx.interruption, int(w), err
+	                           ^
+internal/corazawaf/transaction.go:1172:29: unnecessary conversion (unconvert)
+	return tx.interruption, int(w), err
+	                           ^
+internal/corazawaf/waf.go:183:29: unnecessary conversion (unconvert)
+	tx.RequestBodyLimit = int64(w.RequestBodyLimit)
+	                           ^
+internal/corazawaf/waf.go:185:30: unnecessary conversion (unconvert)
+	tx.ResponseBodyLimit = int64(w.ResponseBodyLimit)
+	                            ^
+internal/corazawaf/waf.go:207:36: unnecessary conversion (unconvert)
+			requestBodyInMemoryLimit = int64(*w.requestBodyInMemoryLimit)
+			                                ^
+internal/seclang/rule_parser.go:258:38: unnecessary conversion (unconvert)
+	if rp.defaultActions[types.RulePhase(phase)] != nil {
+	                                    ^
+internal/seclang/rule_parser.go:261:35: unnecessary conversion (unconvert)
+	rp.defaultActions[types.RulePhase(phase)] = act
+	                                 ^
+internal/url/url.go:67:22: unnecessary conversion (unconvert)
+			res.WriteByte(byte(hi<<4 | lo))
+			                  ^
+internal/bodyprocessors/json.go:76:45: readJSON - result 1 (error) is always nil (unparam)
+func readJSON(s string) (map[string]string, error) {
+                                            ^
+http/interceptor_test.go:29:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "", nil)
+	                          ^
+http/interceptor_test.go:32:17: "204" can be replaced by http.StatusNoContent (usestdlibvars)
+	rw.WriteHeader(204)
+	               ^
+http/interceptor_test.go:33:17: "205" can be replaced by http.StatusResetContent (usestdlibvars)
+	rw.WriteHeader(205)
+	               ^
+http/interceptor_test.go:59:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "", nil)
+	                          ^
+http/interceptor_test.go:90:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "", nil)
+	                          ^
+http/interceptor_test.go:94:17: "204" can be replaced by http.StatusNoContent (usestdlibvars)
+	rw.WriteHeader(204)
+	               ^
+http/interceptor_test.go:129:29: "GET" can be replaced by http.MethodGet (usestdlibvars)
+		req, _ := http.NewRequest("GET", "", nil)
+		                          ^
+http/interceptor_test.go:132:18: "204" can be replaced by http.StatusNoContent (usestdlibvars)
+		rw.WriteHeader(204)
+		               ^
+http/interceptor_test.go:152:29: "GET" can be replaced by http.MethodGet (usestdlibvars)
+		req, _ := http.NewRequest("GET", "", nil)
+		                          ^
+http/interceptor_test.go:156:18: "204" can be replaced by http.StatusNoContent (usestdlibvars)
+		rw.WriteHeader(204)
+		               ^
+http/interceptor_test.go:188:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "", nil)
+	                          ^
+http/interceptor_test.go:205:17: "204" can be replaced by http.StatusNoContent (usestdlibvars)
+	rw.WriteHeader(204)
+	               ^
+http/interceptor_test.go:251:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "", nil)
+	                          ^
+http/middleware_test.go:32:28: "POST" can be replaced by http.MethodPost (usestdlibvars)
+	req, _ := http.NewRequest("POST", "https://www.coraza.io/test", strings.NewReader("test=456"))
+	                          ^
+http/middleware_test.go:47:28: "POST" can be replaced by http.MethodPost (usestdlibvars)
+	req, _ := http.NewRequest("POST", "https://www.coraza.io/test", strings.NewReader("test=456"))
+	                          ^
+http/middleware_test.go:95:28: "GET" can be replaced by http.MethodGet (usestdlibvars)
+	req, _ := http.NewRequest("GET", "https://www.coraza.io/test", nil)
+	                          ^
+http/middleware_test.go:138:30: "POST" can be replaced by http.MethodPost (usestdlibvars)
+	req, err := http.NewRequest("POST", "/some", body)
+	                            ^
+http/middleware_test.go:447:17: "201" can be replaced by http.StatusCreated (usestdlibvars)
+		w.WriteHeader(201)
+		              ^
+http/middleware_test.go:474:28: "POST" can be replaced by http.MethodPost (usestdlibvars)
+	req, _ := http.NewRequest("POST", ts.URL+tCase.reqURI, reqBody)
+	                          ^
+http/middleware_test.go:598:19: "201" can be replaced by http.StatusCreated (usestdlibvars)
+				w.WriteHeader(201)
+				              ^
+http/middleware_test.go:599:19: "202" can be replaced by http.StatusAccepted (usestdlibvars)
+				w.WriteHeader(202)
+				              ^
+http/middleware_test.go:611:19: "201" can be replaced by http.StatusCreated (usestdlibvars)
+				w.WriteHeader(201)
+				              ^
+http/middleware_test.go:618:19: "201" can be replaced by http.StatusCreated (usestdlibvars)
+				w.WriteHeader(201)
+				              ^
+internal/environment/default_test.go:28:17: os.TempDir() could be replaced by t.TempDir() in TestFSCheck (usetesting)
+			tmpDir:      os.TempDir(),
+			             ^
+internal/environment/default_test.go:35:4: os.Setenv() could be replaced by t.Setenv() in TestFSCheck (usetesting)
+			os.Setenv("TMPDIR", tc.tmpDir)
+			^
+internal/seclang/directives_test.go:318:5: os.TempDir() could be replaced by t.TempDir() in TestDirectives (usetesting)
+			{os.TempDir(), func(w *corazawaf.WAF) bool { return w.UploadDir == os.TempDir() }},
+			 ^
+internal/corazawaf/transaction.go:769:2: assigned to path, but reassigned without using the value (wastedassign)
+	path := ""
+	^
+internal/seclang/rule_parser.go:363:2: assigned to actions, but reassigned without using the value (wastedassign)
+	actions := ""
+	^
+experimental/plugins/auditlog_formatter_test.go:29:42: unnecessary leading newline (whitespace)
+func ExampleRegisterAuditLogFormatter() {
+                                         ^
+http/interceptor.go:156:22: unnecessary leading newline (whitespace)
+) { // nolint:gocyclo
+                     ^
+internal/actions/ctl.go:195:51: unnecessary leading newline (whitespace)
+		if tx.LastPhase() <= types.PhaseRequestHeaders {
+		                                                ^
+internal/actions/ctl_test.go:439:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/actions/setenv.go:74:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/auditlog/auditlog_test.go:29:2: unnecessary trailing newline (whitespace)
+	}
+	^
+internal/auditlog/auditlog_test.go:332:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/auditlog/formats_ocsf.go:132:73: unnecessary leading newline (whitespace)
+func (f ocsfFormatter) Format(al plugintypes.AuditLog) ([]byte, error) {
+                                                                        ^
+internal/auditlog/formats_ocsf.go:141:2: unnecessary trailing newline (whitespace)
+	}
+	^
+internal/auditlog/formats_ocsf_test.go:167:32: unnecessary leading newline (whitespace)
+func createAuditLogs() []*Log {
+                               ^
+internal/auditlog/logger_test.go:59:46: unnecessary leading newline (whitespace)
+func TestRegisterAndGetWriter(t *testing.T) {
+                                             ^
+internal/auditlog/logger_test.go:87:49: unnecessary leading newline (whitespace)
+func TestRegisterAndGetFormatter(t *testing.T) {
+                                                ^
+internal/collections/map_test.go:65:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/collections/map_test.go:108:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/collections/named_test.go:89:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/corazawaf/rule_test.go:370:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/corazawaf/transaction.go:563:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/corazawaf/transaction.go:1553:2: unnecessary trailing newline (whitespace)
+	}
+	^
+internal/corazawaf/transaction_test.go:289:5: unnecessary trailing newline (whitespace)
+				})
+				^
+internal/corazawaf/transaction_test.go:292:3: unnecessary trailing newline (whitespace)
+		})
+		^
+internal/corazawaf/transaction_test.go:612:5: unnecessary trailing newline (whitespace)
+				})
+				^
+internal/corazawaf/transaction_test.go:615:3: unnecessary trailing newline (whitespace)
+		})
+		^
+internal/operators/restpath_test.go:45:37: unnecessary leading newline (whitespace)
+	for path, want := range testCases {
+	                                   ^
+internal/operators/rx_test.go:82:73: unnecessary leading newline (whitespace)
+		t.Run(fmt.Sprintf("%s/%s", tt.pattern, tt.input), func(t *testing.T) {
+		                                                                      ^
+internal/seclang/directives.go:1089:89: unnecessary leading newline (whitespace)
+func updateTargetBySingleID(id int, variables string, options *DirectiveOptions) error {
+                                                                                        ^
+internal/seclang/directives.go:1175:87: unnecessary leading newline (whitespace)
+func updateActionBySingleID(id int, actions string, options *DirectiveOptions) error {
+                                                                                      ^
+internal/seclang/directives_test.go:63:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/seclang/directives_test.go:88:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/seclang/generator/main.go:72:3: unnecessary trailing newline (whitespace)
+		}
+		^
+internal/seclang/rule_parser.go:349:40: unnecessary leading newline (whitespace)
+	for _, da := range defaultActionsRaw {
+	                                      ^
+internal/seclang/rules_test.go:459:4: unnecessary trailing newline (whitespace)
+			}
+			^
+internal/transformations/js_decode.go:36:12: unnecessary leading newline (whitespace)
+			switch {
+			        ^
+internal/transformations/js_decode.go:129:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/transformations/url_decode.go:67:1: unnecessary trailing newline (whitespace)
+}
+^
+internal/variables/generator/main.go:96:3: unnecessary trailing newline (whitespace)
+		}
+		^
+853 issues:
+* canonicalheader: 2
+* cyclop: 3
+* depguard: 5
+* embeddedstructfieldcheck: 7
+* errcheck: 50
+* errorlint: 33
+* exhaustive: 5
+* forbidigo: 10
+* funcorder: 6
+* funlen: 3
+* gochecknoglobals: 43
+* gochecknoinits: 41
+* gocognit: 49
+* gocritic: 4
+* gocyclo: 2
+* godoclint: 4
+* godot: 50
+* golines: 37
+* gomoddirectives: 1
+* gosec: 23
+* govet: 50
+* intrange: 48
+* makezero: 1
+* mirror: 4
+* mnd: 50
+* modernize: 29
+* musttag: 1
+* nakedret: 5
+* nestif: 30
+* nilerr: 1
+* nilnil: 7
+* noctx: 3
+* nolintlint: 1
+* nonamedreturns: 7
+* perfsprint: 25
+* protogetter: 30
+* recvcheck: 3
+* revive: 50
+* staticcheck: 5
+* testpackage: 50
+* tparallel: 1
+* unconvert: 10
+* unparam: 1
+* usestdlibvars: 23
+* usetesting: 3
+* wastedassign: 2
+* whitespace: 35

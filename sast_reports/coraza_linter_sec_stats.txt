@@ -1,0 +1,555 @@
+debuglog/default.go:124:42: Error return value is not checked (errcheck)
+		defaultFields: append(l.defaultFields, e.(*defaultEvent).fields...),
+		                                       ^
+internal/actions/allow.go:58:8: Error return value is not checked (errcheck)
+	tx := txS.(*corazawaf.Transaction)
+	      ^
+internal/actions/auditlog.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = true
+	^
+internal/actions/capture.go:34:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Capture = true
+	^
+internal/actions/chain.go:53:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).HasChain = true
+	^
+internal/actions/ctl.go:130:8: Error return value is not checked (errcheck)
+	tx := txS.(*corazawaf.Transaction)
+	      ^
+internal/actions/ctl.go:232:4: Error return value is not checked (errcheck)
+			tx.Variables().RequestBodyProcessor().(*collections.Single).Set(strings.ToUpper(a.value))
+			^
+internal/actions/ctl.go:348:4: Error return value is not checked (errcheck)
+			tx.Variables().ResponseBodyProcessor().(*collections.Single).Set(strings.ToUpper(a.value))
+			^
+internal/actions/id.go:39:8: Error return value is not checked (errcheck)
+	cr := r.(*corazawaf.Rule)
+	      ^
+internal/actions/log.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Log = true
+	^
+internal/actions/log.go:29:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = true
+	^
+internal/actions/logdata.go:35:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).LogData = m
+	^
+internal/actions/maturity.go:38:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Maturity_ = m
+	^
+internal/actions/msg.go:35:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Msg = msg
+	^
+internal/actions/multimatch.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).MultiMatch = true
+	^
+internal/actions/noauditlog.go:32:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = false
+	^
+internal/actions/nolog.go:28:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Log = false
+	^
+internal/actions/nolog.go:29:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Audit = false
+	^
+internal/actions/phase.go:46:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Phase_ = p
+	^
+internal/actions/rev.go:30:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Rev_ = data
+	^
+internal/actions/severity.go:48:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Severity_ = sev
+	^
+internal/actions/skip.go:51:2: Error return value is not checked (errcheck)
+	tx.(*corazawaf.Transaction).Skip = a.data
+	^
+internal/actions/skipafter.go:61:2: Error return value is not checked (errcheck)
+	tx.(*corazawaf.Transaction).SkipAfter = a.data
+	^
+internal/actions/status.go:37:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).DisruptiveStatus = status
+	^
+internal/actions/t.go:30:3: Error return value is not checked (errcheck)
+		r.(*corazawaf.Rule).ClearTransformations()
+		^
+internal/actions/t.go:38:9: Error return value is not checked (errcheck)
+	return r.(*corazawaf.Rule).AddTransformation(data, tt)
+	       ^
+internal/actions/tag.go:32:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Tags_ = append(r.(*corazawaf.Rule).Tags_, data)
+	^
+internal/actions/ver.go:30:2: Error return value is not checked (errcheck)
+	r.(*corazawaf.Rule).Version_ = data
+	^
+internal/bodyprocessors/multipart.go:27:3: Error return value is not checked (errcheck)
+		v.MultipartStrictError().(*collections.Single).Set("1")
+		^
+internal/bodyprocessors/multipart.go:48:4: Error return value is not checked (errcheck)
+			v.MultipartStrictError().(*collections.Single).Set("1")
+			^
+internal/bodyprocessors/multipart.go:65:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:71:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:79:6: Error return value is not checked (errcheck)
+					v.MultipartStrictError().(*collections.Single).Set("1")
+					^
+internal/bodyprocessors/multipart.go:92:5: Error return value is not checked (errcheck)
+				v.MultipartStrictError().(*collections.Single).Set("1")
+				^
+internal/bodyprocessors/multipart.go:98:3: Error return value is not checked (errcheck)
+		filesCombinedSizeCol.(*collections.Single).Set(fmt.Sprintf("%d", totalSize))
+		^
+internal/bodyprocessors/raw.go:26:2: Error return value is not checked (errcheck)
+	v.RequestBody().(*collections.Single).Set(b)
+	^
+internal/bodyprocessors/raw.go:27:2: Error return value is not checked (errcheck)
+	v.RequestBodyLength().(*collections.Single).Set(strconv.Itoa(len(b)))
+	^
+internal/bodyprocessors/urlencoded.go:31:2: Error return value is not checked (errcheck)
+	v.RequestBody().(*collections.Single).Set(b)
+	^
+internal/bodyprocessors/urlencoded.go:32:2: Error return value is not checked (errcheck)
+	v.RequestBodyLength().(*collections.Single).Set(strconv.Itoa(len(b)))
+	^
+internal/collections/concat.go:105:3: Error return value is not checked (errcheck)
+		m.(*corazarules.MatchData).Variable_ = v
+		^
+internal/corazawaf/rule.go:178:30: Error return value is not checked (errcheck)
+	r.doEvaluate(logger, phase, tx.(*Transaction), &collectiveMatchedValues, chainLevelZero, cache)
+	                            ^
+internal/corazawaf/rule.go:367:5: Error return value is not checked (errcheck)
+				matchedValues[0].(*corazarules.MatchData).Message_ = r.Msg.Expand(tx)
+				^
+internal/corazawaf/rule.go:370:5: Error return value is not checked (errcheck)
+				matchedValues[0].(*corazarules.MatchData).Data_ = r.LogData.Expand(tx)
+				^
+internal/corazawaf/rule.go:521:9: Error return value is not checked (errcheck)
+			re = vare.(*regexp.Regexp)
+			     ^
+internal/corazawaf/rule.go:565:9: Error return value is not checked (errcheck)
+			re = vare.(*regexp.Regexp)
+			     ^
+internal/corazawaf/waf.go:171:8: Error return value is not checked (errcheck)
+	tx := w.txPool.Get().(*Transaction)
+	      ^
+internal/operators/pm.go:37:22: Error return value is not checked (errcheck)
+	return &pm{matcher: m.(ahocorasick.AhoCorasick)}, nil
+	                    ^
+internal/operators/pm_from_dataset.go:32:22: Error return value is not checked (errcheck)
+	return &pm{matcher: m.(ahocorasick.AhoCorasick)}, nil
+	                    ^
+internal/seclang/directives.go:821:39: Error return value is not checked (errcheck)
+	options.WAF.AuditLogRelevantStatus = re.(*regexp.Regexp)
+	                                     ^
+waf.go:33:7: Error return value is not checked (errcheck)
+	c := config.(*wafConfig)
+	     ^
+experimental/plugins/macro/macro.go:86:1: File is not properly formatted (golines)
+	tx.DebugLogger().Warn().Str("variable", token.variable.Name()).Str("key", token.key).Msg("key not found in collection, returning the original text")
+^
+http/e2e/cmd/httpe2e/main.go:27:1: File is not properly formatted (golines)
+		nulledBody      = flag.Bool("nulled-body", false, "Accept a body filled of empty bytes as an enforced disruptive action. Default: false")
+^
+http/e2e/e2e.go:62:1: File is not properly formatted (golines)
+func expectNulledBodyStatusCode(nulledBody bool, expectedEmptyBodyCode, expectedNulledBodyCode int) statusCodeExpectation {
+^
+http/middleware_test.go:489:1: File is not properly formatted (golines)
+		t.Errorf("unexpected response headers, expected keys: %v, headers: %v", tCase.expectedRespHeadersKeys, res.Header)
+^
+internal/actions/ctl_test.go:88:1: File is not properly formatted (golines)
+				if wantToContain, have := "[WARN] Cannot change request body access after request headers phase", logEntry; !strings.Contains(have, wantToContain) {
+^
+internal/actions/setvar.go:122:1: File is not properly formatted (golines)
+func (a *setvarFn) evaluateTxCollection(r plugintypes.RuleMetadata, tx plugintypes.TransactionState, key string, value string) {
+^
+internal/actions/setvar_test.go:143:1: File is not properly formatted (golines)
+					t.Errorf("expected error log containing %q, got %q", warningKeyNotFoundInCollection, logsBuf.String())
+^
+internal/auditlog/auditlog_test.go:26:1: File is not properly formatted (golines)
+			t.Errorf("failed to match error message, \ngot: %s, \nexpected: %s", err, "invalid character '}' looking for beginning of value")
+^
+internal/auditlog/concurrent_writer.go:87:1: File is not properly formatted (golines)
+	cl.log.Printf("%s %s - - [%s]", al.Transaction().ClientIP(), al.Transaction().HostIP(), al.Transaction().Timestamp())
+^
+internal/auditlog/formats.go:49:1: File is not properly formatted (golines)
+		_, _ = fmt.Fprintf(&res, "[%s] %s %s %d %s %d", al.Transaction().Timestamp(), al.Transaction().ID(),
+^
+internal/auditlog/formats_json_test.go:62:1: File is not properly formatted (golines)
+		t.Errorf("failed to match legacy formatter, \ngot: %s\nexpected: %s", legacyAl.Transaction.Time, al.Transaction().Timestamp())
+^
+internal/auditlog/formats_ocsf_test.go:39:1: File is not properly formatted (golines)
+			t.Errorf("failed to match ocsfFormatter MIME type, \ngot: %s\nexpected: %s", fmt.Sprint(f.MIME()), "application/json")
+^
+internal/bodyprocessors/json.go:20:1: File is not properly formatted (golines)
+func (js *jsonBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, _ plugintypes.BodyProcessorOptions) error {
+^
+internal/bodyprocessors/multipart.go:22:1: File is not properly formatted (golines)
+func (mbp *multipartBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, options plugintypes.BodyProcessorOptions) error {
+^
+internal/bodyprocessors/multipart_test.go:31:1: File is not properly formatted (golines)
+	}); err == nil || err.Error() != expectedError {
+^
+internal/bodyprocessors/raw.go:18:1: File is not properly formatted (golines)
+func (*rawBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, _ plugintypes.BodyProcessorOptions) error {
+^
+internal/bodyprocessors/urlencoded.go:19:1: File is not properly formatted (golines)
+func (*urlencodedBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, options plugintypes.BodyProcessorOptions) error {
+^
+internal/bodyprocessors/xml.go:17:1: File is not properly formatted (golines)
+func (*xmlBodyProcessor) ProcessRequest(reader io.Reader, v plugintypes.TransactionVariables, options plugintypes.BodyProcessorOptions) error {
+^
+internal/corazarules/rule_match.go:192:1: File is not properly formatted (golines)
+	fmt.Fprintf(log, "[file %q] [line %q] [id %q] [rev %q] [msg %q] [data %q] [severity %q] [ver %q] [maturity %q] [accuracy %q]",
+^
+internal/corazawaf/body_buffer_test.go:138:1: File is not properly formatted (golines)
+				t.Fatalf("unexpected number of bytes written, want: %d, have: %d", len(tCase.toBeWrittenBytes), writtenBytes)
+^
+internal/corazawaf/rule.go:164:1: File is not properly formatted (golines)
+func (r *Rule) Evaluate(phase types.RulePhase, tx plugintypes.TransactionState, cache map[transformationKey]*transformationValue) {
+^
+internal/corazawaf/rule_multiphase.go:302:1: File is not properly formatted (golines)
+func generateChainMatches(tx *Transaction, matchedValues []types.MatchData, currentDepth int, buildingMatchedChain []types.MatchData, matchedChainsResult *[][]types.MatchData) {
+^
+internal/corazawaf/rule_test.go:106:1: File is not properly formatted (golines)
+			matchdata := r.doEvaluate(debuglog.Noop(), types.PhaseRequestHeaders, tx, &matchedValues, 0, tx.transformationCache)
+^
+internal/corazawaf/transaction.go:905:1: File is not properly formatted (golines)
+		tx.debugLogger.Warn().Msg("Processing request body whose size reached the configured limit (Action ProcessPartial)")
+^
+internal/corazawaf/transaction_test.go:228:1: File is not properly formatted (golines)
+		"BodyInOneShot":     {urlencodedBody},
+^
+internal/operators/operators_test.go:113:1: File is not properly formatted (golines)
+						t.Errorf("Invalid operator result for @%s(%q, %q), %s expected", data.Name, data.Param, data.Input, expected)
+^
+internal/operators/pm_from_file.go:48:1: File is not properly formatted (golines)
+	m, _ := memoize.Do(strings.Join(options.Path, ",")+filepath, func() (interface{}, error) { return builder.Build(lines), nil })
+^
+internal/operators/validate_nid_test.go:26:1: File is not properly formatted (golines)
+	ok := []string{"11.111.111-1", "16100407-3", "8.492.655-8", "84926558", "111111111", "5348281-3", "10727393-k", "10727393-K"}
+^
+internal/operators/validate_schema_test.go:584:1: File is not properly formatted (golines)
+		t.Errorf("Expected response body to be preferred in phase 4, but got no violation (should have failed on invalid response body)")
+^
+internal/operators/validate_url_encoding.go:63:1: File is not properly formatted (golines)
+			if (((c1 >= '0') && (c1 <= '9')) || ((c1 >= 'a') && (c1 <= 'f')) || ((c1 >= 'A') && (c1 <= 'F'))) && (((c2 >= '0') && (c2 <= '9')) || ((c2 >= 'a') && (c2 <= 'f')) || ((c2 >= 'A') && (c2 <= 'F'))) {
+^
+internal/seclang/directives_test.go:275:1: File is not properly formatted (golines)
+			{"ProcessPartial", func(w *corazawaf.WAF) bool { return w.RequestBodyLimitAction == types.BodyLimitActionProcessPartial }},
+^
+internal/seclang/parser_test.go:145:1: File is not properly formatted (golines)
+	if !strings.Contains(err.Error(), "no such file or directory") && !strings.Contains(err.Error(), "file does not exist") {
+^
+internal/seclang/rule_parser.go:545:1: File is not properly formatted (golines)
+			res, disruptiveActionIndex, err = appendRuleAction(res, actions[beforeKey+1:afterKey], val, disruptiveActionIndex)
+^
+internal/seclang/rule_parser_test.go:79:1: File is not properly formatted (golines)
+	err := p.FromString(`SecRule REQUEST_COOKIES|!REQUEST_COOKIES:/__utm/|!REQUEST_COOKIES:/_pk_ref/|REQUEST_COOKIES_NAMES|ARGS_NAMES|ARGS|XML:/* "" "id:7,pass"`)
+^
+internal/transformations/css_decode.go:93:1: File is not properly formatted (golines)
+						if (d[c] > 0x00) && (d[c] < 0x5f) && ((input[i+j-3] == 'f') || (input[i+j-3] == 'F')) && ((input[i+j-4] == 'f') || (input[i+j-4] == 'F')) {
+^
+internal/transformations/escape_seq_decode.go:73:1: File is not properly formatted (golines)
+			if (input[i+1] == 'x' || input[i+1] == 'X') && i+3 < inputLen && utils.ValidHex(input[i+2]) && utils.ValidHex(input[i+3]) {
+^
+internal/transformations/js_decode.go:46:1: File is not properly formatted (golines)
+				if (d[c] > 0x00) && (d[c] < 0x5f) && ((input[i+2] == 'f') || (input[i+2] == 'F')) && ((input[i+3] == 'f') || (input[i+3] == 'F')) {
+^
+internal/transformations/transformations_test.go:64:1: File is not properly formatted (golines)
+					t.Errorf("Transformation %s:\nInput: %s\nExpected: %v\nGot: %v\nExpected String: %s\nGot String: %s",
+^
+internal/transformations/url_decode_uni.go:32:1: File is not properly formatted (golines)
+					if (strings.ValidHex(input[i+2])) && (strings.ValidHex(input[i+3])) && (strings.ValidHex(input[i+4])) && (strings.ValidHex(input[i+5])) {
+^
+internal/variables/variables_test.go:21:1: File is not properly formatted (golines)
+	vars := []string{"URLENCODED_ERROR", "RESPONSE_CONTENT_TYPE", "UNIQUE_ID", "ARGS_COMBINED_SIZE", "AUTH_TYPE", "FILES_COMBINED_SIZE", "FULL_REQUEST", "FULL_REQUEST_LENGTH", "INBOUND_DATA_ERROR", "MATCHED_VAR", "MATCHED_VAR_NAME", "MULTIPART_BOUNDARY_QUOTED", "MULTIPART_BOUNDARY_WHITESPACE", "MULTIPART_CRLF_LF_LINES", "MULTIPART_DATA_AFTER", "MULTIPART_DATA_BEFORE", "MULTIPART_FILE_LIMIT_EXCEEDED", "MULTIPART_HEADER_FOLDING", "MULTIPART_INVALID_HEADER_FOLDING", "MULTIPART_INVALID_PART", "MULTIPART_INVALID_QUOTING", "MULTIPART_LF_LINE", "MULTIPART_MISSING_SEMICOLON", "MULTIPART_STRICT_ERROR", "MULTIPART_UNMATCHED_BOUNDARY", "OUTBOUND_DATA_ERROR", "PATH_INFO", "QUERY_STRING", "REMOTE_ADDR", "REMOTE_HOST", "REMOTE_PORT", "REQBODY_ERROR", "REQBODY_ERROR_MSG", "REQBODY_PROCESSOR_ERROR", "REQBODY_PROCESSOR_ERROR_MSG", "REQBODY_PROCESSOR", "REQUEST_BASENAME", "REQUEST_BODY", "REQUEST_BODY_LENGTH", "REQUEST_FILENAME", "REQUEST_LINE", "REQUEST_METHOD", "REQUEST_PROTOCOL", "REQUEST_URI", "REQUEST_URI_RAW", "RESPONSE_BODY", "RESPONSE_CONTENT_LENGTH", "RESPONSE_PROTOCOL", "RESPONSE_STATUS", "SERVER_ADDR", "SERVER_NAME", "SERVER_PORT", "SESSIONID", "RESPONSE_HEADERS_NAMES", "REQUEST_HEADERS_NAMES", "USERID", "ARGS", "ARGS_GET", "ARGS_POST", "FILES_SIZES", "FILES_NAMES", "FILES_TMP_CONTENT", "MULTIPART_FILENAME", "MULTIPART_NAME", "MATCHED_VARS_NAMES", "MATCHED_VARS", "FILES", "REQUEST_COOKIES", "REQUEST_HEADERS", "RESPONSE_HEADERS", "GEO", "REQUEST_COOKIES_NAMES", "FILES_TMPNAMES", "ARGS_NAMES", "ARGS_GET_NAMES", "ARGS_POST_NAMES", "RULE", "XML", "TX", "DURATION", "TIME", "TIME_DAY", "TIME_EPOCH", "TIME_HOUR", "TIME_MIN", "TIME_MON", "TIME_SEC", "TIME_WDAY", "TIME_YEAR"}
+^
+testing/coraza_test.go:41:1: File is not properly formatted (golines)
+							t.Errorf("\x1b[41m ERROR \x1b[0m: %s:%s: %s, got:%s\n%s\nREQUEST:\n%s", p.Meta.Name, test.Name, e, debug, test.transaction, test.Request())
+^
+debuglog/default.go:78:46: G115: integer overflow conversion uint -> int (gosec)
+	e.fields = append(e.fields, strconv.Itoa(int(i))...)
+	                                            ^
+http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)
+				resp.Body.Close()
+				^
+http/e2e/e2e.go:308:3: G104: Errors unhandled (gosec)
+		resp.Body.Close()
+		^
+internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)
+			Code:        int32(al.Transaction().Response().Status()),
+			                  ^
+internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)
+			Port: int32(al.Transaction().ClientPort()),
+			           ^
+internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)
+			Port: int32(al.Transaction().HostPort()),
+			           ^
+internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)
+	webResourcesActivity.TimezoneOffset = int32(offset)
+	                                           ^
+internal/corazawaf/waf.go:265:9: G302: Expect file permissions to be 0600 or less (gosec)
+	return os.OpenFile(path, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0666)
+	       ^
+internal/environment/default.go:25:3: G104: Errors unhandled (gosec)
+		file.Close()
+		^
+internal/environment/default.go:26:3: G104: Errors unhandled (gosec)
+		os.Remove(file.Name())
+		^
+internal/operators/inspect_file.go:34:9: G204: Subprocess launched with a potential tainted input or cmd arguments (gosec)
+	cmd := exec.CommandContext(ctx, o.path, value)
+	       ^
+internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
+	"crypto/md5"
+	^
+internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)
+	hasher := md5.New()
+	          ^
+internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.AuditLogWriterConfig.DirMode = fs.FileMode(auditLogDirMode)
+	                                                      ^
+internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.AuditLogWriterConfig.FileMode = fs.FileMode(auditLogFileMode)
+	                                                       ^
+internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)
+	options.WAF.UploadFileMode = fs.FileMode(fm)
+	                                        ^
+internal/transformations/js_decode.go:75:25: G602: slice index out of range (gosec)
+					if (j == 3) && (buf[0] > '3') {
+					                   ^
+internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
+	"crypto/md5"
+	^
+internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)
+	h := md5.New()
+	     ^
+internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)
+	buf := md5.Sum(nil)
+	       ^
+internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)
+	"crypto/sha1"
+	^
+internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)
+	h := sha1.New()
+	     ^
+internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)
+	buf := sha1.Sum(nil)
+	       ^
+config_test.go:88:11: shadow: declaration of "err" shadows declaration at line 80 (govet)
+	if _, _, err := tx.WriteResponseBody([]byte("aaa")); err != nil {
+	         ^
+config_test.go:91:8: shadow: declaration of "err" shadows declaration at line 80 (govet)
+	if _, err := tx.ProcessResponseBody(); err != nil {
+	      ^
+experimental/plugins/auditlog_formatter_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+http/e2e/cmd/httpe2e/main.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/actions/ctl.go:463:7: shadow: declaration of "err" shadows declaration at line 446 (govet)
+		id, err := strconv.Atoi(input)
+		    ^
+internal/actions/ctl_test.go:346:7: shadow: declaration of "err" shadows declaration at line 340 (govet)
+			if err := a.Init(r, test.input); err != nil {
+			   ^
+internal/actions/setvar.go:90:10: shadow: declaration of "err" shadows declaration at line 74 (govet)
+		macro, err := macro.NewMacro(colVal)
+		       ^
+internal/actions/setvar.go:98:10: shadow: declaration of "err" shadows declaration at line 74 (govet)
+		macro, err := macro.NewMacro(val)
+		       ^
+internal/actions/setvar_test.go:178:9: nilness: impossible condition: non-nil == nil (govet)
+	if col == nil {
+	       ^
+internal/actions/skip_test.go:33:46: nilness: nil dereference in dynamic method call (govet)
+					t.Errorf("expected error: %s", err.Error())
+					                                        ^
+internal/auditlog/auditlog_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/concurrent_writer.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/concurrent_writer.go:75:5: shadow: declaration of "err" shadows declaration at line 58 (govet)
+	if err := os.MkdirAll(logdir, cl.logDirMode); err != nil {
+	   ^
+internal/auditlog/concurrent_writer_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/concurrent_writer_test.go:106:5: shadow: declaration of "err" shadows declaration at line 95 (govet)
+	if err := file.Close(); err != nil {
+	   ^
+internal/auditlog/concurrent_writer_test.go:111:5: shadow: declaration of "err" shadows declaration at line 95 (govet)
+	if err := writer.Init(config); err != nil {
+	   ^
+internal/auditlog/concurrent_writer_test.go:131:5: shadow: declaration of "err" shadows declaration at line 95 (govet)
+	if err := writer.Write(expectedLog); err != nil {
+	   ^
+internal/auditlog/concurrent_writer_test.go:145:5: shadow: declaration of "err" shadows declaration at line 95 (govet)
+	if err := json.Unmarshal(logData, actualLog); err != nil {
+	   ^
+internal/auditlog/formats_json_test.go:58:5: shadow: declaration of "err" shadows declaration at line 50 (govet)
+	if err := json.Unmarshal(data, &legacyAl); err != nil {
+	   ^
+internal/auditlog/formats_ocsf_test.go:33:6: shadow: declaration of "err" shadows declaration at line 24 (govet)
+		if err := json.Unmarshal(data, &wra); err != nil {
+		   ^
+internal/auditlog/https_writer.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/https_writer.go:63:8: shadow: declaration of "err" shadows declaration at line 44 (govet)
+	if _, err := io.Copy(io.Discard, res.Body); err != nil {
+	      ^
+internal/auditlog/https_writer_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/https_writer_test.go:53:9: shadow: declaration of "err" shadows declaration at line 38 (govet)
+		body, err := io.ReadAll(r.Body)
+		      ^
+internal/auditlog/https_writer_test.go:65:5: shadow: declaration of "err" shadows declaration at line 38 (govet)
+	if err := writer.Init(plugintypes.AuditLogConfig{
+	   ^
+internal/auditlog/https_writer_test.go:71:5: shadow: declaration of "err" shadows declaration at line 38 (govet)
+	if err := writer.Write(sampleHttpsAuditLog); err != nil {
+	   ^
+internal/auditlog/init.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo,!windows,!plan9
+^
+internal/auditlog/init_tinygo.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build tinygo
+^
+internal/auditlog/init_windows.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build windows plan9
+^
+internal/auditlog/init_windows.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/logger_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/noop_formater.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build tinygo
+^
+internal/auditlog/serial_writer_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/serial_writer_test.go:115:5: shadow: declaration of "err" shadows declaration at line 103 (govet)
+	if err := writer.Close(); err != nil {
+	   ^
+internal/auditlog/syslog_writer.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo,!windows,!plan9
+^
+internal/auditlog/syslog_writer.go:68:6: shadow: declaration of "err" shadows declaration at line 62 (govet)
+		if err := s.Syslog.Err(string(payload)); err != nil {
+		   ^
+internal/auditlog/syslog_writer.go:75:5: shadow: declaration of "err" shadows declaration at line 62 (govet)
+	if err := s.Syslog.Info(string(payload)); err != nil {
+	   ^
+internal/auditlog/syslog_writer_test.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo,!windows,!plan9
+^
+internal/auditlog/syslog_writer_test.go:112:7: shadow: declaration of "err" shadows declaration at line 102 (govet)
+			if err := w.Init(tt.args.c); (err != nil) != tt.wantErr {
+			   ^
+internal/auditlog/syslog_writer_test.go:235:7: shadow: declaration of "err" shadows declaration at line 213 (govet)
+			if err := w.Write(tt.args.al); (err != nil) != tt.wantErr {
+			   ^
+internal/bodyprocessors/multipart.go:43:6: shadow: declaration of "err" shadows declaration at line 25 (govet)
+		p, err := mr.NextPart()
+		   ^
+internal/bodyprocessors/multipart.go:63:11: shadow: declaration of "err" shadows declaration at line 43 (govet)
+				temp, err := os.CreateTemp(storagePath, "crzmp*")
+				      ^
+internal/bodyprocessors/multipart.go:77:9: shadow: declaration of "err" shadows declaration at line 43 (govet)
+				sz, err := io.Copy(io.Discard, p)
+				    ^
+internal/bodyprocessors/multipart.go:90:10: shadow: declaration of "err" shadows declaration at line 43 (govet)
+			data, err := io.ReadAll(p)
+			      ^
+internal/collections/named_test.go:59:6: shadow: declaration of "want" shadows declaration at line 58 (govet)
+		if want := "ARGS_POST_NAMES: key2,key"; want != have {
+		   ^
+internal/collections/named_test.go:66:6: shadow: declaration of "want" shadows declaration at line 65 (govet)
+		if want := "ARGS_POST_NAMES: key2,key,key"; want != have {
+		   ^
+internal/collections/named_test.go:75:6: shadow: declaration of "want" shadows declaration at line 74 (govet)
+		if want := "ARGS_POST_NAMES: key,key,Key,key2"; want != have {
+		   ^
+mage.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build ignore
+^
+magefile.go:5:1: buildtag: +build line is no longer needed (govet)
+// +build mage
+^
+testing/e2e/e2e_test.go:6:1: buildtag: +build line is no longer needed (govet)
+// +build !tinygo
+^
+internal/auditlog/formats_json.go:30:7: ST1006: receiver name should not be an underscore, omit the name if it is unused (staticcheck)
+func (_ legacyJSONFormatter) Format(al plugintypes.AuditLog) ([]byte, error) {
+      ^
+internal/auditlog/formats_json.go:97:7: ST1006: receiver name should not be an underscore, omit the name if it is unused (staticcheck)
+func (_ legacyJSONFormatter) MIME() string {
+      ^
+internal/auditlog/formats_ocsf.go:34:4: QF1012: Use fmt.Fprintf(...) instead of WriteString(fmt.Sprintf(...)) (staticcheck)
+			argString.WriteString(fmt.Sprintf("%s=%s", arg.Key(), arg.Value()))
+			^
+internal/auditlog/formats_ocsf.go:246:2: ST1003: var logJson should be logJSON (staticcheck)
+	logJson, _ := json.Marshal(&webResourcesActivity)
+	^
+internal/auditlog/formats_test.go:23:4: QF1012: Use fmt.Fprintf(...) instead of WriteString(fmt.Sprintf(...)) (staticcheck)
+			auditLog.WriteString(fmt.Sprintf("Line %d: ", i))
+			^
+internal/auditlog/https_writer_test.go:21:5: ST1003: var sampleHttpsAuditLog should be sampleHTTPSAuditLog (staticcheck)
+var sampleHttpsAuditLog = &Log{
+    ^
+internal/collections/map.go:127:1: ST1020: comment on exported method Set should be of the form "Set ..." (staticcheck)
+// Sets the value of a key with the array of strings passed. If the key already exists, it will be overwritten.
+^
+internal/corazarules/rule_match.go:60:1: ST1021: comment on exported type DisruptiveAction should be of the form "DisruptiveAction ..." (with optional leading article) (staticcheck)
+// ActionName is used to identify an action.
+^
+internal/corazawaf/rule_mandatory_idcheck_default.go:6:5: ST1003: var shouldDoMandatoryRuleIdCheck should be shouldDoMandatoryRuleIDCheck (staticcheck)
+var shouldDoMandatoryRuleIdCheck = false
+    ^
+internal/corazawaf/rulegroup.go:201:4: SA4011: ineffective break statement. Did you mean to break out of the outer loop? (staticcheck)
+			break
+			^
+internal/corazawaf/transaction.go:706:1: ST1020: comment on exported method AddGetRequestArgument should be of the form "AddGetRequestArgument ..." (staticcheck)
+// AddGetRequestArgument
+^
+internal/corazawaf/transaction.go:715:1: ST1020: comment on exported method AddPostRequestArgument should be of the form "AddPostRequestArgument ..." (staticcheck)
+// AddPostRequestArgument
+^
+internal/corazawaf/transaction.go:724:1: ST1020: comment on exported method AddPathRequestArgument should be of the form "AddPathRequestArgument ..." (staticcheck)
+// AddPathRequestArgument
+^
+internal/corazawaf/transaction.go:737:1: ST1020: comment on exported method AddResponseArgument should be of the form "AddResponseArgument ..." (staticcheck)
+// AddResponseArgument
+^
+internal/corazawaf/waf.go:205:32: QF1011: could omit type int64 from declaration; it will be inferred from the right-hand side (staticcheck)
+		var requestBodyInMemoryLimit int64 = w.RequestBodyLimit
+		                             ^
+internal/operators/validate_nid.go:132:9: QF1001: could apply De Morgan's law (staticcheck)
+	return !(sequence || equals)
+	       ^
+internal/seclang/directives.go:573:6: ST1003: func directiveSecGsbLookupDb should be directiveSecGsbLookupDB (staticcheck)
+func directiveSecGsbLookupDb(options *DirectiveOptions) error {
+     ^
+internal/transformations/base64decode.go:84:2: QF1003: could use tagged switch on n (staticcheck)
+	if n == 2 {
+	^
+internal/transformations/url_encode_test.go:52:3: ST1018: string literal contains Unicode control characters, consider using escape sequences instead (staticcheck)
+		"~",
+		^
+183 issues:
+* errcheck: 50
+* golines: 41
+* gosec: 23
+* govet: 50
+* staticcheck: 19
