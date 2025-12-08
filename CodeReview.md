@@ -139,4 +139,40 @@ I learned coding in a language that has support for tooling is really important 
 What did you find most useful?
 I enjoyed the gosec plugin and I thought it was exteremely useful and easy to use once I figured out how to only look at those results.
 
+## MWvandergriff Findings
 
+### Code Review
+
+I took the automated code review approach.  Looking through the provided list, I hooked up SemGrep, to my fork of the Coraza/CorazaWAF project and ran the code review process.  The process came back with 10 issues, that correlated to 5 CWEs.  the URl is https://semgrep.dev/orgs/mvandergriff_unomaha_edu/findings?repo_ref=686559747.  The 5 CWEs that were found are
+    1. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+    2. CWE-319: Cleartext Transmission of Sensitive Information
+    3. CWE-328: Use of Weak Hash
+    4. CWE-94: Improper Control of Generation of Code ('Code Injection')
+    5. CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)
+
+#### CWE - 94
+This issue was found in internal/operators/inspect_file.go, line 33.  The application is executing a Command Prompt with out input validation.  This opens up the code to potential Code Injection.
+
+#### CWE - 328
+This issue was found internal/operations/validate_schema.go line 32, internal/transformations/md5.go line 20, and line 31.  MD5 is an out of date encryption process, and should no longer be used.
+Also, internal/transformations/sha1.go line 19, and line 29.  SHA -1 is an out of date encryption process and should not be used.
+
+#### CWE - 338
+This issue is in internal/strings/strings.go line 7.  This is using Math/Rand as part of the encryption process, when it should be using crypto/rand.
+
+#### CWE - 319
+This issue is found in examples/http-server/main.go line 39.  The application is writing text using HTTP instead of using HTTPS for all communication.
+
+#### CWE - 79
+This issue was found in internal/variable/generator/main.go line 19 and examples/http-server/main.go line 29.  The application is using test/template to render the pages, including user input.  This does not escape any HTML content and can lead to Cross Site Scripting.  The application should use html/template
+
+### Summary of findings
+The automated code review did an excellent job at finding some potential serious issues.  Use of MD5 or SHA-1, should have been discontinued years ago.  And not sanitizing any kind of input, leaves the project wide open for issues.
+
+### Planned Contributions
+I would like to improve the sanitization of input data, and to look at the scope of the encryption process, and what that would take to update to a valid and secure encryption level.
+
+### MWVandergriff Reflections
+What did you learn from this assignment?  The automated code review process was awesome.  Having worked with a lot of legacy code, finding issues that are not throwing errors and demanding attention can be extremely difficult.  And that is if you are familiar with the code.  Working on an OSS project, in an unfamiliar language, increased the difficulty by a large margin.  Being able to use the automated scan, really helped to focus, and identify major red flags.
+
+What did you find most useful.  I used the Semgrep automated scanning tool.  It identified several issues, where in the code the issue was, and mapped the issues back to CWEs.
