@@ -20,29 +20,29 @@ The initial scan produced 2672 lines of findings, however restricted to just the
 
 Here are the initial findings:
 
-debuglog/default.go:78:46: G115: integer overflow conversion uint -> int (gosec)
-http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)
-http/e2e/e2e.go:308:3: G104: Errors unhandled (gosec)
-internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)
-internal/corazawaf/waf.go:265:9: G302: Expect file permissions to be 0600 or less (gosec)
-internal/environment/default.go:25:3: G104: Errors unhandled (gosec)
-internal/environment/default.go:26:3: G104: Errors unhandled (gosec)
-internal/operators/inspect_file.go:34:9: G204: Subprocess launched with a potential tainted input or cmd arguments (gosec)
-internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
-internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)
-internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)
-internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)
-internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)
-internal/transformations/js_decode.go:75:25: G602: slice index out of range (gosec)
-internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
-internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)
+debuglog/default.go:78:46: G115: integer overflow conversion uint -> int (gosec)  
+http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)  
+http/e2e/e2e.go:308:3: G104: Errors unhandled (gosec)  
+internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)  
+internal/corazawaf/waf.go:265:9: G302: Expect file permissions to be 0600 or less (gosec)  
+internal/environment/default.go:25:3: G104: Errors unhandled (gosec)  
+internal/environment/default.go:26:3: G104: Errors unhandled (gosec)  
+internal/operators/inspect_file.go:34:9: G204: Subprocess launched with a potential tainted input or cmd arguments (gosec)  
+internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)  
+internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)  
+internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)  
+internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)  
+internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)  
+internal/transformations/js_decode.go:75:25: G602: slice index out of range (gosec)  
+internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)  
 
 
 ### Manual Analysis
@@ -58,10 +58,10 @@ Because I am not a Golang afficionado I leveraged AI to assist with understandin
 This bug is located in the internal/auditlog/formats_ocsf.go file which provides a standard logging format that             adheres to the OCSF standard. The code blocks referenced are for HTTP status codes and this wouldn't provide a              feasible risk of CWE-190.
 
 
-internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)
-internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)
+internal/auditlog/formats_ocsf.go:181:22: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:186:15: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:190:15: G115: integer overflow conversion int -> int32 (gosec)  
+internal/auditlog/formats_ocsf.go:218:45: G115: integer overflow conversion int -> int32 (gosec)  
 
 
 debuglog/default.go:78:46: G115: integer overflow conversion uint -> int (gosec)
@@ -71,17 +71,17 @@ This instance of potential CWE-190 appears to be real, while AI suggests this is
 
 These results are false positives as the parseInt portion of the code prevents the integer overflow from returning something problematic.
 
-internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)
-internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)
-internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)
+internal/seclang/directives.go:761:56: G115: integer overflow conversion int64 -> uint32 (gosec)  
+internal/seclang/directives.go:785:57: G115: integer overflow conversion int64 -> uint32 (gosec)  
+internal/seclang/directives.go:933:42: G115: integer overflow conversion int64 -> uint32 (gosec)  
 
 ## CWE-252 Unchecked Return Value
 
 
-http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)
+http/e2e/e2e.go:261:5: G104: Errors unhandled (gosec)  
 http/e2e/e2e.go:308:3: G104: Errors unhandled (gosec)
 
-internal/environment/default.go:25:3: G104: Errors unhandled (gosec)
+internal/environment/default.go:25:3: G104: Errors unhandled (gosec)  
 internal/environment/default.go:26:3: G104: Errors unhandled (gosec)
 
 While the first two instances of this CWE are thought to be false positives the last two instances are true positives that could impact the utility of the WAF as the function referenced tests whether or not the directory is writable and it not processing errors correctly.
@@ -108,16 +108,15 @@ internal/operators/inspect_file.go:34:9: G204: Subprocess launched with a potent
 
 All of these code blocks are exposed to this CWE as they are importing the older/weak libraries on purpose and after looking at the comments in various parts of the code it appears that the developers felt the risk of collision was low enough to allow the use of these weak primitives, however the last change to one of these files was years ago so it may be time to update the rationale behind the exception and explore updating these libraries.
 
-internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
-internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)
-internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)
-internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)
-internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)
+internal/operators/validate_schema.go:10:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)internal/operators/validate_schema.go:33:12: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:7:2: G501: Blocklisted import crypto/md5: weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:20:7: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/md5.go:31:9: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:7:2: G505: Blocklisted import crypto/sha1: weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:19:7: G401: Use of weak cryptographic primitive (gosec)  
+internal/transformations/sha1.go:29:9: G401: Use of weak cryptographic primitive (gosec)  
 
 ## CWE-125 Out of Bounds Read
 
@@ -130,11 +129,11 @@ internal/transformations/js_decode.go:75:25: G602: slice index out of range (gos
 ### Code Review
 
 I took the automated code review approach.  Looking through the provided list, I hooked up SemGrep, to my fork of the Coraza/CorazaWAF project and ran the code review process.  The process came back with 10 issues, that correlated to 5 CWEs.  the URl is https://semgrep.dev/orgs/mvandergriff_unomaha_edu/findings?repo_ref=686559747.  The 5 CWEs that were found are
-    1. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
-    2. CWE-319: Cleartext Transmission of Sensitive Information
-    3. CWE-328: Use of Weak Hash
-    4. CWE-94: Improper Control of Generation of Code ('Code Injection')
-    5. CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)
+1. CWE-79: Improper Neutralization of Input During Web Page Generation ('Cross-site Scripting')
+2. CWE-319: Cleartext Transmission of Sensitive Information
+3. CWE-328: Use of Weak Hash
+4. CWE-94: Improper Control of Generation of Code ('Code Injection')
+5. CWE-338: Use of Cryptographically Weak Pseudo-Random Number Generator (PRNG)
 
 #### CWE - 94
 This issue was found in internal/operators/inspect_file.go, line 33.  The application is executing a Command Prompt with out input validation.  This opens up the code to potential Code Injection.
@@ -176,6 +175,11 @@ We would also like to improve the sanitization of input data, and to look at the
 
 **Aiden Barger:** This assignment showed the importance of using automated tools with manual analysis. Scanners can quickly find potential issues, but they might necessitate diving deeo into context with manual review. I also learned how necessary it is to map findings back to very specific CWEs.
 
+**Aaron Buesing:** We use a SAST tool for work to scan all of our code before deploying to production, 
+so I was familiar with using the results from the scans to help improve code security posture. As this
+was a programming language we don't use at work, looking at all the tools (or lack of tools) was a surprise 
+to me.
+
 ### What did you find most useful?
 
 **Jmcshannon:** I enjoyed the gosec plugin and I thought it was extremely useful and easy to use once I figured out how to only look at those results.
@@ -183,3 +187,7 @@ We would also like to improve the sanitization of input data, and to look at the
 **MWvandergriff:** I used the Semgrep automated scanning tool. It identified several issues, where in the code the issue was, and mapped the issues back to CWEs.
 
 **Aiden Barger:** Seeing the difference in results of the hybrid approach of automated or manual review was cool.
+
+**Aaron Buesing:** I thought that having Semgrep list the CWE with its findings was helpful in order
+to have a place to start looking for ways to fix it. You don't have to go to Google or Stack Overflow
+looking for random fixes, you can start with the CWE document itself.
