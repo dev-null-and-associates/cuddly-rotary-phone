@@ -176,6 +176,8 @@ We would also like to improve the sanitization of input data, and to look at the
 
 **Aiden Barger:** This assignment showed the importance of using automated tools with manual analysis. Scanners can quickly find potential issues, but they might necessitate diving deeo into context with manual review. I also learned how necessary it is to map findings back to very specific CWEs.
 
+**Mason Wagner:** I think it is important for different people to do code review rather than just one person. Adding different types of code review increases the likelihood that you will find CWEs. Different approaches with different tools will lead to different results, just as different people looking at the same code, with different experience levels will find different vulnerabilities.
+
 ### What did you find most useful?
 
 **Jmcshannon:** I enjoyed the gosec plugin and I thought it was extremely useful and easy to use once I figured out how to only look at those results.
@@ -183,3 +185,5 @@ We would also like to improve the sanitization of input data, and to look at the
 **MWvandergriff:** I used the Semgrep automated scanning tool. It identified several issues, where in the code the issue was, and mapped the issues back to CWEs.
 
 **Aiden Barger:** Seeing the difference in results of the hybrid approach of automated or manual review was cool.
+
+**Mason Wagner:** The varying ways to scan for CWEs whether manual or automated helps properly ensure the security of the WAF. Only using one tool, or only code reviewing manually, may allow for vulnerabilities to go by unnoticed.
