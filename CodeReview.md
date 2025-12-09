@@ -173,7 +173,7 @@ We would also like to improve the sanitization of input data, and to look at the
 
 **MWvandergriff:** The automated code review process was awesome. Having worked with a lot of legacy code, finding issues that are not throwing errors and demanding attention can be extremely difficult. And that is if you are familiar with the code. Working on an OSS project, in an unfamiliar language, increased the difficulty by a large margin. Being able to use the automated scan, really helped to focus, and identify major red flags.
 
-**Aiden Barger:** This assignment showed the importance of using automated tools with manual analysis. Scanners can quickly find potential issues, but they might necessitate diving deeo into context with manual review. I also learned how necessary it is to map findings back to very specific CWEs.
+**Aiden Barger:** This assignment showed the importance of using automated tools with manual analysis. Scanners can quickly find potential issues, but they might necessitate diving deep into context with manual review. I also learned how necessary it is to map findings back to very specific CWEs.
 
 **Aaron Buesing:** We use a SAST tool for work to scan all of our code before deploying to production, 
 so I was familiar with using the results from the scans to help improve code security posture. As this
@@ -195,3 +195,10 @@ to have a place to start looking for ways to fix it. You don't have to go to Goo
 looking for random fixes, you can start with the CWE document itself.
 
 **Mason Wagner:** The varying ways to scan for CWEs whether manual or automated helps properly ensure the security of the WAF. Only using one tool, or only code reviewing manually, may allow for vulnerabilities to go by unnoticed.
+
+### Combined Reflection
+Overall, the team agreed that in a code review, an automated scan is a great starting point. It pin-points
+places that a reviewer needs manually review, adding additional context into the scanner's output. We agree that
+having multiple people (and tools) looking at the code provides a different lens that vulnerabilites can be found,
+so having a single person review code will not catch everything. Finally, mapping the findings to a specific CWE
+can help start the process to remediate it, so it is important that the tool assists with that.
