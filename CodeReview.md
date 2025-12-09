@@ -9,6 +9,8 @@ We expected the code review to be challenging because Golang (which Coraza is wr
 ### How did your code review strategy attempt to address the anticipated challenges?
 In order to address these challenges we did some work to understand Golang a little more and leaned on AI to make sense of small chunks of code when needed.
 
+## Part 1: Code Review Findings
+
 ## Jmcshannon Findings
 
 ### Code Review
@@ -123,22 +125,6 @@ This could be a true positive findind as there appears to be an off-by-one error
 
 internal/transformations/js_decode.go:75:25: G602: slice index out of range (gosec)
 
-### Summary of findings
-
-While some false positives were uncovered it does appear that there are several real issues in the code including use of weak/outdated cryptographic libraries as well as real issues with file permissions being overly permissive on created log files. The log file permission creation issue is a really good find because that could have had some very negative outcomes if this application were to be deployed into our hypothetical environment.
-
-### Planned Contributions
-
-Upon further review of the code I would like to update the file permission code blocks as that would have the most impact with the smallest change. Additionally taking on the update of crypto libs would be a good idea, I fear that those values are intertwined throughout the project and a much bigger undertaking that appears at first glance.
-
-### Jmcshannon Reflection
-
-What did you learn from this assignment?
-I learned coding in a language that has support for tooling is really important and that even if you use the same scanner as the development team there are still likely issues that the team has either muted or ignored that you can find and possibly help with.
-
-What did you find most useful?
-I enjoyed the gosec plugin and I thought it was exteremely useful and easy to use once I figured out how to only look at those results.
-
 ## MWvandergriff Findings
 
 ### Code Review
@@ -166,13 +152,34 @@ This issue is found in examples/http-server/main.go line 39.  The application is
 #### CWE - 79
 This issue was found in internal/variable/generator/main.go line 19 and examples/http-server/main.go line 29.  The application is using test/template to render the pages, including user input.  This does not escape any HTML content and can lead to Cross Site Scripting.  The application should use html/template
 
-### Summary of findings
-The automated code review did an excellent job at finding some potential serious issues.  Use of MD5 or SHA-1, should have been discontinued years ago.  And not sanitizing any kind of input, leaves the project wide open for issues.
+## Part 2: Key Findings and Contributions
+
+### Summary of Findings
+
+While some false positives were uncovered, it does appear that there are several real issues in the code including use of weak/outdated cryptographic libraries as well as real issues with file permissions being overly permissive on created log files. The log file permission creation issue is a really good find because that could have had some very negative outcomes if this application were to be deployed into our hypothetical environment.
+
+The automated code review did an excellent job at finding some potential serious issues. Use of MD5 or SHA-1 should have been discontinued years ago. And not sanitizing any kind of input leaves the project wide open for issues.
 
 ### Planned Contributions
-I would like to improve the sanitization of input data, and to look at the scope of the encryption process, and what that would take to update to a valid and secure encryption level.
 
-### MWVandergriff Reflections
-What did you learn from this assignment?  The automated code review process was awesome.  Having worked with a lot of legacy code, finding issues that are not throwing errors and demanding attention can be extremely difficult.  And that is if you are familiar with the code.  Working on an OSS project, in an unfamiliar language, increased the difficulty by a large margin.  Being able to use the automated scan, really helped to focus, and identify major red flags.
+Upon further review of the code, we would like to update the file permission code blocks as that would have the most impact with the smallest change. Additionally, taking on the update of crypto libs would be a good idea, though we fear that those values are intertwined throughout the project and a much bigger undertaking than appears at first glance.
 
-What did you find most useful.  I used the Semgrep automated scanning tool.  It identified several issues, where in the code the issue was, and mapped the issues back to CWEs.
+We would also like to improve the sanitization of input data, and to look at the scope of the encryption process, and what that would take to update to a valid and secure encryption level.
+
+## Team Reflection
+
+### What did you learn from this assignment?
+
+**Jmcshannon:** I learned coding in a language that has support for tooling is really important and that even if you use the same scanner as the development team there are still likely issues that the team has either muted or ignored that you can find and possibly help with.
+
+**MWvandergriff:** The automated code review process was awesome. Having worked with a lot of legacy code, finding issues that are not throwing errors and demanding attention can be extremely difficult. And that is if you are familiar with the code. Working on an OSS project, in an unfamiliar language, increased the difficulty by a large margin. Being able to use the automated scan, really helped to focus, and identify major red flags.
+
+**Aiden Barger:** This assignment showed the importance of using automated tools with manual analysis. Scanners can quickly find potential issues, but they might necessitate diving deeo into context with manual review. I also learned how necessary it is to map findings back to very specific CWEs.
+
+### What did you find most useful?
+
+**Jmcshannon:** I enjoyed the gosec plugin and I thought it was extremely useful and easy to use once I figured out how to only look at those results.
+
+**MWvandergriff:** I used the Semgrep automated scanning tool. It identified several issues, where in the code the issue was, and mapped the issues back to CWEs.
+
+**Aiden Barger:** Seeing the difference in results of the hybrid approach of automated or manual review was cool.
