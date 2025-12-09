@@ -180,6 +180,8 @@ so I was familiar with using the results from the scans to help improve code sec
 was a programming language we don't use at work, looking at all the tools (or lack of tools) was a surprise 
 to me.
 
+**Mason Wagner:** I think it is important for different people to do code review rather than just one person. Adding different types of code review increases the likelihood that you will find CWEs. Different approaches with different tools will lead to different results, just as different people looking at the same code, with different experience levels will find different vulnerabilities.
+
 ### What did you find most useful?
 
 **Jmcshannon:** I enjoyed the gosec plugin and I thought it was extremely useful and easy to use once I figured out how to only look at those results.
@@ -191,3 +193,5 @@ to me.
 **Aaron Buesing:** I thought that having Semgrep list the CWE with its findings was helpful in order
 to have a place to start looking for ways to fix it. You don't have to go to Google or Stack Overflow
 looking for random fixes, you can start with the CWE document itself.
+
+**Mason Wagner:** The varying ways to scan for CWEs whether manual or automated helps properly ensure the security of the WAF. Only using one tool, or only code reviewing manually, may allow for vulnerabilities to go by unnoticed.
